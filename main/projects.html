@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,103 +5,16 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <link href="../css/style.css" rel="stylesheet" type="text/css"/>
         <link rel='icon' href='../favicon.ico' type='image/x-icon'/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
 
     <body>
-        <div id="fixedMenuBar">
-            <div class="flip-container" >
-                <div class="flipper">
-                    <div class="front" >
-                        <img src="../img/icons/list.png" alt="Menu"/>
-                    </div>
-                    <div class="back">
-                        <ul>
-                            <li>
-                                <div class="flip-container" >
-                                    <div class="flipper">
-                                        <div class="front" >
-                                        </div>
-                                        <div class="back">
-                                            <h2>Menu</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="inner-flip-container">
-                                    <div class="inner-flipper">
-                                        <div class="inner-front">
-                                            <img src='../img/icons/home.empty.png' alt='Home'/>
-                                        </div>
-                                        <a href='index.html'>
-                                            <div class="inner-back">
-                                                <h2>Home</h2>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="inner-flip-container">
-                                    <div class="inner-flipper">
-                                        <div class="inner-front">
-                                            <img src='../img/icons/book.list.png' alt='Resume'/>
-                                        </div>
-                                        <a href='resume.html'>
-                                            <div class="inner-back">
-                                                <h2>Resume</h2>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="inner-flip-container">
-                                    <div class="inner-flipper">
-                                        <div class="inner-front">
-                                            <img src='../img/icons/courses.png' alt='Courses'/>
-                                        </div>
-                                        <a href='courses.html'>
-                                            <div class="inner-back">
-                                                <h2>Courses</h2>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="inner-flip-container">
-                                    <div class="inner-flipper">
-                                        <div class="inner-front">
-                                            <img src='../img/icons/information.circle.png' alt='About'/>
-                                        </div>
-                                        <a href='about.html'>
-                                            <div class="inner-back">
-                                                <h2>About</h2>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="inner-flip-container">
-                                    <div class="inner-flipper">
-                                        <div class="inner-front">
-                                            <img src='../img/icons/email.png' alt='Contact'/>
-                                        </div>
-                                        <a href='mail.html'>
-                                            <div class="inner-back">
-                                                <h2>Contact</h2>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="fixedMenuBar"></div>
+        <script>
+            $(document).ready(function () {
+                $('#fixedMenuBar').load('inner_menu.html');
+            });
+        </script>
 
         <div class="container">
 
@@ -135,7 +47,7 @@
                 Kinect, joystick controls for moving the robot, and gyro controls for viewing the 3D pointcloud. 
 
             </p>
-            
+
             <iframe style="max-width: 700px; width: 100%;" height="400" src="https://www.youtube.com/embed/yVagtGQEGKE" frameborder="0" allowfullscreen>
             </iframe>
             <h3>Partners: Zach Zweig-Vinegar (zzv2), Isaac Qureshi (iaq3)</h3>
