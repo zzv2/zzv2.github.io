@@ -1,0 +1,8 @@
+G.O.M.D	J. Cole	2014 Forest Hills Drive	2014	10	1	hip-hop;rap
+Raise Your Weapon (Feat. Greta Svabo Bech)	Deadmau5	4x4=12	2010	9	1	indie;upbeat
+Seeya (feat. Colleen D'Agostino)	Deadmau5	while(1<2)	2014	10	1	upbeat;dance
+The Mother We Share	Chvrches	The Bones Of What You Believe	2014	10	1	indie;happy;electronic
+Dissolve Me	Alt-J	An Awesome Wave	2012	9	1	chill;study
+Hands On The Wheel (feat. A$ap Rocky)	Schoolboy Q	Habits & Contradictions	2012	1	1	rap;hip-hop
+Test	Test	Test	2015	3	1	test;chill;indie;rock;test2
+&lt;div style=&quot;font-size=50px&quot;&gt;Hi&lt;/div&gt;	Me	Album	2016	10	1	tag

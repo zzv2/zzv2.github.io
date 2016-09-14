@@ -1,0 +1,18 @@
+[24-May-2015 21:23:15] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:17] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:32] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:35] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:35] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:36] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:36] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:38] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:39] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:39] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:39] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:23:44] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '../Services/Twilio.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home6/zzvtwoin/public_html/projects/ma-maria/includes/notify.php on line 2
+[24-May-2015 21:24:34] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:24:34] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:24:36] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[24-May-2015 21:24:37] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[17-Nov-2015 11:09:48] PHP Parse error:  syntax error, unexpected T_STRING in /home6/zzvtwoin/public_html/projects/ma-maria/vendor/stripe/lib/Stripe.php on line 3
+[17-Nov-2015 11:09:49] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required '../Services/Twilio.php' (include_path='.:/usr/lib64/php:/usr/share/pear') in /home6/zzvtwoin/public_html/projects/ma-maria/includes/notify.php on line 2
