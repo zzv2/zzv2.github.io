@@ -30,7 +30,7 @@ h3 {
 p,ul,table {
     font-size: 1em;
     font-family: Helvetica;
-    color: gray;
+    color: #999999;
 }
 
 body {
@@ -44,16 +44,20 @@ body {
 }
 
 .container {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(20,20,20,0.92);
     padding: 25px;
     border-radius: 15px;
 }
 
 .section {
     padding: 25px;
-    background-color: rgba(25,25,25,0.85);;
+    background-color: rgba(45,45,45,0.80);;
     border-radius: 25px;
     margin: 25px;
+}
+
+.img-circle {
+    border-radius: 50%;
 }
 
 .project {
