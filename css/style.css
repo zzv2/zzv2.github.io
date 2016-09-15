@@ -55,6 +55,10 @@ body {
     border-radius: 50%;
 }
 
+.img-rounded {
+    border-radius: 20%;
+}
+
 .project {
     margin: 0px;
 }
