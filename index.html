@@ -27,7 +27,8 @@
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="doc/Zach Z-V Resume.pdf">
+                        <!--<a href="doc/Zach Z-V Resume.pdf">-->
+                        <a href="#resume" class="resume-open">
                             <img src='img/icons/book.list.png' alt='Resume'/>
                             <h2>Resume</h2>
                         </a>
@@ -59,6 +60,7 @@
 
                     function hide_all(s) {
                         $("#about").slideUp(s);
+                        $("#resume").slideUp(s);
                         $("#projects").slideUp(s);
                         $("#courses").slideUp(s);
                     }
@@ -83,23 +85,29 @@
                     }
 
                     var speed = 1000;
+                    $(".about-open").on('click', function (e) {
+                        open_scroll("#about", this, e);
+                    });
+                    $(".resume-open").on('click', function (e) {
+                        open_scroll("#resume", this, e);
+                    });
                     $(".projects-open").on('click', function (e) {
                         open_scroll("#projects", this, e);
                     });
                     $(".courses-open").on('click', function (e) {
                         open_scroll("#courses", this, e);
                     });
-                    $(".about-open").on('click', function (e) {
-                        open_scroll("#about", this, e);
+                    $(".about-toggle").click(function () {
+                        $("#about").slideToggle(speed);
+                    });
+                    $(".resume-toggle").click(function () {
+                        $("#resume").slideToggle(speed);
                     });
                     $(".projects-toggle").click(function () {
                         $("#projects").slideToggle(speed);
                     });
                     $(".courses-toggle").click(function () {
                         $("#courses").slideToggle(speed);
-                    });
-                    $(".about-toggle").click(function () {
-                        $("#about").slideToggle(speed);
                     });
 
                     var menubarTop = $('#title #menubar').offset().top;
@@ -110,6 +118,9 @@
                             $("#fixed-menubar").hide();
                         }
                     });
+
+                    var menubarHeight = $('#menubar').outerHeight();
+                    $("#resume-preview").height($(window).height() - menubarHeight - 100);
                 });
             </script>
 
@@ -151,6 +162,11 @@
             </div>
 
 
+            <div id="resume" class="section">
+                <iframe id="resume-preview" src="https://drive.google.com/a/cornell.edu/file/d/0BxoS7oGR4RRkX0hYalJRUGlZN0k/preview" style="width: 100%;"></iframe>
+            </div>
+
+            
             <div id="projects" class="section">
                 <h1 class="projects-toggle toggle">Projects</h1>
 
