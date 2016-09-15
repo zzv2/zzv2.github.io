@@ -95,8 +95,8 @@ a:hover {
     border-width:1px 0px;
     padding: 10px;
     text-align:center;
-    /*display:block;*/
-    /*width: 100%;*/
+    border-radius: 35px;
+    /*border-radius: 15px 15px 150px 150px;*/
 }
 
 .menu-fixed {
@@ -104,13 +104,14 @@ a:hover {
     border-width:1px 0px;
     padding: 10px;
     text-align:center;
-
     position: fixed;
     display: table;
     background: rgba(0,0,0,0.92);
     margin: 0px;
     top: 0px;
     bottom: 0px;
+    border-radius: 35px;
+    /*border-radius: 15px 15px 150px 150px;*/
 }
 
 .toggle {
@@ -130,7 +131,7 @@ li.menu {
     font-size: 1.2em;
     font-family: Helvetica;
     color: white;
-    margin: 5px;
+    margin: -15px 5px;
 }
 
 @media only screen
