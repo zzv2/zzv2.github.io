@@ -3,7 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created  : Feb 1 2015
     Author   : Zach Zweig-Vinegar
 */
@@ -43,7 +43,7 @@ p,ul,table {
 
 body {
     background-image: url('../img/Pinwheel_fractal.png');
-    //background-image: url('../img/mandelbrot_fractal.jpg');
+    /*background-image: url('../img/mandelbrot_fractal.jpg');*/
     background-attachment: fixed;
     /*background-repeat: no-repeat;*/
     margin-left: 15%;
@@ -94,7 +94,7 @@ a:hover {
 #fixedMenuBar {
     position: fixed;
     padding: 20px;
-    top:0; 
+    top:0;
     left:0;
     width: 9%;
     height: 100%;
@@ -118,8 +118,22 @@ a:hover {
     /*height: 150px;*/
 }
 
-#fixedMenuBar a {    
+#fixedMenuBar a {
     word-wrap: normal;
+}
+
+.menu-fixed {
+    position: fixed;
+    background: black;
+    margin: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.toggle {
+    cursor: pointer;
 }
 
 ul.menu {
@@ -269,9 +283,9 @@ textarea {
     width: 100%;
 }
 
-@media only screen 
-  /*and (min-device-width: 768px)*/ 
-  and (max-device-width: 1024px) {
+@media only screen
+/*and (min-device-width: 768px)*/
+and (max-device-width: 1024px) {
     html {
         font-size: 14px;
     }
