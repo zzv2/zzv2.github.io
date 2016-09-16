@@ -67,7 +67,7 @@
                     function hide_all(s) {
                         $("#about").slideUp(s);
                         $("#resume").slideUp(s);
-                        $("#projects").slideUp(s);
+//                        $("#projects").slideUp(s);
                         $("#courses").slideUp(s);
                     }
                     hide_all(0);
@@ -222,13 +222,104 @@
                 <h1 class="projects-toggle toggle">Projects</h1>
 
                 <div id="CS-6751" class="project">
-                    <h2>ROS API & Multi-Robot Controller, Multi-User Unity Interface, Guided Policy Search on Baxter, and Deep Spatial Autoencoder</h2>
+                    <h2>CS 6751 - Mobile Manipulation - Final Project</h2>
+                    <h3>Team: Zach Zweig-Vinegar (zzv2), Isaac Qureshi (iaq3)</h3>
 
-                    <!--<p>Problem</p>
-                    <p>Solution</p>
-                    <p>Learned</p>
-                    <p>Example</p>-->
+                    <h3>
+                        ROS API & Multi-Robot Controller,
+                        Multi-User Unity Interface, <br>
+                        Guided Policy Search on Baxter, 
+                        and Deep Spatial Autoencoder
+                    </h3>
 
+                    <h3>Description:</h3>
+                    <p>
+                        We created a centralized ROS system and Unity Interface
+                        that allows remote users to control a team of robots. The
+                        users can define what the robots should be doing and utilize
+                        many levels of control. The behavior includes exploration
+                        and the manipulation of objects and moving them to user
+                        defined locations to create structures.
+                        Our centralized system also includes a supplementary
+                        learning module for fine motor tasks. The user can select
+                        to run one of these modules in Baxter’s action graph,
+                        enabling the learning module to take direct torque control
+                        of Baxter’s arm in order to achieve some predefined,
+                        pre-learned objective. The module is pre-trained on a set of
+                        challenging tasks requiring fine-grain physical coordination
+                        such as screwing a bottle cap on, fitting a peg into a
+                        hole, and picking a block off of a tower. Baxter is trained
+                        on these tasks using the Guided Policy Search (GPS)
+                        algorithm developed at Berkeley. The learning module’s
+                        abilities are further enhanced by incorporating a deep spatial
+                        autoencoder to provide the GPS torque net with key feature
+                        points. Using both torque feedback and visual feedback,
+                        Baxter can achieve a high degree of fine-grain coordination,
+                        significantly extending the collective capabilities or our
+                        centralized robot system.
+                        To develop and test the system we used two robots:
+                        Baxter, an industrial robot built by Rethink Robotics with
+                        two 7-DOF arms, and a modified version of a Turtlebot
+                        named Gatlin. Gatlin was built by Zach and includes
+                        an 4-DOF PhantomX Pincher arm for manipulation, an
+                        iRobot-Create base for mobility, and a Kinect head mounted
+                        on a 2 DOF turret for 360 degree RGB+D vision.
+                        <br><br>
+                        Computer science and robotics is in an exciting time
+                        of rapid progress. Due to advances, robots can perceive
+                        and manipulate more objects for low cost and at a higher
+                        accuracy. We wanted to create a system that we could use to
+                        control the behavior of any robot added to the system. There
+                        are many powerful open source algorithms (in ROS) that we
+                        can call from our system.
+                        3D interfaces are efficient ways of communicating information
+                        and extending some control to users. With practice,
+                        people gain dexterity over the interface and information it
+                        is conveying. We used the Unity3D Game Engine to create
+                        the user interface so we could visualize a 3D representation
+                        of the system on any device, in real-time. Unity3D exports
+                        to standalone Windows/Linux/Mac clients, iOS, Android,
+                        Windows phone, and more, allowing a wide variety of
+                        devices for users.
+                    </p>
+
+                    <h3>Result:</h3>
+                    <p>
+                        The system can be used as it was intended. We
+                        successfully had Gatlin and Baxter following the tasks that
+                        the user created in the interface. We were able to make
+                        user-defined arrangements of blocks, throw them, and have
+                        Gatlin drive routes that were created in the map. We had
+                        multiple users controlling the same robots and observing
+                        the structures they were building. We have combined many
+                        powerful vision and robotic techniques into our system.
+                        We are excited to work more on this project. We want
+                        to streamline the process of adding robots and their actions
+                        to the system. This will allow us to incorporate many of
+                        the exciting advances in computer science that will extend
+                        what can be perceived and manipulated. These can be put
+                        into the system, expanding the capabilities the user has over
+                        their environment.
+                        The supplementary learning module was never fully incorporated
+                        into the overall ROS system due to time constraints.
+                        Once the learning module is completed, it’s recommended
+                        interface is a ROS messaging service that could define a
+                        task to either be strained on or to implement using a trained
+                        model. Sending a task would involve sending a cost function
+                        to minimize over a set of actions. If the cost function
+                        (which might be encapsulated in an enumerated constant)
+                        has already been used in a training session, the robot can
+                        retrieve the policy it developed in the training session. In
+                        this way, the GPS and DSA networks can effectively take
+                        control of a given robots actions for a specified task.
+                        Training the DSA network has been tested with small
+                        amounts of data. However, to actually use this network,
+                        we need more data by following the steps in the appendix.
+                        Others can train and use this system if they have the data. It
+                        can also be extended to include the depth channel.
+                    </p>
+
+                    <h3>Demo:</h3>
                     <img class="resizable gif" src="img/proj/gif/gatlin-pick-static.png" alt=""/>
                     <img class="resizable gif" src="img/proj/gif/gatlin-localize-static.png" alt=""/>
                     <img class="resizable gif" src="img/proj/gif/gatlin-place-static.png" alt=""/>

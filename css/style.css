@@ -14,12 +14,19 @@ h1 {
 h2 {
     font-family: Helvetica;
     color: white;
+    font-size: 1.5em;
 }
 
 h3 {
     font-family: Helvetica;
     color: white;
-    font-size: 1em;
+    font-size: 1.25em;
+}
+
+h4 {
+    font-family: Helvetica;
+    color: white;
+    font-size: 1.0em;
 }
 
 p,ul,table {
@@ -54,11 +61,11 @@ body {
 
 .gif {
     display: block;
-    max-width: 320px;
+    max-width: 640px;
 }
 
 /*.gif:hover {
-    cursor:pointer; 
+    cursor:pointer;
     background:url('URL-of-animated-GIF');
 }*/
 
