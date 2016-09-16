@@ -116,8 +116,8 @@
                         $("#courses").slideToggle(speed);
                     });
 
-                    var menubarTop = $('#title #menubar').offset().top;
                     $(window).scroll(function () {
+                        var menubarTop = $('#title #menubar').offset().top;
                         if ($(window).scrollTop() > menubarTop) {
                             $("#fixed-menubar").show();
                         } else {
@@ -228,7 +228,7 @@
                     <h3>
                         ROS API & Multi-Robot Controller,
                         Multi-User Unity Interface, <br>
-                        Guided Policy Search on Baxter, 
+                        Guided Policy Search on Baxter,
                         and Deep Spatial Autoencoder
                     </h3>
 
