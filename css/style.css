@@ -36,7 +36,31 @@ body {
 
 .resizable {
     width: 100%;
+
+    /*background-color: rgba(55,55,55,0.80);*/
+    background-color: darkgray;
+    display: inline-block;
+    border-radius: 15px;
+    vertical-align: middle;
+    margin: 2%;
+    width: 96%;
 }
+
+.pic-text {
+    font-size: 2.5em;
+    font-family: Helvetica;
+    color: white;
+}
+
+.gif {
+    display: block;
+    max-width: 320px;
+}
+
+/*.gif:hover {
+    cursor:pointer; 
+    background:url('URL-of-animated-GIF');
+}*/
 
 .container {
     background-color: rgba(20,20,20,0.92);
@@ -160,6 +184,11 @@ and (max-device-width: 1024px) {
         margin: 2%;
     }
 
+    .resizable {
+        margin: 5%;
+        width: 90%;
+    }
+
     ul.menu {
         /*width: 100%;*/
         /*display: block;*/
@@ -183,6 +212,7 @@ and (max-device-width: 1024px) {
     }
     h1 {
         margin: 20px 5px;
+        font-size: 2.5em;
     }
     h2 {
         font-size: 1.5em;

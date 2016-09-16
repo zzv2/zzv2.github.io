@@ -23,6 +23,7 @@
                 <h3 style="font-size: 1.1em; color: #999999">
                     Undergraduate CS Major, Cornell University
                 </h3>
+                <br>
 
                 <ul id="menubar" class="menu">
                     <li class="menu">
@@ -126,7 +127,52 @@
 
                     var menubarHeight = $('#menubar').outerHeight();
                     $("#resume-preview").height($(window).height() - menubarHeight - 100);
+
+
+                    $(".gif").hover(
+                            function () {
+                                var src = $(this).attr('src');
+                                var new_src = src.replace("-static.png", ".gif");
+                                if (src != new_src) {
+                                    $(this).attr('src', new_src);
+                                }
+                            },
+                            function () {
+//                                var src = $(this).attr('src');
+//                                var new_src = src.replace(".gif", "-static.png");
+//                                if (src != new_src) {
+//                                    $(this).attr('src', new_src);
+//                                }
+                            }
+                    );
+
+                    var $w = $(window).scroll(function () {
+                        $(".gif").each(function () {
+                            var nav_height = $('#fixed-menubar #menubar').outerHeight();
+                            var offset = $(this).offset().top;
+                            var middle = offset - ($(window).height() - nav_height) * .5;
+                            var element_height = $(this).outerHeight();
+                            var targetOffsetBottom = middle - element_height / 2;
+                            var targetOffsetTop = middle + element_height / 2;
+
+                            if ($w.scrollTop() > targetOffsetBottom && $w.scrollTop() < targetOffsetTop) {
+                                var src = $(this).attr('src');
+                                var new_src = src.replace("-static.png", ".gif");
+                                if (src !== new_src) {
+                                    $(this).attr('src', new_src);
+                                }
+                            } else {
+                                var src = $(this).attr('src');
+                                var new_src = src.replace(".gif", "-static.png");
+                                if (src !== new_src) {
+                                    $(this).attr('src', new_src);
+                                }
+                            }
+                        });
+                    });
                 });
+
+
             </script>
 
 
@@ -175,17 +221,43 @@
             <div id="projects" class="section">
                 <h1 class="projects-toggle toggle">Projects</h1>
 
-                <div id="Turtlebot" class="project">
+                <div id="CS-6751" class="project">
+                    <h2>ROS API & Multi-Robot Controller, Multi-User Unity Interface, Guided Policy Search on Baxter, and Deep Spatial Autoencoder</h2>
 
-                    <h2>TurtleBot with PhantomX Pincher Robot Arm</h2>
+                    <!--<p>Problem</p>
+                    <p>Solution</p>
+                    <p>Learned</p>
+                    <p>Example</p>-->
+
+                    <img class="resizable gif" src="img/proj/gif/gatlin-pick-static.png" alt=""/>
+                    <img class="resizable gif" src="img/proj/gif/gatlin-localize-static.png" alt=""/>
+                    <img class="resizable gif" src="img/proj/gif/gatlin-place-static.png" alt=""/>
+                    <img class="resizable gif" src="img/proj/gif/baxter-left-pick-place-static.png" alt=""/>
+                    <img class="resizable gif" src="img/proj/gif/baxter-right-pick-static.png" alt=""/>
+
+                </div>
+
+                <div id="Turtlebot" class="project">
+                    <h2>TurtleBot with PhantomX Pincher Robot Arm, and PhantomX Robot Turret Kit</h2>
+
                     <a href="http://turtlebot.com/">
-                        <img class="resizable" style="max-width: 320px;" src="http://2.bp.blogspot.com/-f446rKskiCc/TdQBLnZqZzI/AAAAAAAAFz4/d5s5kHHiLwk/s1600/ROS-robot-turtlebot.png" alt="TurtleBot">
+                        <img class="resizable" style="max-width: 250px;" src="http://2.bp.blogspot.com/-f446rKskiCc/TdQBLnZqZzI/AAAAAAAAFz4/d5s5kHHiLwk/s1600/ROS-robot-turtlebot.png" alt="TurtleBot">
                     </a>
+                    <span class="pic-text">+</span>
                     <a href="http://www.trossenrobotics.com/p/PhantomX-Pincher-Robot-Arm.aspx">
-                        <img class="resizable" style="max-width: 320px;" src="img/proj/KIT-RK-PINCHER-c.png" alt="TurtleBot">
+                        <img class="resizable" style="max-width: 250px;" src="img/proj/KIT-RK-PINCHER-c.png" alt="PhantomX Pincher Robot Arm">
                     </a>
+                    <span class="pic-text">+</span>
+                    <a href="http://www.trossenrobotics.com/p/phantomX-robot-turret.aspx">
+                        <img class="resizable" style="max-width: 250px;" src="img/proj/PhantomX-Robot-Turret-Kit.png" alt="PhantomX Robot Turret Kit">
+                    </a>
+                    <span class="pic-text">=</span>
+                    <!--<a href="">-->
+                    <img class="resizable" style="max-width: 250px;" src="img/proj/gatlin.png" alt="Gatlin"/>
+                    <!--</a>-->
                     <br>
                     <h3>Augmented Reality Remote Arm Controller - Codename: Gatlin</h3>
+
                     <!--<img class="resizable" style="max-width: 706px;" src="projects/gatlin/diagram.png" alt=""/>-->
                     <p>
                         The camera on the back of the mobile device captures the user's hand pose while the screen displays the calculated
@@ -202,6 +274,12 @@
                         Kinect, joystick controls for moving the robot, and gyro controls for viewing the 3D pointcloud.
 
                     </p>
+
+                    <a href="https://github.com/iaq3/gatlin">
+                        <span style="">GitHub Repo:</span>
+                        <img style="vertical-align:middle" src="img/icons/social.github.png" alt="Gatlin Repo"/>
+                    </a>
+                    <br><br>
 
                     <iframe style="max-width: 700px; width: 100%;" height="400" src="https://www.youtube.com/embed/yVagtGQEGKE" frameborder="0" allowfullscreen>
                     </iframe>
