@@ -245,4 +245,8 @@ and (max-device-width: 1024px) {
     .two-col {
         width: 100%;
     }
+
+    .parts img {
+        width: 80%;
+    }
 }
