@@ -102,9 +102,8 @@
             <div id="projects" class="section">
                 <h1 class="toggle" title="#projects">Projects</h1>
 
+                <h2 class="toggle" title="#CS-6751">CS 6751 - Mobile Manipulation - Final Project</h2>
                 <div id="CS-6751" class="project">
-                    <h2>CS 6751 - Mobile Manipulation - Final Project</h2>
-
                     <h3>
                         ROS API & Multi-Robot Controller,
                         Multi-User Unity Interface, <br>
@@ -171,9 +170,9 @@
                     </p>
 
                     <h3>Solution:</h3>
-                    <h3 class="toggle" title="#cs6751-report">
+                    <h4 class="toggle" title="#cs6751-report">
                         Click for full PDF report.
-                    </h3>
+                    </h4>
                     <div id="cs6751-report">
                         <iframe class="pdf-preview" src="https://drive.google.com/file/d/0BxoS7oGR4RRkOTI5VExBQmtKbHc/preview" style="width: 100%;"></iframe>
                     </div>
@@ -308,8 +307,8 @@
 
                 </div>
 
+                <h2 class="toggle" title="#Turtlebot">Independent Study Project</h2>
                 <div id="Turtlebot" class="project">
-                    <h2>Independent Study Project</h2>
                     <h3>TurtleBot with PhantomX Pincher Robot Arm, and PhantomX Robot Turret Kit</h3>
 
                     <a href="http://turtlebot.com/">
@@ -370,9 +369,8 @@
                 </div>
 
 
+                <h2 class="toggle" title="#Stress_Detector_Glove">Stress Detector Glove (Galvanic Skin Response)</h2>
                 <div id="Stress_Detector_Glove" class="project">
-
-                    <h2>Stress Detector Glove (Galvanic Skin Response)</h2>
                     <img class="resizable" style="max-width: 706px;" src="img/proj/20131209_210100_7_bestshot.jpg" alt="Lie Detector Glove"/>
                     <h3>Team Members: Zach Zweig-Vinegar, Fred Kummer</h3>
                     <p>Final class project for ENGRI 1820: Electricity Lights Camera Action:
@@ -406,9 +404,8 @@
                 </div>
 
 
+                <h2 class="toggle" title="#Arduino_Thermistor_Data_Collector">Arduino Thermistor Data Collector</h2>
                 <div id="Arduino_Thermistor_Data_Collector" class="project">
-
-                    <h2>Arduino Thermistor Data Collector</h2>
                     <a href="projects/arduino_thermistor_data_collector/Autonomous Thermal Data Collection.pdf">
                         Click to enlarge...<br>
                         <img class="resizable" style="max-width: 706px;" src="projects/arduino_thermistor_data_collector/Autonomous Thermal Data Collection.jpg" alt="Arduino Thermistor Data Collector">
@@ -438,118 +435,166 @@
 
                 </div>
 
+                <h1>Websites</h1>
                 <div id="websites">
-                    <h1>Websites</h1>
+                    <h2 class="toggle" title="#Flights">CS 3300 Project 2 - Trends in U.S. Domestic Flights</h2>
+                    <div id="Flights" class="website">
+                        <a href="projects/trends-US-domestic-flights/index.html">
+                            <img class="resizable" style="max-width: 1280px;" src="projects/trends-US-domestic-flights/full.png" alt=""/>
+                        </a>
+                        <h3>Ankita Agrawal (aa653), Yezy Lim (yl647), Zachary Vinegar (zzv2)</h3>
+                        <p></p>
+                        <ul>
+                            <li>
+                                <a href="projects/trends-US-domestic-flights/p2.pdf">Assignment Description</a>
+                            </li>
+                            <li>
+                                <a href="projects/trends-US-domestic-flights/p2_Writeup.pdf">Writeup</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <!--<a href="projects/physics bus/php/index.html">-->
-                    <h2 id="Ithaca_Physics_Bus">CS 1300 Final Project - Ithaca Physics Bus</h2>
-                    <img class="resizable" style="max-width: 750px;" src="projects/physics bus.png" alt=""/>
-                    <!--</a>-->
-                    <h3>Partners: Victoria Beall, Bryan Rhodes, Logan McManus</h3>
-                    <p>
-                        "For this project, our client is a small company called Physics Bus, founded by Erik Herman. Physics Bus is a refurbished old style bus that travels to schools and events as a
-                        mobile physics exhibit. The mission of Physics Bus is two fold: first, to spark interest in physics and science in audiences of all ages through fun and
-                        interactive exhibits, emphasizing the artistic and creative aspects of physics rather than straight equations; second, the exhibits in the bus are made from also
-                        entirely recycled and/or junk materials. The current URL for the Physics Bus site is <a href="http://ithacaphysicsfactory.weebly.com/">http://ithacaphysicsfactory.weebly.com/</a>
-                        (physicsbus.org), but our client has expressed his unhappiness with the overall theme, color scheme, and even logo of the site (which is just a slightly modified version of the
-                        logo for the parent organization, Physics Factory).
-                        What our client was looking for in their site was something that embodies the fun and interactive elements of their project. In particular, our client mentioned
-                        that he likes the look of hero images and requested a slideshow on the website's main page. He was also looking for a site that effectively uses social media,
-                        blogging, and videos/images to give users a taste of what the Physics Bus is like."
+                    <h2 class="toggle" title="#Asteroids">CS 3300 Project 1 - NASA Asteroids</h2>
+                    <div id="Asteroids" class="website">
+                        <a href="projects/asteroids/cs3300-p1/index.html">
+                            <img class="resizable" style="max-width: 1280px;" src="projects/asteroids/full-small.png" alt=""/>
+                        </a>
+                        <h3>Partners: Shanie Jeanat, Zachary Vinegar, John Farese</h3>
+                        <p>
+                            All of the data we used was pulled from NASA's NeoWs online api available at
+                            <a href="https://api.nasa.gov/api.html#demo_keyratelimits">https://api.nasa.gov/api.html#demo_keyratelimits</a>
+                            Each NASA api request returns a JSON file with a list of asteroid objects for a particular week of the year.
+                            Each asteroid object returns a diameter, magnitude, velocity, miss distance, approach date, and name.
+                            Since each file represents one week of the year, we iterated through all 53 weeks in order to get all of the
+                            data for 2016. In our graphs, we only referenced the relative velocities, distances from Earth, and diameters
+                            of each asteroid. We chose those criteria because they seemed most relevant for visualizing the potential
+                            threat a near-earth object may pose towards people on planet Earth...
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="projects/asteroids/project1.pdf">Assignment Description</a>
+                            </li>
+                            <li>
+                                <a href="projects/asteroids/description.pdf">Rationale</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    </p>
-                    <ul>
-                        <li>
-                            <a href="projects/physics bus/FinalDJM.pdf">Design Journey Map</a>
-                        </li>
-                    </ul>
+                    <h2 class="toggle" title="#Ma_Maria">CS 2300 Final Project - Ma-Maria</h2>
+                    <div id="Ma_Maria" class="website">
+                        <!--<a href="projects/ma-maria/index.html">-->
+                        <img class="resizable" style="max-width: 750px;" src="projects/ma-maria.png" alt=""/>
+                        <!--</a>-->
+                        <h3>Partners: Jarrod Ashley, Keshav Varma, Robert Oxer</h3>
+                        <p>
+                            "Our client is Ada Chan, an MBA candidate at Cornell. She is the founder of a company that intends to create an online solution to
+                            match part time cleaners with customers (for the purposes of this project we may decide to focus on the Ithaca area). The website we
+                            built is intended to be an alpha version of the company's final product and will mostly be used for product demos to potential
+                            investors... <br>
+                            <br>
+                            The website's main purpose is to connect customers who need household cleaning services with providers
+                            in their local area. The content will reflect this purpose as well as make it as easy to use as possible.
+                            We plan to incorporate many features, so it should be very simple to facilitate communication between
+                            customers and cleaners. This will ensure that target audience enjoys this service as much as our client does."
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="projects/ma-maria/docs/FP_M5.pdf">Assignment Description</a>
+                            </li>
+                            <li>Design Journey Map
+                                <ul>
+                                    <li>
+                                        <a href="projects/ma-maria/docs/FP_DJ_Part_1.pdf">Part 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects/ma-maria/docs/FP_DJ_Part_2.pdf">Part 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects/ma-maria/docs/FP_DJ_Part_3.pdf">Part 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects/ma-maria/docs/FP_DJ_Part_4.pdf">Part 4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <!--<a href="projects/ma-maria/index.html">-->
-                    <h2 id="Ma-Maria">CS 2300 Final Project - Ma-Maria</h2>
-                    <img class="resizable" style="max-width: 750px;" src="projects/ma-maria.png" alt=""/>
-                    <!--</a>-->
-                    <h3>Partners: Jarrod Ashley, Keshav Varma, Robert Oxer</h3>
-                    <p>
-                        "Our client is Ada Chan, an MBA candidate at Cornell. She is the founder of a company that intends to create an online solution to
-                        match part time cleaners with customers (for the purposes of this project we may decide to focus on the Ithaca area). The website we
-                        built is intended to be an alpha version of the company's final product and will mostly be used for product demos to potential
-                        investors... <br>
-                        <br>
-                        The website's main purpose is to connect customers who need household cleaning services with providers
-                        in their local area. The content will reflect this purpose as well as make it as easy to use as possible.
-                        We plan to incorporate many features, so it should be very simple to facilitate communication between
-                        customers and cleaners. This will ensure that target audience enjoys this service as much as our client does."
-                    </p>
-                    <ul>
-                        <li>
-                            <a href="projects/ma-maria/docs/FP_M5.pdf">Assignment Description</a>
-                        </li>
-                        <li>Design Journey Map
-                            <ul>
-                                <li>
-                                    <a href="projects/ma-maria/docs/FP_DJ_Part_1.pdf">Part 1</a>
-                                </li>
-                                <li>
-                                    <a href="projects/ma-maria/docs/FP_DJ_Part_2.pdf">Part 2</a>
-                                </li>
-                                <li>
-                                    <a href="projects/ma-maria/docs/FP_DJ_Part_3.pdf">Part 3</a>
-                                </li>
-                                <li>
-                                    <a href="projects/ma-maria/docs/FP_DJ_Part_4.pdf">Part 4</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <h2 class="toggle" title="#Image_Album">CS 2300 Project 3 - Image Album</h2>
+                    <div id="Image_Album" class="website">
+                        <!--<a href="projects/image album/main/index.html">-->
+                        <img class="resizable" style="max-width: 750px;" src="projects/image album.png" alt=""/>
+                        <!--</a>-->
+                        <p>
+                            This image gallery will be used to host professional pictures of me and my
+                            CS projects, so I want to reflect the coding aspect in the look and feel of my
+                            design. I used a black background because it adds more contrast to
+                            the text and most people associate black backgrounds with computer consoles
+                            or terminals. I also wanted the website to feel sleek and modern, just like the
+                            iOS and Android operating systems which is why I incorporated large icons
+                            and a CSS flip for interaction...
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="projects/image album/Project_3.pdf">Assignment Description</a>
+                            </li>
+                            <li>
+                                <a href="projects/image album/final rationale.pdf">Rationale</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <!--<a href="projects/image album/main/index.html">-->
-                    <h2 id="Image_Album">CS 2300 Project 3 - Image Album</h2>
-                    <img class="resizable" style="max-width: 750px;" src="projects/image album.png" alt=""/>
-                    <!--</a>-->
-                    <p>
-                        This image gallery will be used to host professional pictures of me and my
-                        CS projects, so I want to reflect the coding aspect in the look and feel of my
-                        design. I used a black background because it adds more contrast to
-                        the text and most people associate black backgrounds with computer consoles
-                        or terminals. I also wanted the website to feel sleek and modern, just like the
-                        iOS and Android operating systems which is why I incorporated large icons
-                        and a CSS flip for interaction...
-                    </p>
-                    <ul>
-                        <li>
-                            <a href="projects/image album/Project_3.pdf">Assignment Description</a>
-                        </li>
-                        <li>
-                            <a href="projects/image album/final rationale.pdf">Rationale</a>
-                        </li>
-                    </ul>
+                    <h2 class="toggle" title="#Music_Library">CS 2300 Project 2 - Music Library</h2>
+                    <div id="Music_Library" class="website">
+                        <!--<a href="projects/music library/main/index.html">-->
+                        <img class="resizable" style="max-width: 750px;" src="projects/music library.png" alt=""/>
+                        <!--</a>-->
+                        <p>
+                            This music library was my first website made using a database and it actually uses a text file to save data.
+                            You can filter your music by mood with tags to find a perfect song for any time of day. You can also search by Title, Artist, Album,
+                            Year, Rating or a combination. Simply change a search parameter to get a list of matching tracks...
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="projects/music library/P2.pdf">Assignment Description</a>
+                            </li>
+                            <li>
+                                <a href="projects/image album/checking.pdf">Rationale</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <!--<a href="projects/music library/main/index.html">-->
-                    <h2 id="Music_Library">CS 2300 Project 2 - Music Library</h2>
-                    <img class="resizable" style="max-width: 750px;" src="projects/music library.png" alt=""/>
-                    <!--</a>-->
-                    <p>
-                        This music library was my first website made using a database and it actually uses a text file to save data.
-                        You can filter your music by mood with tags to find a perfect song for any time of day. You can also search by Title, Artist, Album,
-                        Year, Rating or a combination. Simply change a search parameter to get a list of matching tracks...
-                    </p>
-                    <ul>
-                        <li>
-                            <a href="projects/music library/P2.pdf">Assignment Description</a>
-                        </li>
-                        <li>
-                            <a href="projects/image album/checking.pdf">Rationale</a>
-                        </li>
-                    </ul>
+                    <h2 class="toggle" title="#Ithaca_Physics_Bus">CS 1300 Final Project - Ithaca Physics Bus</h2>
+                    <div id="Ithaca_Physics_Bus" class="website">
+                        <!--<a href="projects/physics bus/php/index.html">-->
+                        <img class="resizable" style="max-width: 750px;" src="projects/physics bus.png" alt=""/>
+                        <!--</a>-->
+                        <h3>Partners: Victoria Beall, Bryan Rhodes, Logan McManus</h3>
+                        <p>
+                            "For this project, our client is a small company called Physics Bus, founded by Erik Herman. Physics Bus is a refurbished old style bus that travels to schools and events as a
+                            mobile physics exhibit. The mission of Physics Bus is two fold: first, to spark interest in physics and science in audiences of all ages through fun and
+                            interactive exhibits, emphasizing the artistic and creative aspects of physics rather than straight equations; second, the exhibits in the bus are made from also
+                            entirely recycled and/or junk materials. The current URL for the Physics Bus site is <a href="http://ithacaphysicsfactory.weebly.com/">http://ithacaphysicsfactory.weebly.com/</a>
+                            (physicsbus.org), but our client has expressed his unhappiness with the overall theme, color scheme, and even logo of the site (which is just a slightly modified version of the
+                            logo for the parent organization, Physics Factory).
+                            What our client was looking for in their site was something that embodies the fun and interactive elements of their project. In particular, our client mentioned
+                            that he likes the look of hero images and requested a slideshow on the website's main page. He was also looking for a site that effectively uses social media,
+                            blogging, and videos/images to give users a taste of what the Physics Bus is like."
 
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="projects/physics bus/FinalDJM.pdf">Design Journey Map</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
 
                 <!-- <a href="http://www.oculusvr.com/">
                     <h2>Oculus Rift</h2>
                     <img class="resizable" style="max-width: 411px;" src="http://i.imgur.com/mW94RR1.png" alt="Oculus Rift">
                 </a> -->
-
-                <p>Last updated 18th September 2015</p>
             </div>
 
 
@@ -719,7 +764,10 @@
             </div>
 
             <div class="footer">
-                <p class="copyright" style="text-align: center;">Copyright © 2016 Zachary Zweig-Vinegar.</p>
+                <p id="copyright" style="text-align: center;">
+                    Copyright © 2016 Zachary Zweig-Vinegar.<br>
+                    Updated
+                </p>
             </div>
         </div>
     </body>

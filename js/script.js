@@ -95,4 +95,6 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('#copyright').append(document.lastModified.split(" ", 2)[0]);
 });

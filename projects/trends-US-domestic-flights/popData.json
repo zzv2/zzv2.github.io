@@ -1,0 +1,257 @@
+[
+  {
+    "state": "AL",
+    "outflow": 221452,
+    "inflow": 222204
+  },
+  {
+    "state": "AK",
+    "outflow": 336604,
+    "inflow": 338230
+  },
+  {
+    "state": "AZ",
+    "outflow": 2237531,
+    "inflow": 2228380
+  },
+  {
+    "state": "AR",
+    "outflow": 161000,
+    "inflow": 161188
+  },
+  {
+    "state": "CA",
+    "outflow": 7755611,
+    "inflow": 7784978
+  },
+  {
+    "state": "CO",
+    "outflow": 2602992,
+    "inflow": 2592541
+  },
+  {
+    "state": "CT",
+    "outflow": 282055,
+    "inflow": 285561
+  },
+  {
+    "state": "DE",
+    "outflow": 1095,
+    "inflow": 1093
+  },
+  {
+    "state": "FL",
+    "outflow": 5610406,
+    "inflow": 5596116
+  },
+  {
+    "state": "GA",
+    "outflow": 4102093,
+    "inflow": 4097390
+  },
+  {
+    "state": "HI",
+    "outflow": 1187767,
+    "inflow": 1185593
+  },
+  {
+    "state": "ID",
+    "outflow": 174877,
+    "inflow": 175977
+  },
+  {
+    "state": "IL",
+    "outflow": 3966615,
+    "inflow": 3956524
+  },
+  {
+    "state": "IN",
+    "outflow": 439377,
+    "inflow": 441106
+  },
+  {
+    "state": "IA",
+    "outflow": 164968,
+    "inflow": 166196
+  },
+  {
+    "state": "KS",
+    "outflow": 80492,
+    "inflow": 81531
+  },
+  {
+    "state": "KY",
+    "outflow": 482115,
+    "inflow": 481734
+  },
+  {
+    "state": "LA",
+    "outflow": 616993,
+    "inflow": 613942
+  },
+  {
+    "state": "ME",
+    "outflow": 110140,
+    "inflow": 110912
+  },
+  {
+    "state": "MD",
+    "outflow": 1113022,
+    "inflow": 1118117
+  },
+  {
+    "state": "MA",
+    "outflow": 1287588,
+    "inflow": 1297910
+  },
+  {
+    "state": "MI",
+    "outflow": 1553526,
+    "inflow": 1554832
+  },
+  {
+    "state": "MN",
+    "outflow": 1547895,
+    "inflow": 1547489
+  },
+  {
+    "state": "MS",
+    "outflow": 76624,
+    "inflow": 76547
+  },
+  {
+    "state": "MO",
+    "outflow": 1110888,
+    "inflow": 1122429
+  },
+  {
+    "state": "MT",
+    "outflow": 177048,
+    "inflow": 176873
+  },
+  {
+    "state": "NE",
+    "outflow": 211298,
+    "inflow": 212252
+  },
+  {
+    "state": "NV",
+    "outflow": 2099738,
+    "inflow": 2078351
+  },
+  {
+    "state": "NH",
+    "outflow": 106187,
+    "inflow": 107557
+  },
+  {
+    "state": "NJ",
+    "outflow": 1216387,
+    "inflow": 1220656
+  },
+  {
+    "state": "NM",
+    "outflow": 237695,
+    "inflow": 237943
+  },
+  {
+    "state": "NY",
+    "outflow": 3183647,
+    "inflow": 3189123
+  },
+  {
+    "state": "NC",
+    "outflow": 2645464,
+    "inflow": 2632078
+  },
+  {
+    "state": "ND",
+    "outflow": 111530,
+    "inflow": 111332
+  },
+  {
+    "state": "OH",
+    "outflow": 858928,
+    "inflow": 866289
+  },
+  {
+    "state": "OK",
+    "outflow": 302069,
+    "inflow": 304671
+  },
+  {
+    "state": "OR",
+    "outflow": 857076,
+    "inflow": 862337
+  },
+  {
+    "state": "PA",
+    "outflow": 1740399,
+    "inflow": 1743845
+  },
+  {
+    "state": "RI",
+    "outflow": 171410,
+    "inflow": 174002
+  },
+  {
+    "state": "SC",
+    "outflow": 397441,
+    "inflow": 397739
+  },
+  {
+    "state": "SD",
+    "outflow": 74401,
+    "inflow": 74954
+  },
+  {
+    "state": "TN",
+    "outflow": 855745,
+    "inflow": 857209
+  },
+  {
+    "state": "TX",
+    "outflow": 6543683,
+    "inflow": 6535843
+  },
+  {
+    "state": "UT",
+    "outflow": 994922,
+    "inflow": 990016
+  },
+  {
+    "state": "VT",
+    "outflow": 55477,
+    "inflow": 56248
+  },
+  {
+    "state": "VA",
+    "outflow": 2040437,
+    "inflow": 2041441
+  },
+  {
+    "state": "WA",
+    "outflow": 1888501,
+    "inflow": 1891521
+  },
+  {
+    "state": "WV",
+    "outflow": 33927,
+    "inflow": 33899
+  },
+  {
+    "state": "WI",
+    "outflow": 460936,
+    "inflow": 464559
+  },
+  {
+    "state": "WY",
+    "outflow": 51077,
+    "inflow": 51043
+  },
+  {
+    "state": "PR",
+    "outflow": 379900,
+    "inflow": 369082
+  }
+]

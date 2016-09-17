@@ -1,0 +1,257 @@
+[
+  {
+    "State": "Alabama",
+    "Population": "4,858,979",
+    "AirportNum": 8
+  },
+  {
+    "State": "Alaska",
+    "Population": "738,432",
+    "AirportNum": 270
+  },
+  {
+    "State": "Arizona",
+    "Population": "6,828,065",
+    "AirportNum": 16
+  },
+  {
+    "State": "Arkansas",
+    "Population": "2,978,204",
+    "AirportNum": 10
+  },
+  {
+    "State": "California",
+    "Population": "39,144,818",
+    "AirportNum": 48
+  },
+  {
+    "State": "Colorado",
+    "Population": "5,456,574",
+    "AirportNum": 16
+  },
+  {
+    "State": "Connecticut",
+    "Population": "3,590,886",
+    "AirportNum": 3
+  },
+  {
+    "State": "Delaware",
+    "Population": "945,934",
+    "AirportNum": 1
+  },
+  {
+    "State": "Florida",
+    "Population": "20,271,272",
+    "AirportNum": 23
+  },
+  {
+    "State": "Georgia",
+    "Population": "10,214,860",
+    "AirportNum": 8
+  },
+  {
+    "State": "Hawaii",
+    "Population": "1,431,603",
+    "AirportNum": 12
+  },
+  {
+    "State": "Idaho",
+    "Population": "1,654,930",
+    "AirportNum": 6
+  },
+  {
+    "State": "Illinois",
+    "Population": "12,859,995",
+    "AirportNum": 13
+  },
+  {
+    "State": "Indiana",
+    "Population": "6,619,680",
+    "AirportNum": 8
+  },
+  {
+    "State": "Iowa",
+    "Population": "3,123,899",
+    "AirportNum": 8
+  },
+  {
+    "State": "Kansas",
+    "Population": "2,911,641",
+    "AirportNum": 11
+  },
+  {
+    "State": "Kentucky",
+    "Population": "4,425,092",
+    "AirportNum": 6
+  },
+  {
+    "State": "Louisiana",
+    "Population": "4,670,724",
+    "AirportNum": 8
+  },
+  {
+    "State": "Maine",
+    "Population": "1,329,328",
+    "AirportNum": 6
+  },
+  {
+    "State": "Maryland",
+    "Population": "6,006,401",
+    "AirportNum": 3
+  },
+  {
+    "State": "Massachusetts",
+    "Population": "6,794,422",
+    "AirportNum": 10
+  },
+  {
+    "State": "Michigan",
+    "Population": "9,922,576",
+    "AirportNum": 19
+  },
+  {
+    "State": "Minnesota",
+    "Population": "5,489,594",
+    "AirportNum": 9
+  },
+  {
+    "State": "Mississippi",
+    "Population": "2,992,333",
+    "AirportNum": 8
+  },
+  {
+    "State": "Missouri",
+    "Population": "6,083,672",
+    "AirportNum": 9
+  },
+  {
+    "State": "Montana",
+    "Population": "1,032,949",
+    "AirportNum": 14
+  },
+  {
+    "State": "Nebraska",
+    "Population": "1,896,190",
+    "AirportNum": 10
+  },
+  {
+    "State": "Nevada",
+    "Population": "2,890,845",
+    "AirportNum": 6
+  },
+  {
+    "State": "New Hampshire",
+    "Population": "1,330,608",
+    "AirportNum": 3
+  },
+  {
+    "State": "New Jersey",
+    "Population": "8,958,013",
+    "AirportNum": 6
+  },
+  {
+    "State": "New Mexico",
+    "Population": "2,085,109",
+    "AirportNum": 11
+  },
+  {
+    "State": "New York",
+    "Population": "19,795,791",
+    "AirportNum": 21
+  },
+  {
+    "State": "North Carolina",
+    "Population": "10,042,802",
+    "AirportNum": 13
+  },
+  {
+    "State": "North Dakota",
+    "Population": "756,927",
+    "AirportNum": 8
+  },
+  {
+    "State": "Ohio",
+    "Population": "11,613,423",
+    "AirportNum": 13
+  },
+  {
+    "State": "Oklahoma",
+    "Population": "3,911,338",
+    "AirportNum": 3
+  },
+  {
+    "State": "Oregon",
+    "Population": "4,028,977",
+    "AirportNum": 17
+  },
+  {
+    "State": "Pennsylvania",
+    "Population": "12,802,503",
+    "AirportNum": 16
+  },
+  {
+    "State": "Rhode Island",
+    "Population": "1,056,298",
+    "AirportNum": 3
+  },
+  {
+    "State": "South Carolina",
+    "Population": "4,896,146",
+    "AirportNum": 6
+  },
+  {
+    "State": "South Dakota",
+    "Population": "858,469",
+    "AirportNum": 6
+  },
+  {
+    "State": "Tennessee",
+    "Population": "6,600,299",
+    "AirportNum": 8
+  },
+  {
+    "State": "Texas",
+    "Population": "27,469,114",
+    "AirportNum": 33
+  },
+  {
+    "State": "Utah",
+    "Population": "2,995,919",
+    "AirportNum": 8
+  },
+  {
+    "State": "Vermont",
+    "Population": "626,042",
+    "AirportNum": 3
+  },
+  {
+    "State": "Virginia",
+    "Population": "8,382,993",
+    "AirportNum": 10
+  },
+  {
+    "State": "Washington",
+    "Population": "7,170,351",
+    "AirportNum": 24
+  },
+  {
+    "State": "West Virginia",
+    "Population": "1,844,128",
+    "AirportNum": 7
+  },
+  {
+    "State": "Wisconsin",
+    "Population": "5,771,337",
+    "AirportNum": 8
+  },
+  {
+    "State": "Wyoming",
+    "Population": "586,107",
+    "AirportNum": 10
+  },
+  {
+    "State": "Puerto Rico",
+    "Population": "3,474,182",
+    "AirportNum": 8
+  }
+]

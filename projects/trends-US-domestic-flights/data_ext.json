@@ -1,0 +1,1312 @@
+[
+  {
+    "orig": "AK",
+    "dest": "AK",
+    "numPeople": 144240
+  },
+  {
+    "orig": "AK",
+    "dest": "WA",
+    "numPeople": 126036
+  },
+  {
+    "orig": "AL",
+    "dest": "GA",
+    "numPeople": 80670
+  },
+  {
+    "orig": "AZ",
+    "dest": "AZ",
+    "numPeople": 72951
+  },
+  {
+    "orig": "AZ",
+    "dest": "CA",
+    "numPeople": 539887
+  },
+  {
+    "orig": "AZ",
+    "dest": "CO",
+    "numPeople": 133911
+  },
+  {
+    "orig": "AZ",
+    "dest": "GA",
+    "numPeople": 65235
+  },
+  {
+    "orig": "AZ",
+    "dest": "IL",
+    "numPeople": 126046
+  },
+  {
+    "orig": "AZ",
+    "dest": "MN",
+    "numPeople": 72454
+  },
+  {
+    "orig": "AZ",
+    "dest": "NV",
+    "numPeople": 104274
+  },
+  {
+    "orig": "AZ",
+    "dest": "TX",
+    "numPeople": 254267
+  },
+  {
+    "orig": "AZ",
+    "dest": "UT",
+    "numPeople": 72288
+  },
+  {
+    "orig": "AZ",
+    "dest": "WA",
+    "numPeople": 94096
+  },
+  {
+    "orig": "CA",
+    "dest": "AZ",
+    "numPeople": 532104
+  },
+  {
+    "orig": "CA",
+    "dest": "CA",
+    "numPeople": 1996027
+  },
+  {
+    "orig": "CA",
+    "dest": "CO",
+    "numPeople": 395413
+  },
+  {
+    "orig": "CA",
+    "dest": "FL",
+    "numPeople": 158453
+  },
+  {
+    "orig": "CA",
+    "dest": "GA",
+    "numPeople": 213598
+  },
+  {
+    "orig": "CA",
+    "dest": "HI",
+    "numPeople": 357156
+  },
+  {
+    "orig": "CA",
+    "dest": "IL",
+    "numPeople": 417222
+  },
+  {
+    "orig": "CA",
+    "dest": "MA",
+    "numPeople": 138817
+  },
+  {
+    "orig": "CA",
+    "dest": "MI",
+    "numPeople": 74201
+  },
+  {
+    "orig": "CA",
+    "dest": "MN",
+    "numPeople": 145607
+  },
+  {
+    "orig": "CA",
+    "dest": "NC",
+    "numPeople": 100884
+  },
+  {
+    "orig": "CA",
+    "dest": "NJ",
+    "numPeople": 148989
+  },
+  {
+    "orig": "CA",
+    "dest": "NV",
+    "numPeople": 511832
+  },
+  {
+    "orig": "CA",
+    "dest": "NY",
+    "numPeople": 305458
+  },
+  {
+    "orig": "CA",
+    "dest": "OR",
+    "numPeople": 274554
+  },
+  {
+    "orig": "CA",
+    "dest": "PA",
+    "numPeople": 80537
+  },
+  {
+    "orig": "CA",
+    "dest": "TX",
+    "numPeople": 744495
+  },
+  {
+    "orig": "CA",
+    "dest": "UT",
+    "numPeople": 215655
+  },
+  {
+    "orig": "CA",
+    "dest": "VA",
+    "numPeople": 144140
+  },
+  {
+    "orig": "CA",
+    "dest": "WA",
+    "numPeople": 466667
+  },
+  {
+    "orig": "CO",
+    "dest": "AZ",
+    "numPeople": 132114
+  },
+  {
+    "orig": "CO",
+    "dest": "CA",
+    "numPeople": 403206
+  },
+  {
+    "orig": "CO",
+    "dest": "CO",
+    "numPeople": 115708
+  },
+  {
+    "orig": "CO",
+    "dest": "FL",
+    "numPeople": 115097
+  },
+  {
+    "orig": "CO",
+    "dest": "GA",
+    "numPeople": 82312
+  },
+  {
+    "orig": "CO",
+    "dest": "IL",
+    "numPeople": 134577
+  },
+  {
+    "orig": "CO",
+    "dest": "MN",
+    "numPeople": 76488
+  },
+  {
+    "orig": "CO",
+    "dest": "MO",
+    "numPeople": 72797
+  },
+  {
+    "orig": "CO",
+    "dest": "NV",
+    "numPeople": 106718
+  },
+  {
+    "orig": "CO",
+    "dest": "TX",
+    "numPeople": 298683
+  },
+  {
+    "orig": "CO",
+    "dest": "UT",
+    "numPeople": 78783
+  },
+  {
+    "orig": "CO",
+    "dest": "WA",
+    "numPeople": 100343
+  },
+  {
+    "orig": "FL",
+    "dest": "CA",
+    "numPeople": 156329
+  },
+  {
+    "orig": "FL",
+    "dest": "CO",
+    "numPeople": 115528
+  },
+  {
+    "orig": "FL",
+    "dest": "FL",
+    "numPeople": 262626
+  },
+  {
+    "orig": "FL",
+    "dest": "GA",
+    "numPeople": 764598
+  },
+  {
+    "orig": "FL",
+    "dest": "IL",
+    "numPeople": 343095
+  },
+  {
+    "orig": "FL",
+    "dest": "KY",
+    "numPeople": 70874
+  },
+  {
+    "orig": "FL",
+    "dest": "MA",
+    "numPeople": 154625
+  },
+  {
+    "orig": "FL",
+    "dest": "MD",
+    "numPeople": 189807
+  },
+  {
+    "orig": "FL",
+    "dest": "MI",
+    "numPeople": 182916
+  },
+  {
+    "orig": "FL",
+    "dest": "MN",
+    "numPeople": 96055
+  },
+  {
+    "orig": "FL",
+    "dest": "MO",
+    "numPeople": 78055
+  },
+  {
+    "orig": "FL",
+    "dest": "NC",
+    "numPeople": 348184
+  },
+  {
+    "orig": "FL",
+    "dest": "NJ",
+    "numPeople": 276575
+  },
+  {
+    "orig": "FL",
+    "dest": "NY",
+    "numPeople": 674414
+  },
+  {
+    "orig": "FL",
+    "dest": "OH",
+    "numPeople": 119838
+  },
+  {
+    "orig": "FL",
+    "dest": "PA",
+    "numPeople": 273085
+  },
+  {
+    "orig": "FL",
+    "dest": "PR",
+    "numPeople": 139472
+  },
+  {
+    "orig": "FL",
+    "dest": "TN",
+    "numPeople": 96600
+  },
+  {
+    "orig": "FL",
+    "dest": "TX",
+    "numPeople": 493615
+  },
+  {
+    "orig": "FL",
+    "dest": "VA",
+    "numPeople": 233681
+  },
+  {
+    "orig": "GA",
+    "dest": "AL",
+    "numPeople": 80616
+  },
+  {
+    "orig": "GA",
+    "dest": "AZ",
+    "numPeople": 65700
+  },
+  {
+    "orig": "GA",
+    "dest": "CA",
+    "numPeople": 213012
+  },
+  {
+    "orig": "GA",
+    "dest": "CO",
+    "numPeople": 80439
+  },
+  {
+    "orig": "GA",
+    "dest": "FL",
+    "numPeople": 763964
+  },
+  {
+    "orig": "GA",
+    "dest": "GA",
+    "numPeople": 126294
+  },
+  {
+    "orig": "GA",
+    "dest": "IL",
+    "numPeople": 153401
+  },
+  {
+    "orig": "GA",
+    "dest": "KY",
+    "numPeople": 72146
+  },
+  {
+    "orig": "GA",
+    "dest": "LA",
+    "numPeople": 105692
+  },
+  {
+    "orig": "GA",
+    "dest": "MA",
+    "numPeople": 66078
+  },
+  {
+    "orig": "GA",
+    "dest": "MD",
+    "numPeople": 70417
+  },
+  {
+    "orig": "GA",
+    "dest": "MI",
+    "numPeople": 85030
+  },
+  {
+    "orig": "GA",
+    "dest": "MO",
+    "numPeople": 94697
+  },
+  {
+    "orig": "GA",
+    "dest": "NC",
+    "numPeople": 238751
+  },
+  {
+    "orig": "GA",
+    "dest": "NY",
+    "numPeople": 199595
+  },
+  {
+    "orig": "GA",
+    "dest": "OH",
+    "numPeople": 108423
+  },
+  {
+    "orig": "GA",
+    "dest": "PA",
+    "numPeople": 144871
+  },
+  {
+    "orig": "GA",
+    "dest": "SC",
+    "numPeople": 91810
+  },
+  {
+    "orig": "GA",
+    "dest": "TN",
+    "numPeople": 121485
+  },
+  {
+    "orig": "GA",
+    "dest": "TX",
+    "numPeople": 316298
+  },
+  {
+    "orig": "GA",
+    "dest": "VA",
+    "numPeople": 216269
+  },
+  {
+    "orig": "HI",
+    "dest": "CA",
+    "numPeople": 358973
+  },
+  {
+    "orig": "HI",
+    "dest": "HI",
+    "numPeople": 562351
+  },
+  {
+    "orig": "HI",
+    "dest": "WA",
+    "numPeople": 73975
+  },
+  {
+    "orig": "IL",
+    "dest": "AZ",
+    "numPeople": 127522
+  },
+  {
+    "orig": "IL",
+    "dest": "CA",
+    "numPeople": 418254
+  },
+  {
+    "orig": "IL",
+    "dest": "CO",
+    "numPeople": 135513
+  },
+  {
+    "orig": "IL",
+    "dest": "FL",
+    "numPeople": 339642
+  },
+  {
+    "orig": "IL",
+    "dest": "GA",
+    "numPeople": 150004
+  },
+  {
+    "orig": "IL",
+    "dest": "IL",
+    "numPeople": 70800
+  },
+  {
+    "orig": "IL",
+    "dest": "MA",
+    "numPeople": 105647
+  },
+  {
+    "orig": "IL",
+    "dest": "MI",
+    "numPeople": 129950
+  },
+  {
+    "orig": "IL",
+    "dest": "MN",
+    "numPeople": 146028
+  },
+  {
+    "orig": "IL",
+    "dest": "MO",
+    "numPeople": 130193
+  },
+  {
+    "orig": "IL",
+    "dest": "NC",
+    "numPeople": 109891
+  },
+  {
+    "orig": "IL",
+    "dest": "NJ",
+    "numPeople": 83303
+  },
+  {
+    "orig": "IL",
+    "dest": "NV",
+    "numPeople": 117943
+  },
+  {
+    "orig": "IL",
+    "dest": "NY",
+    "numPeople": 294805
+  },
+  {
+    "orig": "IL",
+    "dest": "OH",
+    "numPeople": 125014
+  },
+  {
+    "orig": "IL",
+    "dest": "PA",
+    "numPeople": 164888
+  },
+  {
+    "orig": "IL",
+    "dest": "TN",
+    "numPeople": 73297
+  },
+  {
+    "orig": "IL",
+    "dest": "TX",
+    "numPeople": 285712
+  },
+  {
+    "orig": "IL",
+    "dest": "VA",
+    "numPeople": 160937
+  },
+  {
+    "orig": "IL",
+    "dest": "WA",
+    "numPeople": 75665
+  },
+  {
+    "orig": "IL",
+    "dest": "WI",
+    "numPeople": 67251
+  },
+  {
+    "orig": "KY",
+    "dest": "FL",
+    "numPeople": 71272
+  },
+  {
+    "orig": "KY",
+    "dest": "GA",
+    "numPeople": 72311
+  },
+  {
+    "orig": "LA",
+    "dest": "GA",
+    "numPeople": 105104
+  },
+  {
+    "orig": "LA",
+    "dest": "TX",
+    "numPeople": 197653
+  },
+  {
+    "orig": "MA",
+    "dest": "CA",
+    "numPeople": 136845
+  },
+  {
+    "orig": "MA",
+    "dest": "FL",
+    "numPeople": 154149
+  },
+  {
+    "orig": "MA",
+    "dest": "GA",
+    "numPeople": 66435
+  },
+  {
+    "orig": "MA",
+    "dest": "IL",
+    "numPeople": 103780
+  },
+  {
+    "orig": "MA",
+    "dest": "NC",
+    "numPeople": 70432
+  },
+  {
+    "orig": "MA",
+    "dest": "NY",
+    "numPeople": 113755
+  },
+  {
+    "orig": "MA",
+    "dest": "PA",
+    "numPeople": 72665
+  },
+  {
+    "orig": "MA",
+    "dest": "TX",
+    "numPeople": 81008
+  },
+  {
+    "orig": "MA",
+    "dest": "VA",
+    "numPeople": 113826
+  },
+  {
+    "orig": "MD",
+    "dest": "FL",
+    "numPeople": 183646
+  },
+  {
+    "orig": "MD",
+    "dest": "GA",
+    "numPeople": 69939
+  },
+  {
+    "orig": "MD",
+    "dest": "NC",
+    "numPeople": 71069
+  },
+  {
+    "orig": "MD",
+    "dest": "NY",
+    "numPeople": 72341
+  },
+  {
+    "orig": "MD",
+    "dest": "TX",
+    "numPeople": 84552
+  },
+  {
+    "orig": "MI",
+    "dest": "CA",
+    "numPeople": 72375
+  },
+  {
+    "orig": "MI",
+    "dest": "FL",
+    "numPeople": 183419
+  },
+  {
+    "orig": "MI",
+    "dest": "GA",
+    "numPeople": 83625
+  },
+  {
+    "orig": "MI",
+    "dest": "IL",
+    "numPeople": 130308
+  },
+  {
+    "orig": "MI",
+    "dest": "MI",
+    "numPeople": 103578
+  },
+  {
+    "orig": "MI",
+    "dest": "NY",
+    "numPeople": 96921
+  },
+  {
+    "orig": "MI",
+    "dest": "TX",
+    "numPeople": 83662
+  },
+  {
+    "orig": "MN",
+    "dest": "AZ",
+    "numPeople": 73243
+  },
+  {
+    "orig": "MN",
+    "dest": "CA",
+    "numPeople": 148248
+  },
+  {
+    "orig": "MN",
+    "dest": "CO",
+    "numPeople": 76070
+  },
+  {
+    "orig": "MN",
+    "dest": "FL",
+    "numPeople": 96255
+  },
+  {
+    "orig": "MN",
+    "dest": "IL",
+    "numPeople": 144926
+  },
+  {
+    "orig": "MN",
+    "dest": "TX",
+    "numPeople": 80141
+  },
+  {
+    "orig": "MN",
+    "dest": "WA",
+    "numPeople": 65395
+  },
+  {
+    "orig": "MO",
+    "dest": "CA",
+    "numPeople": 65998
+  },
+  {
+    "orig": "MO",
+    "dest": "CO",
+    "numPeople": 71952
+  },
+  {
+    "orig": "MO",
+    "dest": "FL",
+    "numPeople": 76300
+  },
+  {
+    "orig": "MO",
+    "dest": "GA",
+    "numPeople": 94213
+  },
+  {
+    "orig": "MO",
+    "dest": "IL",
+    "numPeople": 124645
+  },
+  {
+    "orig": "MO",
+    "dest": "TX",
+    "numPeople": 168717
+  },
+  {
+    "orig": "NC",
+    "dest": "CA",
+    "numPeople": 96128
+  },
+  {
+    "orig": "NC",
+    "dest": "FL",
+    "numPeople": 347422
+  },
+  {
+    "orig": "NC",
+    "dest": "GA",
+    "numPeople": 239393
+  },
+  {
+    "orig": "NC",
+    "dest": "IL",
+    "numPeople": 110888
+  },
+  {
+    "orig": "NC",
+    "dest": "MA",
+    "numPeople": 72568
+  },
+  {
+    "orig": "NC",
+    "dest": "MD",
+    "numPeople": 71577
+  },
+  {
+    "orig": "NC",
+    "dest": "NC",
+    "numPeople": 241039
+  },
+  {
+    "orig": "NC",
+    "dest": "NJ",
+    "numPeople": 73996
+  },
+  {
+    "orig": "NC",
+    "dest": "NY",
+    "numPeople": 185696
+  },
+  {
+    "orig": "NC",
+    "dest": "PA",
+    "numPeople": 129006
+  },
+  {
+    "orig": "NC",
+    "dest": "SC",
+    "numPeople": 71473
+  },
+  {
+    "orig": "NC",
+    "dest": "TN",
+    "numPeople": 79919
+  },
+  {
+    "orig": "NC",
+    "dest": "TX",
+    "numPeople": 163973
+  },
+  {
+    "orig": "NC",
+    "dest": "VA",
+    "numPeople": 159300
+  },
+  {
+    "orig": "NJ",
+    "dest": "CA",
+    "numPeople": 145357
+  },
+  {
+    "orig": "NJ",
+    "dest": "FL",
+    "numPeople": 274686
+  },
+  {
+    "orig": "NJ",
+    "dest": "IL",
+    "numPeople": 82936
+  },
+  {
+    "orig": "NJ",
+    "dest": "NC",
+    "numPeople": 73055
+  },
+  {
+    "orig": "NJ",
+    "dest": "TX",
+    "numPeople": 95019
+  },
+  {
+    "orig": "NM",
+    "dest": "TX",
+    "numPeople": 68062
+  },
+  {
+    "orig": "NV",
+    "dest": "AZ",
+    "numPeople": 104011
+  },
+  {
+    "orig": "NV",
+    "dest": "CA",
+    "numPeople": 524143
+  },
+  {
+    "orig": "NV",
+    "dest": "CO",
+    "numPeople": 107096
+  },
+  {
+    "orig": "NV",
+    "dest": "GA",
+    "numPeople": 65026
+  },
+  {
+    "orig": "NV",
+    "dest": "IL",
+    "numPeople": 119155
+  },
+  {
+    "orig": "NV",
+    "dest": "NV",
+    "numPeople": 77952
+  },
+  {
+    "orig": "NV",
+    "dest": "TX",
+    "numPeople": 212845
+  },
+  {
+    "orig": "NV",
+    "dest": "WA",
+    "numPeople": 98665
+  },
+  {
+    "orig": "NY",
+    "dest": "CA",
+    "numPeople": 303678
+  },
+  {
+    "orig": "NY",
+    "dest": "FL",
+    "numPeople": 673500
+  },
+  {
+    "orig": "NY",
+    "dest": "GA",
+    "numPeople": 200785
+  },
+  {
+    "orig": "NY",
+    "dest": "IL",
+    "numPeople": 295579
+  },
+  {
+    "orig": "NY",
+    "dest": "MA",
+    "numPeople": 116761
+  },
+  {
+    "orig": "NY",
+    "dest": "MD",
+    "numPeople": 71996
+  },
+  {
+    "orig": "NY",
+    "dest": "MI",
+    "numPeople": 97708
+  },
+  {
+    "orig": "NY",
+    "dest": "NC",
+    "numPeople": 182711
+  },
+  {
+    "orig": "NY",
+    "dest": "NY",
+    "numPeople": 182136
+  },
+  {
+    "orig": "NY",
+    "dest": "PA",
+    "numPeople": 86205
+  },
+  {
+    "orig": "NY",
+    "dest": "PR",
+    "numPeople": 67312
+  },
+  {
+    "orig": "NY",
+    "dest": "TX",
+    "numPeople": 180924
+  },
+  {
+    "orig": "NY",
+    "dest": "VA",
+    "numPeople": 129615
+  },
+  {
+    "orig": "OH",
+    "dest": "FL",
+    "numPeople": 119151
+  },
+  {
+    "orig": "OH",
+    "dest": "GA",
+    "numPeople": 109598
+  },
+  {
+    "orig": "OH",
+    "dest": "IL",
+    "numPeople": 126070
+  },
+  {
+    "orig": "OH",
+    "dest": "TX",
+    "numPeople": 65275
+  },
+  {
+    "orig": "OK",
+    "dest": "TX",
+    "numPeople": 123827
+  },
+  {
+    "orig": "OR",
+    "dest": "CA",
+    "numPeople": 275124
+  },
+  {
+    "orig": "OR",
+    "dest": "WA",
+    "numPeople": 102724
+  },
+  {
+    "orig": "PA",
+    "dest": "CA",
+    "numPeople": 75734
+  },
+  {
+    "orig": "PA",
+    "dest": "FL",
+    "numPeople": 270640
+  },
+  {
+    "orig": "PA",
+    "dest": "GA",
+    "numPeople": 144480
+  },
+  {
+    "orig": "PA",
+    "dest": "IL",
+    "numPeople": 165801
+  },
+  {
+    "orig": "PA",
+    "dest": "MA",
+    "numPeople": 74134
+  },
+  {
+    "orig": "PA",
+    "dest": "NC",
+    "numPeople": 125206
+  },
+  {
+    "orig": "PA",
+    "dest": "NY",
+    "numPeople": 90260
+  },
+  {
+    "orig": "PA",
+    "dest": "PA",
+    "numPeople": 83781
+  },
+  {
+    "orig": "PA",
+    "dest": "TX",
+    "numPeople": 113416
+  },
+  {
+    "orig": "PR",
+    "dest": "FL",
+    "numPeople": 145331
+  },
+  {
+    "orig": "PR",
+    "dest": "NY",
+    "numPeople": 69052
+  },
+  {
+    "orig": "SC",
+    "dest": "GA",
+    "numPeople": 92126
+  },
+  {
+    "orig": "SC",
+    "dest": "NC",
+    "numPeople": 70239
+  },
+  {
+    "orig": "TN",
+    "dest": "FL",
+    "numPeople": 96860
+  },
+  {
+    "orig": "TN",
+    "dest": "GA",
+    "numPeople": 122095
+  },
+  {
+    "orig": "TN",
+    "dest": "IL",
+    "numPeople": 73203
+  },
+  {
+    "orig": "TN",
+    "dest": "NC",
+    "numPeople": 78496
+  },
+  {
+    "orig": "TN",
+    "dest": "TX",
+    "numPeople": 130487
+  },
+  {
+    "orig": "TX",
+    "dest": "AZ",
+    "numPeople": 256563
+  },
+  {
+    "orig": "TX",
+    "dest": "CA",
+    "numPeople": 764038
+  },
+  {
+    "orig": "TX",
+    "dest": "CO",
+    "numPeople": 297699
+  },
+  {
+    "orig": "TX",
+    "dest": "FL",
+    "numPeople": 491278
+  },
+  {
+    "orig": "TX",
+    "dest": "GA",
+    "numPeople": 309469
+  },
+  {
+    "orig": "TX",
+    "dest": "IL",
+    "numPeople": 285372
+  },
+  {
+    "orig": "TX",
+    "dest": "LA",
+    "numPeople": 194492
+  },
+  {
+    "orig": "TX",
+    "dest": "MA",
+    "numPeople": 81203
+  },
+  {
+    "orig": "TX",
+    "dest": "MD",
+    "numPeople": 83465
+  },
+  {
+    "orig": "TX",
+    "dest": "MI",
+    "numPeople": 84650
+  },
+  {
+    "orig": "TX",
+    "dest": "MN",
+    "numPeople": 79558
+  },
+  {
+    "orig": "TX",
+    "dest": "MO",
+    "numPeople": 170799
+  },
+  {
+    "orig": "TX",
+    "dest": "NC",
+    "numPeople": 162448
+  },
+  {
+    "orig": "TX",
+    "dest": "NJ",
+    "numPeople": 95434
+  },
+  {
+    "orig": "TX",
+    "dest": "NM",
+    "numPeople": 68627
+  },
+  {
+    "orig": "TX",
+    "dest": "NV",
+    "numPeople": 213516
+  },
+  {
+    "orig": "TX",
+    "dest": "NY",
+    "numPeople": 181872
+  },
+  {
+    "orig": "TX",
+    "dest": "OH",
+    "numPeople": 65497
+  },
+  {
+    "orig": "TX",
+    "dest": "OK",
+    "numPeople": 125460
+  },
+  {
+    "orig": "TX",
+    "dest": "PA",
+    "numPeople": 110867
+  },
+  {
+    "orig": "TX",
+    "dest": "TN",
+    "numPeople": 128689
+  },
+  {
+    "orig": "TX",
+    "dest": "TX",
+    "numPeople": 1473814
+  },
+  {
+    "orig": "TX",
+    "dest": "UT",
+    "numPeople": 72069
+  },
+  {
+    "orig": "TX",
+    "dest": "VA",
+    "numPeople": 175603
+  },
+  {
+    "orig": "TX",
+    "dest": "WA",
+    "numPeople": 99375
+  },
+  {
+    "orig": "UT",
+    "dest": "AZ",
+    "numPeople": 72841
+  },
+  {
+    "orig": "UT",
+    "dest": "CA",
+    "numPeople": 216546
+  },
+  {
+    "orig": "UT",
+    "dest": "CO",
+    "numPeople": 80192
+  },
+  {
+    "orig": "UT",
+    "dest": "TX",
+    "numPeople": 71226
+  },
+  {
+    "orig": "VA",
+    "dest": "CA",
+    "numPeople": 142446
+  },
+  {
+    "orig": "VA",
+    "dest": "FL",
+    "numPeople": 233074
+  },
+  {
+    "orig": "VA",
+    "dest": "GA",
+    "numPeople": 216000
+  },
+  {
+    "orig": "VA",
+    "dest": "IL",
+    "numPeople": 164127
+  },
+  {
+    "orig": "VA",
+    "dest": "MA",
+    "numPeople": 113514
+  },
+  {
+    "orig": "VA",
+    "dest": "NC",
+    "numPeople": 155513
+  },
+  {
+    "orig": "VA",
+    "dest": "NY",
+    "numPeople": 129043
+  },
+  {
+    "orig": "VA",
+    "dest": "TX",
+    "numPeople": 177992
+  },
+  {
+    "orig": "WA",
+    "dest": "AK",
+    "numPeople": 128053
+  },
+  {
+    "orig": "WA",
+    "dest": "AZ",
+    "numPeople": 92846
+  },
+  {
+    "orig": "WA",
+    "dest": "CA",
+    "numPeople": 467433
+  },
+  {
+    "orig": "WA",
+    "dest": "CO",
+    "numPeople": 100007
+  },
+  {
+    "orig": "WA",
+    "dest": "HI",
+    "numPeople": 69813
+  },
+  {
+    "orig": "WA",
+    "dest": "IL",
+    "numPeople": 74491
+  },
+  {
+    "orig": "WA",
+    "dest": "NV",
+    "numPeople": 96396
+  },
+  {
+    "orig": "WA",
+    "dest": "OR",
+    "numPeople": 103561
+  },
+  {
+    "orig": "WA",
+    "dest": "TX",
+    "numPeople": 98209
+  },
+  {
+    "orig": "WA",
+    "dest": "WA",
+    "numPeople": 186384
+  },
+  {
+    "orig": "WI",
+    "dest": "IL",
+    "numPeople": 65445
+  }
+]
