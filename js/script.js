@@ -3,7 +3,6 @@ $(document).ready(function () {
     $("#menubar").clone().appendTo("#fixed-menubar");
 
     $('#fixed-menubar #menubar').addClass('menu-fixed');
-    $('#fixed-menubar #menubar').width($("#menubar").width());
 
     var speed = 1000;
 
@@ -39,6 +38,7 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
+        $('#fixed-menubar #menubar').width($("#menubar").width());
         var menubarTop = $('#title #menubar').offset().top;
         if ($(window).scrollTop() > menubarTop) {
             $("#fixed-menubar").show();

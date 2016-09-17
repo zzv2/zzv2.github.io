@@ -237,4 +237,12 @@ and (max-device-width: 1024px) {
     .menu h2 {
         font-size: 1.1em;
     }
+
+    .project figure {
+        margin: 1%;
+    }
+
+    .two-col {
+        width: 100%;
+    }
 }
