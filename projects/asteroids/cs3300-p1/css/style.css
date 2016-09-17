@@ -1,0 +1,212 @@
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, :before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #545454;
+    background-image: url('../img/outer-space.jpg');
+    /*
+      above background image taken from:
+      http://il5.picdn.net/shutterstock/videos/3111685/thumb/1.jpg
+    */
+}
+
+p {
+    margin: 0 0 10px;
+    font-family: adobe-garamond-pro, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+h2, h3 {
+    font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container:before, .container:after {
+    content: " ";
+    display: table;
+}
+
+.col1, .col2, .col3, .col4, .col5 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col2, .col4 {
+    float: left;
+}
+
+.col2 {
+    width: 33.33333333%;
+}
+
+.col4 {
+    width: 66.66666667%;
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (min-width:1140px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+.container {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+#graphs h2 {
+    color: #A76CFF;
+}
+
+#graphs h3 {
+    color: #ffffff;
+}
+
+#graphs p {
+    color: #ffffff;
+}
+
+.name {
+  font-size: 1em;
+}
+
+.displays {
+    padding: 3.5em 0;
+}
+
+@media (min-width:992px) {
+    .displays {
+        padding: 6em 0 0;
+    }
+}
+
+.displays .display {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 990;
+    text-align: center;
+}
+
+.displays .display img {
+    max-width: 100%;
+    height: auto;
+}
+
+.displays .info {
+    padding: 2em 0 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.displays .info h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.displays .info p {
+    margin: 0;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.frame {
+  fill: none;
+  stroke: #000;
+}
+
+.axis text {
+  font-size: 12px;
+}
+
+.axis line,
+.axis circle {
+  fill: none;
+  stroke: #28D1D5;
+  stroke-dasharray: 1,4;
+}
+
+.axis :last-of-type circle {
+  stroke: #56b6c2;
+  stroke-width: 28;
+  stroke-dasharray: none;
+  /*fill: #000000;*/
+}
+
+.axis :nth-of-type(2) circle {
+  background-color: #000000;
+}
+
+.line {
+  fill: none;
+  stroke: red;
+  stroke-width: 1.5px;
+}
+
+text {
+  stroke: #327780;
+  stroke-width: 1;
+}
+.highlight-text {
+    stroke: #A2FF5E;
+}
+
+.colorAxis line, .colorAxis path, .distanceLabel, .tick text {
+  stroke: #A2FF5E !important;
+}
+
+.diameterAxis line, .diameterAxis path, .distanceLabel, .tick text {
+  stroke: #A2FF5E !important;
+}
+
+circle {
+  background-color: #000000;
+}
+
+.graph-desc {
+  font-size: 1.2em !important;
+}

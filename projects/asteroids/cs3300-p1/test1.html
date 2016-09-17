@@ -1,0 +1,175 @@
+// var data = d3.range(0, 2 * Math.PI, 0.01).map(function(t) {
+//   return [t, Math.sin(2 * t) * Math.cos(2 * t)];
+// });
+d3.json("data.json", function(error, data) {
+	if (error) {
+    console.log(error);
+  }
+// **************good*********
+
+var width = 700,
+  height = 700,
+  radius = Math.min(width, height) / 2 - 80;
+
+var r = d3.scale.linear()
+  .domain([0, 1])
+  .range([0, radius]);
+
+var line = d3.svg.line.radial()
+  .radius(function(d) {
+    return r(d[1]);
+  })
+  .angle(function(d) {
+    return -d[0] + Math.PI / 2;
+  });
+
+var svg = d3.select("#graph1output").append("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .append("g")
+  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+var gr = svg.append("g")
+  .attr("class", "r axis")
+  .selectAll("g")
+  .data(r.ticks(3).slice(1))
+  .enter().append("g");
+
+gr.append("circle")
+  .attr("r", r);
+
+var ga = svg.append("g")
+  .attr("class", "a axis")
+  .selectAll("g")
+  .data(d3.range(0, 360, 30))
+  .enter().append("g")
+  .attr("transform", function(d) {
+    return "rotate(" + -d + ")";
+  });
+
+ga.append("line")
+  .attr("x2", radius);
+
+ga.append("text")
+  .attr("x", radius + 20) //some padding for the labeled degrees on outside of circle
+  .attr("dy", ".35em")
+  .style("text-anchor", function(d) { return d < 270 && d > 90 ? "end" : null; })
+  .attr("transform", function(d) { return d < 270 && d > 90 ? "rotate(180 " + (radius + 20) + ",0)" : null; })
+  .text(function(d) {
+    var months = {0:"January", 30:"February", 60:"March", 90:"April", 120:"May", 150:"June",
+                  180:"July", 210:"August", 240:"September", 270:"October", 300:"November", 330:"Decemeber"};
+    return months[d]
+  });
+
+var radiusScale = d3.scale.linear()
+          .domain([100, 1500])
+          .range([5, 15]);
+
+var line = d3.svg.line.radial()
+  .radius(function(d) {
+    return r(d[1]);
+  })
+  .angle(function(d) {
+    return -d[0] + Math.PI / 2;
+  });
+
+var circleData = [];
+for (var i=0; i<data.length; i++) {
+  var month = data[i],
+      monthName = Object.keys(data[i])[0];
+  if (monthName=="january") {
+    for (var k in month[monthName]) {
+      var minDiameter = month[monthName][k]["diameter"]["estimated_diameter_min"],
+          maxDiameter = month[monthName][k]["diameter"]["estimated_diameter_max"],
+          diameter = (minDiameter+maxDiameter)/2,
+          missDistance = month[monthName][k]["miss_distance"],
+          velocity = month[monthName][k]["velocity"],
+          radius,
+          point = [0, missDistance/100000000];
+          if (diameter > 100 && diameter < 200) {
+            radius = 10;
+          }
+          if (diameter > 500 && diameter < 600) {
+            radius = 15;
+          }
+          if (velocity > 12000 && velocity < 13000) {
+            color = "#048aba"
+          }
+          circleData.push({"r": radius, "point": point, "color": color});
+    }
+  }
+  if (monthName=="february") {
+    for (var k in month[monthName]) {
+      var minDiameter = month[monthName][k]["diameter"]["estimated_diameter_min"],
+          maxDiameter = month[monthName][k]["diameter"]["estimated_diameter_max"],
+          diameter = (minDiameter+maxDiameter)/2,
+          missDistance = month[monthName][k]["miss_distance"],
+          velocity = month[monthName][k]["velocity"],
+          radius,
+          point = [Math.PI/6, missDistance/100000000];
+          if (diameter > 800 && diameter < 900) {
+            radius = 10;
+          }
+          if (diameter > 1400 && diameter < 1500) {
+            radius = 15;
+          }
+          circleData.push({"r": radius, "point": point, "color": color});
+          console.log(diameter);
+    }
+  }
+}
+// var data = [
+  // [0, 0.5], //January radial line (0 deg)
+  // [Math.PI / 6, Math.random()], //February
+  // [Math.PI / 3, Math.random()], //March
+  // [Math.PI / 2, Math.random()], //April
+  // [(2 * Math.PI) / 3, Math.random()],//May
+  // [(5 * Math.PI) / 6, Math.random()], //June
+  // [Math.PI, Math.random()], //July
+  // [(7 * Math.PI) / 6, Math.random()], //August
+  // [(4 * Math.PI / 3), Math.random()], //September
+  // [(3 * Math.PI) / 2, Math.random()], //October
+  // [(5 * Math.PI / 3), Math.random()], //November
+  // [(11 * Math.PI) / 6, Math.random()], //December
+
+// ]
+
+// for (var i=0; i<circleData.length; i++) {
+  // console.log("yo: "+circleData[i]["x"])
+  var color = d3.scale.linear()
+                .domain([10, 25])
+                .range(["lightblue", "red"]);
+
+  svg.selectAll("point")
+    .data(circleData)
+    .enter()
+    .append("circle")
+    .attr("cx", circleData[i]["x"])
+    .attr("cy", circleData[i]["y"])
+    .attr("class", "point")
+    .attr("transform", function(d) {
+      var coors = line([d.point]).slice(1).slice(0, -1);
+      return "translate(" + coors + ")"
+    })
+    .attr("r", function(d) {return d.r})
+    .attr("fill", function(d) { return d?color(d.r):"lightgray"})
+    // .attr("fill",function(d,i){
+    //   return color(i);
+    // });
+// }
+// svg.selectAll("point")
+//   .data(circleData)
+//   .enter()
+//   .append("circle")
+//   .attr("class", "point")
+//   .attr("transform", function(d) {
+//     var coors = line([d]).slice(1).slice(0, -1);
+//     return "translate(" + coors + ")"
+//   })
+//   .attr("r", 10)
+//   .attr("fill",function(d,i){
+//     return color(i);
+//   });
+
+// ************good*************
+});
