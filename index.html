@@ -5,11 +5,12 @@
 -->
 <html>
     <head>
-        <title>zzv2</title>
+        <title>Zach Zweig-Vinegar</title>
         <meta name=viewport content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <link rel='icon' href='favicon.ico' type='image/x-icon'/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/script.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -34,19 +35,19 @@
                     </li>
                     <li class="menu">
                         <!--<a href="doc/Zach Z-V Resume.pdf">-->
-                        <a href="#resume" class="resume-open">
+                        <a href="#resume" class="open">
                             <img src='img/icons/book.list.png' alt='Resume'/>
                             <h2>Resume</h2>
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="#projects" class="projects-open">
+                        <a href="#projects" class="open">
                             <img src='img/icons/appbar.lightbulb.hue.on.png' alt='Projects'/>
                             <h2>Projects</h2>
                         </a>
                     </li>
                     <li class="menu">
-                        <a href='#courses' class="courses-open">
+                        <a href='#courses' class="open">
                             <img src='img/icons/courses.png' alt='Courses'/>
                             <h2>Courses</h2>
                         </a>
@@ -56,128 +57,8 @@
 
             <div id="fixed-menubar"></div>
 
-            <script>
-                $(document).ready(function () {
-                    $("#fixed-menubar").hide();
-                    $("#menubar").clone().appendTo("#fixed-menubar");
-
-                    $('#fixed-menubar #menubar').addClass('menu-fixed');
-                    $('#fixed-menubar #menubar').width($("#menubar").width());
-
-                    function hide_all(s) {
-                        $("#about").slideUp(s);
-                        $("#resume").slideUp(s);
-//                        $("#projects").slideUp(s);
-                        $("#courses").slideUp(s);
-                    }
-                    hide_all(0);
-
-                    function scroll_to(t, offset) {
-                        var target = t.hash;
-                        var $target = $(target);
-                        var target_offset = $target.offset().top;
-                        $('html, body').animate({
-                            'scrollTop': target_offset + offset
-                        }, 1000, 'swing', function () {
-                            window.location.hash = target;
-                        });
-                    }
-
-                    function open_scroll(id, t, e) {
-                        e.preventDefault();
-                        $(id).slideDown(500);
-                        var menubarHeight = $('#menubar').outerHeight();
-                        scroll_to(t, -menubarHeight - 20);
-                    }
-
-                    var speed = 1000;
-                    $(".about-open").on('click', function (e) {
-                        open_scroll("#about", this, e);
-                    });
-                    $(".resume-open").on('click', function (e) {
-                        open_scroll("#resume", this, e);
-                    });
-                    $(".projects-open").on('click', function (e) {
-                        open_scroll("#projects", this, e);
-                    });
-                    $(".courses-open").on('click', function (e) {
-                        open_scroll("#courses", this, e);
-                    });
-                    $(".about-toggle").click(function () {
-                        $("#about").slideToggle(speed);
-                    });
-                    $(".resume-toggle").click(function () {
-                        $("#resume").slideToggle(speed);
-                    });
-                    $(".projects-toggle").click(function () {
-                        $("#projects").slideToggle(speed);
-                    });
-                    $(".courses-toggle").click(function () {
-                        $("#courses").slideToggle(speed);
-                    });
-
-                    $(window).scroll(function () {
-                        var menubarTop = $('#title #menubar').offset().top;
-                        if ($(window).scrollTop() > menubarTop) {
-                            $("#fixed-menubar").show();
-                        } else {
-                            $("#fixed-menubar").hide();
-                        }
-                    });
-
-                    var menubarHeight = $('#menubar').outerHeight();
-                    $("#resume-preview").height($(window).height() - menubarHeight - 100);
-
-
-                    $(".gif").hover(
-                            function () {
-                                var src = $(this).attr('src');
-                                var new_src = src.replace("-static.png", ".gif");
-                                if (src != new_src) {
-                                    $(this).attr('src', new_src);
-                                }
-                            },
-                            function () {
-//                                var src = $(this).attr('src');
-//                                var new_src = src.replace(".gif", "-static.png");
-//                                if (src != new_src) {
-//                                    $(this).attr('src', new_src);
-//                                }
-                            }
-                    );
-
-                    var $w = $(window).scroll(function () {
-                        $(".gif").each(function () {
-                            var nav_height = $('#fixed-menubar #menubar').outerHeight();
-                            var offset = $(this).offset().top;
-                            var middle = offset - ($(window).height() - nav_height) * .5;
-                            var element_height = $(this).outerHeight();
-                            var targetOffsetBottom = middle - element_height / 2;
-                            var targetOffsetTop = middle + element_height / 2;
-
-                            if ($w.scrollTop() > targetOffsetBottom && $w.scrollTop() < targetOffsetTop) {
-                                var src = $(this).attr('src');
-                                var new_src = src.replace("-static.png", ".gif");
-                                if (src !== new_src) {
-                                    $(this).attr('src', new_src);
-                                }
-                            } else {
-                                var src = $(this).attr('src');
-                                var new_src = src.replace(".gif", "-static.png");
-                                if (src !== new_src) {
-                                    $(this).attr('src', new_src);
-                                }
-                            }
-                        });
-                    });
-                });
-
-
-            </script>
-
-
             <div id="about" class="section">
-                <h1 class="about-toggle toggle">About</h1>
+                <h1 class="toggle" title="#about">About</h1>
 
                 <p>
                     I am a senior computer science major in the the College of Engineering at Cornell University.
@@ -213,17 +94,16 @@
 
 
             <div id="resume" class="section">
-                <h1 class="resume-toggle toggle">Resume</h1>
-                <iframe id="resume-preview" src="https://drive.google.com/a/cornell.edu/file/d/0BxoS7oGR4RRkX0hYalJRUGlZN0k/preview" style="width: 100%;"></iframe>
+                <h1 class="toggle" title="#resume">Resume</h1>
+                <iframe class="pdf-preview" src="https://drive.google.com/a/cornell.edu/file/d/0BxoS7oGR4RRkX0hYalJRUGlZN0k/preview" style="width: 100%;"></iframe>
             </div>
 
 
             <div id="projects" class="section">
-                <h1 class="projects-toggle toggle">Projects</h1>
+                <h1 class="toggle" title="#projects">Projects</h1>
 
                 <div id="CS-6751" class="project">
                     <h2>CS 6751 - Mobile Manipulation - Final Project</h2>
-                    <h3>Team: Zach Zweig-Vinegar (zzv2), Isaac Qureshi (iaq3)</h3>
 
                     <h3>
                         ROS API & Multi-Robot Controller,
@@ -231,6 +111,13 @@
                         Guided Policy Search on Baxter,
                         and Deep Spatial Autoencoder
                     </h3>
+
+                    <h4>
+                        Team: Akhila Ananthram (asa225),
+                        Ethan Keller (eak244),
+                        Isaac Qureshi (iaq3),
+                        Zach Zweig-Vinegar (zzv2)
+                    </h4>
 
                     <h3>Description:</h3>
                     <p>
@@ -260,7 +147,7 @@
                         To develop and test the system we used two robots:
                         Baxter, an industrial robot built by Rethink Robotics with
                         two 7-DOF arms, and a modified version of a Turtlebot
-                        named Gatlin. Gatlin was built by Zach and includes
+                        named Gatlin. Gatlin includes
                         an 4-DOF PhantomX Pincher arm for manipulation, an
                         iRobot-Create base for mobility, and a Kinect head mounted
                         on a 2 DOF turret for 360 degree RGB+D vision.
@@ -319,17 +206,112 @@
                         can also be extended to include the depth channel.
                     </p>
 
-                    <h3>Demo:</h3>
-                    <img class="resizable gif" src="img/proj/gif/gatlin-pick-static.png" alt=""/>
-                    <img class="resizable gif" src="img/proj/gif/gatlin-localize-static.png" alt=""/>
-                    <img class="resizable gif" src="img/proj/gif/gatlin-place-static.png" alt=""/>
-                    <img class="resizable gif" src="img/proj/gif/baxter-left-pick-place-static.png" alt=""/>
-                    <img class="resizable gif" src="img/proj/gif/baxter-right-pick-static.png" alt=""/>
+                    <h3>Solution:</h3>
+                    <h3 class="toggle" title="#cs6751-report">
+                        Click for full PDF report.
+                    </h3>
+                    <div id="cs6751-report">
+                        <iframe class="pdf-preview" src="https://drive.google.com/file/d/0BxoS7oGR4RRkOTI5VExBQmtKbHc/preview" style="width: 100%;"></iframe>
+                    </div>
 
+                    <h3>Demo:</h3>
+                    <div id="cs6751-demo">
+                        <figure>
+                            <img class="resizable gif" src="img/proj/gif/gatlin-localize-static.png" alt="gatlin-localize"/>
+                            <figcaption>1. Gatlin looks around and localizes all robots and objects in current view using AR markers.</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="resizable gif" src="img/proj/gif/unity-three-block-stack-static.png" alt="unity-three-block-stack"/>
+                            <figcaption>
+                                2. A connected Unity user creates a three block stack action located on the
+                                right side of the table with the localized blocks. Then the user starts the action,
+                                which sends it to the central ROS multi-robot server.
+                                The green/red crosses represent the targets
+                                and the gray spheres represent the objects. The lines connecting objects and
+                                targets represents where the object will be moved to.
+                                Two of the blocks are on the table in front of Baxter, but one block is on the ground in front of Gatlin.
+                                This action will require a handoff of that block from Gatlin to Baxter's left arm as well as three handoffs
+                                between Baxter's two arms.
+                            </figcaption>
+                        </figure>
+
+                        <div></div>
+                        <figure class="two-col">
+                            <figcaption>
+                                The robot's workspaces are approximated by a rectangular prism.
+                                Each of Baxter's arms has a red box around it, giving the system a an estimate of the possible locations of each end-effector.
+                                Gatlin has a mobile base, so its workspace spans the whole xy plane (shown in purple), however it has only about 0.4 meters of vertical reach.
+
+                                When the robots' workspaces overlap, a handoff point can be defined that allows the robots to pass objects to different workspaces.
+
+                                For the transfer of objects
+                                between Baxter’s left and right arms, the table in the middle
+                                of both arms serves as a suitable handoff point.
+                                For Baxter and Gatlin the predefined handoff
+                                point is on top of a tool chest that is just the right height
+                                for both to reach, about 0.3 meters above the ground.
+                            </figcaption>
+                            <img class="resizable" style="max-width: 400px; display: inline;" src="img/proj/robot-workspaces.png" alt=""/>
+                            <figcaption>
+                                This system can be represented as a graph where nodes represent the robots,
+                                targets, and objects. An edge between a robot and a object
+                                means that the object is currently in the robot’s workspace,
+                                therefore the robot is able to reach the object. The same is
+                                true for an edge between a robot and a target. Edges are
+                                weighted by the euclidean distance between the two nodes.
+                            </figcaption>
+
+                        </figure>
+                        <figure class="two-col">
+                            <img class="resizable" style="max-width: 400px; display: inline;" src="img/proj/mrc-wcg-three-block-stack.png" alt="mrc-wcg-three-block-stack"/>
+                            <figcaption>
+                                The graph above was generated from the three block stack action sent previously.
+                                Green nodes represent the objects or blocks,
+                                yellow and red nodes represent Gatlin and Baxter,
+                                light blue nodes represent handoff points,
+                                and dark blue nodes represent target locations.
+                                <br><br>
+                                For each
+                                object and target pair, we find the shortest distance path
+                                from the object to the target using Dijkstra’s algorithm, and
+                                then use this path to generate a list of robot primitives to
+                                be added to the Command Request Queue.
+                                <br><br>
+                                In this case the shortest path for the object on the ground is
+                                ['gatlin', 'hp2', 'baxter_left', 'hp1', 'baxter_right', 'target_1']
+                                This path means that the object will be:
+                                <ol>
+                                    <li>Picked up by Gatlin</li>
+                                    <li>Placed at handoff point 2 (on top of the toolbox)</li>
+                                    <li>Picked up by Baxter's left arm</li>
+                                    <li>Placed at handoff point 1 (in the middle of the table)</li>
+                                    <li>Picked up by Baxter's right arm</li>
+                                    <li>Placed at target_1 (on the right side of the table)</li>
+                                </ol>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="resizable gif" src="img/proj/gif/gatlin-pick-static.png" alt="gatlin-pick"/>
+                            <figcaption>1. Picked up by Gatlin</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="resizable gif" src="img/proj/gif/gatlin-place-static.png" alt="gatlin-place"/>
+                            <figcaption>2. Placed at handoff point 2 (on top of the toolbox)</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="resizable gif" src="img/proj/gif/baxter-left-pick-place-static.png" alt="baxter-left-pick-place"/>
+                            <figcaption>3 & 4. Picked up by Baxter's left arm and placed at handoff point 1 (in the middle of the table)</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="resizable gif" src="img/proj/gif/baxter-right-pick-static.png" alt="baxter-right-pick"/>
+                            <figcaption>5 & 6. Picked up by Baxter's right arm and placed at target_1 (on the right side of the table)</figcaption>
+                        </figure>
+                    </div>
                 </div>
 
                 <div id="Turtlebot" class="project">
-                    <h2>TurtleBot with PhantomX Pincher Robot Arm, and PhantomX Robot Turret Kit</h2>
+                    <h2>Independent Study Project</h2>
+                    <h3>TurtleBot with PhantomX Pincher Robot Arm, and PhantomX Robot Turret Kit</h3>
 
                     <a href="http://turtlebot.com/">
                         <img class="resizable" style="max-width: 250px;" src="http://2.bp.blogspot.com/-f446rKskiCc/TdQBLnZqZzI/AAAAAAAAFz4/d5s5kHHiLwk/s1600/ROS-robot-turtlebot.png" alt="TurtleBot">
@@ -385,6 +367,7 @@
                         Click here to read more...
                     </a>
 
+                    <br><br>
                 </div>
 
 
@@ -572,7 +555,7 @@
 
 
             <div id="courses" class="section">
-                <h1 class="courses-toggle toggle">Courses</h1>
+                <h1 class="toggle" title="#courses">Courses</h1>
 
                 <p>
                     Course information provided by the
@@ -735,6 +718,7 @@
                     and well-structured arguments.
                 </p>
             </div>
+
             <div class="footer">
                 <p class="copyright" style="text-align: center;">Copyright © 2016 Zachary Zweig-Vinegar.</p>
             </div>
