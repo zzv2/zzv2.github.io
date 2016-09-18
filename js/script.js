@@ -7,10 +7,12 @@ $(document).ready(function () {
     var speed = 1000;
 
     $(".toggle").each(function (index) {
-        if (!(window.location.hash && window.location.hash === $(this).attr('title')))
+        var id_is_parent = $(window.location.hash).parents($(this).attr('title')).length > 0;
+        if (!(id_is_parent || (window.location.hash && window.location.hash === $(this).attr('title'))))
             $($(this).attr('title')).slideUp(0);
         $(this).on('click', function (e) {
             $($(this).attr('title')).slideToggle(speed);
+            window.location.hash = $(this).attr('title');
         });
     });
 
