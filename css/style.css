@@ -29,7 +29,7 @@ h4 {
     font-size: 1.0em;
 }
 
-p,ul,table,figcaption {
+p,ul,table,figcaption,span {
     font-size: 1em;
     font-family: Helvetica;
     color: #999999;
@@ -43,9 +43,7 @@ body {
 
 .resizable {
     width: 100%;
-
-    /*background-color: rgba(55,55,55,0.80);*/
-    background-color: darkgray;
+    background-color: rgba(70,70,70,0.80);
     display: inline-block;
     border-radius: 15px;
     vertical-align: middle;
@@ -156,6 +154,10 @@ a:hover {
     display: inline-block;
     width: 45%;
     margin: 2%;
+}
+
+.parts img {
+    max-width: 250px;
 }
 
 .footer {
