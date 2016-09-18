@@ -29,6 +29,8 @@ $(document).ready(function () {
 
     function open_scroll(id, t, e) {
         e.preventDefault();
+        // collapse all projects and websites
+        $(id).find('.project, .website').slideUp(250);
         $(id).slideDown(500);
         var menubarHeight = $('#menubar').outerHeight();
         scroll_to(t, -menubarHeight - 20);
