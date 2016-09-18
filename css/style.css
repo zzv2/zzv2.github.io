@@ -150,6 +150,12 @@ a:hover {
     opacity: .5;
 }
 
+h2.toggle {
+    background-color: gray;
+    padding: 1%;
+    border-radius: 10px;
+}
+
 .two-col {
     display: inline-block;
     width: 45%;
