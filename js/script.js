@@ -7,7 +7,8 @@ $(document).ready(function () {
     var speed = 1000;
 
     $(".toggle").each(function (index) {
-        $($(this).attr('title')).slideUp(0);
+        if (!(window.location.hash && window.location.hash === $(this).attr('title')))
+            $($(this).attr('title')).slideUp(0);
         $(this).on('click', function (e) {
             $($(this).attr('title')).slideToggle(speed);
         });
