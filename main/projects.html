@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+    <h1 class="toggle" title="#projects">Projects</h1>
+
+    <h2 class="toggle" title="#beam-occam">People Tracking and Social Navigation<br>Robotic Personal Assistants Lab (RPAL)</h2>
+    <div id="beam-occam" class="project">
+
+        <h3>
+            Team:
+            Christoforos I. Mavrogiannis,
+            Samantha Chen,
+            Yogisha Dixit,
+            Shiv Malhotra,
+            Daryl Sew,
+            Wil Thomason,
+            Alexander Volkov,
+            Zach Zweig-Vinegar,
+            and Ross A. Knepper
+        </h3>
+
+        <h3>Description:</h3>
+        <p>
+            We present an autonomous system, capable of traversing crowded
+            pedestrian environments, without hindering humans’ paths and complying with
+            socially acceptable standards of motion. The core of this system is a navigation
+            algorithm, designed according to specifications extracted from sociology studies
+            on pedestrian behavior and psychology studies on action interpretation. The algorithm
+            enables the robot to infer humans’ intentions based on their observed
+            trajectories and communicate its own intentions through its own motion. We collectively
+            model the intentions of all pedestrians in the scene as combinations of intended
+            topological routes and intended destinations. Preliminary results present
+            the main components of our system in action. Our approach will be validated with
+            real world experiments involving a robot platform navigating crowded academic
+            spaces.
+        </p>
+
+        <h3>Solution:</h3>
+        <h4 class="toggle" title="#socialnav-report">
+            Click for full PDF report.
+        </h4>
+        <div id="socialnav-report">
+            <iframe class="pdf-preview" src="https://drive.google.com/file/d/0BxoS7oGR4RRkSWR0MER0aXh1bDQ/preview" style="width: 100%;"></iframe>
+        </div>
+
+        <h3>Hardware:</h3>
+        <h4>BeamPro Telepresence Robot with Occam Omni Stereo Sensor</h4>
+        <div class="parts">
+            <a href="https://suitabletech.com/beam/">
+                <img class="resizable" src="projects/people-tracking-social-nav/BeamPro.png" alt=""/>
+            </a>
+            <span class="pic-text">+</span>
+            <a href="http://occamvisiongroup.com/product/omni-stereo/">
+                <img class="resizable" src="projects/people-tracking-social-nav/Occam.png" alt="PhantomX Pincher Robot Arm">
+            </a>
+            <span class="pic-text">+</span>
+            <a href="http://shop.lenovo.com/gb/en/laptops/thinkpad/13-series/13-windows/">
+                <img class="resizable" src="projects/people-tracking-social-nav/lenovo-thinkpad.png" alt="PhantomX Pincher Robot Arm">
+            </a>
+            <span class="pic-text">=</span>
+            <img class="resizable" src="projects/people-tracking-social-nav/beam-occam.png" alt=""/>
+        </div>
+
+        <h3>Implementation:</h3>
+        <a href="https://github.com/Cornell-RPAL/occam">
+            <span>Occam GitHub Repo:</span>
+            <img style="vertical-align:middle" src="img/icons/social.github.png" alt="Gatlin Repo"/>
+        </a>
+        <br>
+        <a href="https://github.com/Cornell-RPAL/rosbeam">
+            <span>Rosbeam GitHub Repo:</span>
+            <img style="vertical-align:middle" src="img/icons/social.github.png" alt="Gatlin Repo"/>
+        </a>
+    </div>
+
+    <h2 class="toggle" title="#CS-6751">CS 6751 - Mobile Manipulation - Final Project</h2>
+    <div id="CS-6751" class="project">
+        <h3>
+            ROS API & Multi-Robot Controller,
+            Multi-User Unity Interface, <br>
+            Guided Policy Search on Baxter,
+            and Deep Spatial Autoencoder
+        </h3>
+
+        <h4>
+            Team:
+            Akhila Ananthram (asa225),
+            Ethan Keller (eak244),
+            Isaac Qureshi (iaq3),
+            Zach Zweig-Vinegar (zzv2)
+        </h4>
+
+        <h3>Description:</h3>
+        <p>
+            We created a centralized ROS system and Unity Interface
+            that allows remote users to control a team of robots. The
+            users can define what the robots should be doing and utilize
+            many levels of control. The behavior includes exploration
+            and the manipulation of objects and moving them to user
+            defined locations to create structures.
+            Our centralized system also includes a supplementary
+            learning module for fine motor tasks. The user can select
+            to run one of these modules in Baxter’s action graph,
+            enabling the learning module to take direct torque control
+            of Baxter’s arm in order to achieve some predefined,
+            pre-learned objective. The module is pre-trained on a set of
+            challenging tasks requiring fine-grain physical coordination
+            such as screwing a bottle cap on, fitting a peg into a
+            hole, and picking a block off of a tower. Baxter is trained
+            on these tasks using the Guided Policy Search (GPS)
+            algorithm developed at Berkeley. The learning module’s
+            abilities are further enhanced by incorporating a deep spatial
+            autoencoder to provide the GPS torque net with key feature
+            points. Using both torque feedback and visual feedback,
+            Baxter can achieve a high degree of fine-grain coordination,
+            significantly extending the collective capabilities or our
+            centralized robot system.
+            To develop and test the system we used two robots:
+            Baxter, an industrial robot built by Rethink Robotics with
+            two 7-DOF arms, and a modified version of a Turtlebot
+            named Gatlin. Gatlin includes
+            an 4-DOF PhantomX Pincher arm for manipulation, an
+            iRobot-Create base for mobility, and a Kinect head mounted
+            on a 2 DOF turret for 360 degree RGB+D vision.
+            <br><br>
+            Computer science and robotics is in an exciting time
+            of rapid progress. Due to advances, robots can perceive
+            and manipulate more objects for low cost and at a higher
+            accuracy. We wanted to create a system that we could use to
+            control the behavior of any robot added to the system. There
+            are many powerful open source algorithms (in ROS) that we
+            can call from our system.
+            3D interfaces are efficient ways of communicating information
+            and extending some control to users. With practice,
+            people gain dexterity over the interface and information it
+            is conveying. We used the Unity3D Game Engine to create
+            the user interface so we could visualize a 3D representation
+            of the system on any device, in real-time. Unity3D exports
+            to standalone Windows/Linux/Mac clients, iOS, Android,
+            Windows phone, and more, allowing a wide variety of
+            devices for users.
+        </p>
+
+        <h3>Solution:</h3>
+        <h4 class="toggle" title="#cs6751-report">
+            Click for full PDF report.
+        </h4>
+        <div id="cs6751-report">
+            <iframe class="pdf-preview" src="https://drive.google.com/file/d/0BxoS7oGR4RRkOTI5VExBQmtKbHc/preview" style="width: 100%;"></iframe>
+        </div>
+
+        <h3>Demo:</h3>
+        <div id="cs6751-demo">
+            <figure>
+                <img class="resizable gif" src="img/proj/gif/gatlin-localize-static.png" alt="gatlin-localize"/>
+                <figcaption>1. Gatlin looks around and localizes all robots and objects in current view using AR markers.</figcaption>
+            </figure>
+            <figure>
+                <img class="resizable gif" src="img/proj/gif/unity-three-block-stack-static.png" alt="unity-three-block-stack"/>
+                <figcaption>
+                    2. A connected Unity user creates a three block stack action located on the
+                    right side of the table with the localized blocks. Then the user starts the action,
+                    which sends it to the central ROS multi-robot server.
+                    The green/red crosses represent the targets
+                    and the gray spheres represent the objects. The lines connecting objects and
+                    targets represents where the object will be moved to.
+                    Two of the blocks are on the table in front of Baxter, but one block is on the ground in front of Gatlin.
+                    This action will require a handoff of that block from Gatlin to Baxter's left arm as well as three handoffs
+                    between Baxter's two arms.
+                </figcaption>
+            </figure>
+            <figure class="two-col">
+                <figcaption>
+                    The robot's workspaces are approximated by a rectangular prism.
+                    Each of Baxter's arms has a red box around it, giving the system a an estimate of the possible locations of each end-effector.
+                    Gatlin has a mobile base, so its workspace spans the whole xy plane (shown in purple), however it has only about 0.4 meters of vertical reach.
+
+                    When the robots' workspaces overlap, a handoff point can be defined that allows the robots to pass objects to different workspaces.
+
+                    For the transfer of objects
+                    between Baxter’s left and right arms, the table in the middle
+                    of both arms serves as a suitable handoff point.
+                    For Baxter and Gatlin the predefined handoff
+                    point is on top of a tool chest that is just the right height
+                    for both to reach, about 0.3 meters above the ground.
+                </figcaption>
+                <img class="resizable" style="max-width: 400px; display: inline;" src="img/proj/robot-workspaces.png" alt=""/>
+                <figcaption>
+                    This system can be represented as a graph where nodes represent the robots,
+                    targets, and objects. An edge between a robot and a object
+                    means that the object is currently in the robot’s workspace,
+                    therefore the robot is able to reach the object. The same is
+                    true for an edge between a robot and a target. Edges are
+                    weighted by the euclidean distance between the two nodes.
+                </figcaption>
+            </figure>
+            <figure class="two-col">
+                <img class="resizable" style="max-width: 400px; display: inline;" src="img/proj/mrc-wcg-three-block-stack.png" alt="mrc-wcg-three-block-stack"/>
+                <figcaption>
+                    The graph above was generated from the three block stack action sent previously.
+                    Green nodes represent the objects or blocks,
+                    yellow and red nodes represent Gatlin and Baxter,
+                    light blue nodes represent handoff points,
+                    and dark blue nodes represent target locations.
+                    <br><br>
+                    For each
+                    object and target pair, we find the shortest distance path
+                    from the object to the target using Dijkstra’s algorithm, and
+                    then use this path to generate a list of robot primitives to
+                    be added to the Command Request Queue.
+                    <br><br>
+                    In this case the shortest path for the object on the ground is
+                    ['gatlin', 'hp2', 'baxter_left', 'hp1', 'baxter_right', 'target_1']
+                    This path means that the object will be:
+                    <ol>
+                        <li>Picked up by Gatlin</li>
+                        <li>Placed at handoff point 2 (on top of the toolbox)</li>
+                        <li>Picked up by Baxter's left arm</li>
+                        <li>Placed at handoff point 1 (in the middle of the table)</li>
+                        <li>Picked up by Baxter's right arm</li>
+                        <li>Placed at target_1 (on the right side of the table)</li>
+                    </ol>
+                </figcaption>
+            </figure>
+            <figure>
+                <img class="resizable gif" src="img/proj/gif/gatlin-pick-static.png" alt="gatlin-pick"/>
+                <figcaption>1. Picked up by Gatlin</figcaption>
+            </figure>
+            <figure>
+                <img class="resizable gif" src="img/proj/gif/gatlin-place-static.png" alt="gatlin-place"/>
+                <figcaption>2. Placed at handoff point 2 (on top of the toolbox)</figcaption>
+            </figure>
+            <figure>
+                <img class="resizable gif" src="img/proj/gif/baxter-left-pick-place-static.png" alt="baxter-left-pick-place"/>
+                <figcaption>3 & 4. Picked up by Baxter's left arm and placed at handoff point 1 (in the middle of the table)</figcaption>
+            </figure>
+            <figure>
+                <img class="resizable gif" src="img/proj/gif/baxter-right-pick-static.png" alt="baxter-right-pick"/>
+                <figcaption>5 & 6. Picked up by Baxter's right arm and placed at target_1 (on the right side of the table)</figcaption>
+            </figure>
+        </div>
+
+        <h3>Result:</h3>
+        <p>
+            The system can be used as it was intended. We
+            successfully had Gatlin and Baxter following the tasks that
+            the user created in the interface. We were able to make
+            user-defined arrangements of blocks, throw them, and have
+            Gatlin drive routes that were created in the map. We had
+            multiple users controlling the same robots and observing
+            the structures they were building. We have combined many
+            powerful vision and robotic techniques into our system.
+            We are excited to work more on this project. We want
+            to streamline the process of adding robots and their actions
+            to the system. This will allow us to incorporate many of
+            the exciting advances in computer science that will extend
+            what can be perceived and manipulated. These can be put
+            into the system, expanding the capabilities the user has over
+            their environment.
+            The supplementary learning module was never fully incorporated
+            into the overall ROS system due to time constraints.
+            Once the learning module is completed, it’s recommended
+            interface is a ROS messaging service that could define a
+            task to either be strained on or to implement using a trained
+            model. Sending a task would involve sending a cost function
+            to minimize over a set of actions. If the cost function
+            (which might be encapsulated in an enumerated constant)
+            has already been used in a training session, the robot can
+            retrieve the policy it developed in the training session. In
+            this way, the GPS and DSA networks can effectively take
+            control of a given robots actions for a specified task.
+            Training the DSA network has been tested with small
+            amounts of data. However, to actually use this network,
+            we need more data by following the steps in the appendix.
+            Others can train and use this system if they have the data. It
+            can also be extended to include the depth channel.
+        </p>
+
+    </div>
+
+    <h2 class="toggle" title="#Turtlebot">Independent Study Project</h2>
+    <div id="Turtlebot" class="project">
+        <h3>TurtleBot with PhantomX Pincher Robot Arm, and PhantomX Robot Turret Kit</h3>
+
+        <div class="parts">
+            <a href="http://turtlebot.com/">
+                <img class="resizable" src="http://2.bp.blogspot.com/-f446rKskiCc/TdQBLnZqZzI/AAAAAAAAFz4/d5s5kHHiLwk/s1600/ROS-robot-turtlebot.png" alt="TurtleBot">
+            </a>
+            <span class="pic-text">+</span>
+            <a href="http://www.trossenrobotics.com/p/PhantomX-Pincher-Robot-Arm.aspx">
+                <img class="resizable" src="img/proj/KIT-RK-PINCHER-c.png" alt="PhantomX Pincher Robot Arm">
+            </a>
+            <span class="pic-text">+</span>
+            <a href="http://www.trossenrobotics.com/p/phantomX-robot-turret.aspx">
+                <img class="resizable" src="img/proj/PhantomX-Robot-Turret-Kit.png" alt="PhantomX Robot Turret Kit">
+            </a>
+            <span class="pic-text">=</span>
+            <!--<a href="">-->
+            <img class="resizable" src="img/proj/gatlin.png" alt="Gatlin"/>
+            <!--</a>-->
+        </div>
+
+        <br>
+        <h3>Augmented Reality Remote Arm Controller - Codename: Gatlin</h3>
+
+        <!--<img class="resizable" style="max-width: 706px;" src="projects/gatlin/diagram.png" alt=""/>-->
+        <p>
+            The camera on the back of the mobile device captures the user's hand pose while the screen displays the calculated
+            location of the hand overlaid on top of the 3D view from the Kinect on the robot. The mobile device's screen
+            acts like a window into the robot's perspective. The mobile device's gyroscopes allow precise tracking of orientation, and utilizing the gyroscopes makes the app much more immersive
+            since when you turn the mobile device, the view rotates accordingly. The arm's end effector would then copy the pose of the user's hand, allowing the user to reach
+            for an object and grasp it as if the user was standing where the robot is. The pros of this method is that only a mobile device
+            with a camera is needed to capture hand movements. Thus this will allow the robot controller to be packaged in a app and anyone with a smartphone
+            could then download it to their phone and control the robot remotely. (security authentication will be added so not just anyone can access the robot)
+            <br>
+            <br>
+            Although I have just begun to experiment with Unity and ROS, the combination seems to have many possibilities and applications.
+            Here is a short video demo of an initial prototype for the robot's Android controller app, showing a visualization of the RGBD data from the
+            Kinect, joystick controls for moving the robot, and gyro controls for viewing the 3D pointcloud.
+
+        </p>
+
+        <a href="https://github.com/iaq3/gatlin">
+            <span style="">GitHub Repo:</span>
+            <img style="vertical-align:middle" src="img/icons/social.github.png" alt="Gatlin Repo"/>
+        </a>
+        <br><br>
+
+        <iframe style="max-width: 700px; width: 100%;" height="400" src="https://www.youtube.com/embed/yVagtGQEGKE" frameborder="0" allowfullscreen>
+        </iframe>
+        <h3>Partners: Zach Zweig-Vinegar (zzv2), Isaac Qureshi (iaq3)</h3>
+        <p>
+            The mobile app was created using Unity and the Unity-ROS connection was implemented using the ROS packages "rosbridge" and "web_video_server".
+            Here is a schema for another ROS web interface that we used as a guide during the beginning of this project.
+        </p>
+        <a href="http://cs.brown.edu/research/pubs/theses/masters/2012/lee.pdf">
+            <img class="resizable" style="max-width: 700px;" src="projects/gatlin/schema.png" alt=""/>
+            <br>
+            Click here to read more...
+        </a>
+    </div>
+
+
+    <h2 class="toggle" title="#Stress_Detector_Glove">Stress Detector Glove (Galvanic Skin Response)</h2>
+    <div id="Stress_Detector_Glove" class="project">
+        <img class="resizable" style="max-width: 706px;" src="img/proj/20131209_210100_7_bestshot.jpg" alt="Lie Detector Glove"/>
+        <h3>Team Members: Zach Zweig-Vinegar, Fred Kummer</h3>
+        <p>Final class project for ENGRI 1820: Electricity Lights Camera Action:
+            Nanoengineering for the Future of Bits and Bytes. </p>
+        <p>It is a simple lightweight stress sensor that fits around the wrist
+            which senses your stress level using heart and galvanic skin response
+            and indicates it with an LED of different colors. This could certainly
+            be useful to an ordinary person as a way of tracking everyday stress,
+            but also has potential medical applications, allowing doctors and patients
+            to quickly and easily determine the patients stress level, which would
+            be useful in managing a variety of illnesses from heart disease to anxiety disorders.
+            <br/>
+            <br/>It was created by taking advantage of the fact
+            that the sensors and microcontrollers needed already exist and are easily accessible.
+            This allowed us to focus on integrating them into a functioning system rather
+            than worrying about the specifics of each sensor and to devote more time to the
+            problem of accurately interpreting the data and making them work as flexible electronics.
+            <br/>
+            <br/>Resources: A tessellated surface that can fit around the wrist, an Arduino
+            microcontroller that can be used to interpret the data, a heart rate or pulse sensor,
+            a galvanic skin response sensor or the materials needed to construct one
+            (a fairly simple operation that mainly requires a conductive surface and an Arduino
+            to regulate the data), multicolored LEDs to indicate your stress level, batteries, and wire.
+        </p>
+        <ul>
+            <li>
+                <a href="projects/stress_detector_glove/Parts and Resources.pdf">Parts and Resources</a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <h2 class="toggle" title="#Arduino_Thermistor_Data_Collector">Arduino Thermistor Data Collector</h2>
+    <div id="Arduino_Thermistor_Data_Collector" class="project">
+        <a href="projects/arduino_thermistor_data_collector/Autonomous Thermal Data Collection.pdf">
+            Click to enlarge...<br>
+            <img class="resizable" style="max-width: 706px;" src="projects/arduino_thermistor_data_collector/Autonomous Thermal Data Collection.jpg" alt="Arduino Thermistor Data Collector">
+        </a>
+        <br>
+        <a href="http://sourceforge.net/projects/thermistordatas/">
+            Click to download the sourceforge code...<br>
+            <img class="resizable" style="max-width: 706px;" src="http://a.fsdn.com/con/app/proj/thermistordatas/screenshots/pic%201.jpg" alt="Arduino Thermistor Data Collector">
+        </a>
+        <p>
+            This project utilizes a program that allows the user to easily collect temperature data from
+            inexpensive thermistor temperature sensors connected to the computer
+            through an Arduino. Contains a Java UI for the Arduino USB
+            serial connection. Converts the voltage through the thermistor into a
+            temperature. Allows the user to set the duration and sampling rate for
+            the data collection. Provides real-time graphs of data...
+            <a href="projects/arduino_thermistor_data_collector/README.pdf">README</a>
+        </p>
+        <p>
+            This program was included in a research paper entitled <a href="http://www.lpi.usra.edu/meetings/lpsc2013/pdf/1537.pdf">"Autonomous Thermal Data Collection"</a> and presented
+            at the 44th Lunar and Planetary Science Conference (LPSC) in Huston, Texas.<br>
+            <br>
+            <a href="http://www.lpi.usra.edu/meetings/lpsc2013/pdf/sess619.pdf">
+                All LPSC 2013 Mars Outreach for North Carolina Students Posters
+            </a>
+        </p>
+
+    </div>
+
+    <h1>Websites</h1>
+    <div id="websites">
+        <h2 class="toggle" title="#Flights">CS 3300 Project 2 - Trends in U.S. Domestic Flights</h2>
+        <div id="Flights" class="website">
+            <a href="projects/trends-US-domestic-flights/index.html">
+                <img class="resizable" style="max-width: 1280px;" src="projects/trends-US-domestic-flights/full.png" alt=""/>
+            </a>
+            <h3>Ankita Agrawal (aa653), Yezy Lim (yl647), Zachary Vinegar (zzv2)</h3>
+            <ul>
+                <li>
+                    <a href="projects/trends-US-domestic-flights/p2.pdf">Assignment Description</a>
+                </li>
+                <li>
+                    <a href="projects/trends-US-domestic-flights/p2_Writeup.pdf">Writeup</a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="toggle" title="#Asteroids">CS 3300 Project 1 - NASA Asteroids</h2>
+        <div id="Asteroids" class="website">
+            <a href="projects/asteroids/cs3300-p1/index.html">
+                <img class="resizable" style="max-width: 1280px;" src="projects/asteroids/full-small.png" alt=""/>
+            </a>
+            <h3>Partners: Shanie Jeanat, Zachary Vinegar, John Farese</h3>
+            <p>
+                All of the data we used was pulled from NASA's NeoWs online api available at
+                <a href="https://api.nasa.gov/api.html#demo_keyratelimits">https://api.nasa.gov/api.html#demo_keyratelimits</a>
+                Each NASA api request returns a JSON file with a list of asteroid objects for a particular week of the year.
+                Each asteroid object returns a diameter, magnitude, velocity, miss distance, approach date, and name.
+                Since each file represents one week of the year, we iterated through all 53 weeks in order to get all of the
+                data for 2016. In our graphs, we only referenced the relative velocities, distances from Earth, and diameters
+                of each asteroid. We chose those criteria because they seemed most relevant for visualizing the potential
+                threat a near-earth object may pose towards people on planet Earth...
+            </p>
+            <ul>
+                <li>
+                    <a href="projects/asteroids/project1.pdf">Assignment Description</a>
+                </li>
+                <li>
+                    <a href="projects/asteroids/description.pdf">Rationale</a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="toggle" title="#Ma_Maria">CS 2300 Final Project - Ma-Maria</h2>
+        <div id="Ma_Maria" class="website">
+            <!--<a href="projects/ma-maria/index.html">-->
+            <img class="resizable" style="max-width: 750px;" src="projects/ma-maria.png" alt=""/>
+            <!--</a>-->
+            <h3>Partners: Jarrod Ashley, Keshav Varma, Robert Oxer</h3>
+            <p>
+                "Our client is Ada Chan, an MBA candidate at Cornell. She is the founder of a company that intends to create an online solution to
+                match part time cleaners with customers (for the purposes of this project we may decide to focus on the Ithaca area). The website we
+                built is intended to be an alpha version of the company's final product and will mostly be used for product demos to potential
+                investors... <br>
+                <br>
+                The website's main purpose is to connect customers who need household cleaning services with providers
+                in their local area. The content will reflect this purpose as well as make it as easy to use as possible.
+                We plan to incorporate many features, so it should be very simple to facilitate communication between
+                customers and cleaners. This will ensure that target audience enjoys this service as much as our client does."
+            </p>
+            <ul>
+                <li>
+                    <a href="projects/ma-maria/docs/FP_M5.pdf">Assignment Description</a>
+                </li>
+                <li>Design Journey Map
+                    <ul>
+                        <li>
+                            <a href="projects/ma-maria/docs/FP_DJ_Part_1.pdf">Part 1</a>
+                        </li>
+                        <li>
+                            <a href="projects/ma-maria/docs/FP_DJ_Part_2.pdf">Part 2</a>
+                        </li>
+                        <li>
+                            <a href="projects/ma-maria/docs/FP_DJ_Part_3.pdf">Part 3</a>
+                        </li>
+                        <li>
+                            <a href="projects/ma-maria/docs/FP_DJ_Part_4.pdf">Part 4</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="toggle" title="#Image_Album">CS 2300 Project 3 - Image Album</h2>
+        <div id="Image_Album" class="website">
+            <!--<a href="projects/image album/main/index.html">-->
+            <img class="resizable" style="max-width: 750px;" src="projects/image album.png" alt=""/>
+            <!--</a>-->
+            <p>
+                This image gallery will be used to host professional pictures of me and my
+                CS projects, so I want to reflect the coding aspect in the look and feel of my
+                design. I used a black background because it adds more contrast to
+                the text and most people associate black backgrounds with computer consoles
+                or terminals. I also wanted the website to feel sleek and modern, just like the
+                iOS and Android operating systems which is why I incorporated large icons
+                and a CSS flip for interaction...
+            </p>
+            <ul>
+                <li>
+                    <a href="projects/image album/Project_3.pdf">Assignment Description</a>
+                </li>
+                <li>
+                    <a href="projects/image album/final rationale.pdf">Rationale</a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="toggle" title="#Music_Library">CS 2300 Project 2 - Music Library</h2>
+        <div id="Music_Library" class="website">
+            <!--<a href="projects/music library/main/index.html">-->
+            <img class="resizable" style="max-width: 750px;" src="projects/music library.png" alt=""/>
+            <!--</a>-->
+            <p>
+                This music library was my first website made using a database and it actually uses a text file to save data.
+                You can filter your music by mood with tags to find a perfect song for any time of day. You can also search by Title, Artist, Album,
+                Year, Rating or a combination. Simply change a search parameter to get a list of matching tracks...
+            </p>
+            <ul>
+                <li>
+                    <a href="projects/music library/P2.pdf">Assignment Description</a>
+                </li>
+                <li>
+                    <a href="projects/image album/checking.pdf">Rationale</a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="toggle" title="#Ithaca_Physics_Bus">CS 1300 Final Project - Ithaca Physics Bus</h2>
+        <div id="Ithaca_Physics_Bus" class="website">
+            <!--<a href="projects/physics bus/php/index.html">-->
+            <img class="resizable" style="max-width: 750px;" src="projects/physics bus.png" alt=""/>
+            <!--</a>-->
+            <h3>Partners: Victoria Beall, Bryan Rhodes, Logan McManus</h3>
+            <p>
+                "For this project, our client is a small company called Physics Bus, founded by Erik Herman. Physics Bus is a refurbished old style bus that travels to schools and events as a
+                mobile physics exhibit. The mission of Physics Bus is two fold: first, to spark interest in physics and science in audiences of all ages through fun and
+                interactive exhibits, emphasizing the artistic and creative aspects of physics rather than straight equations; second, the exhibits in the bus are made from also
+                entirely recycled and/or junk materials. The current URL for the Physics Bus site is <a href="http://ithacaphysicsfactory.weebly.com/">http://ithacaphysicsfactory.weebly.com/</a>
+                (physicsbus.org), but our client has expressed his unhappiness with the overall theme, color scheme, and even logo of the site (which is just a slightly modified version of the
+                logo for the parent organization, Physics Factory).
+                What our client was looking for in their site was something that embodies the fun and interactive elements of their project. In particular, our client mentioned
+                that he likes the look of hero images and requested a slideshow on the website's main page. He was also looking for a site that effectively uses social media,
+                blogging, and videos/images to give users a taste of what the Physics Bus is like."
+
+            </p>
+            <ul>
+                <li>
+                    <a href="projects/physics bus/FinalDJM.pdf">Design Journey Map</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- <a href="http://www.oculusvr.com/">
+        <h2>Oculus Rift</h2>
+        <img class="resizable" style="max-width: 411px;" src="http://i.imgur.com/mW94RR1.png" alt="Oculus Rift">
+    </a> -->
+</html>

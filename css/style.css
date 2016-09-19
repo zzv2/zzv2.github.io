@@ -142,12 +142,8 @@ a:hover {
     /*border-radius: 15px 15px 150px 150px;*/
 }
 
-.toggle {
+.toggle, #courses h2 {
     cursor: pointer;
-}
-
-.toggle:hover {
-    opacity: .5;
 }
 
 h2.toggle {
