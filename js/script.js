@@ -16,6 +16,13 @@ $(document).ready(function () {
         });
     });
 
+    $("#courses h2").each(function (index) {
+        $(this).next().slideUp();
+        $(this).on('click', function (e) {
+            $($(this).next()).slideToggle(speed);
+        });
+    });
+
     function scroll_to(t, offset) {
         var target = t.hash;
         var $target = $(target);
