@@ -1,1881 +1,1939 @@
 <html>
-    
-<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-<meta content="utf-8" http-equiv="encoding">
-    
-<head>
 
-<style>
-    body {
-       /*font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;*/
-        font-family: "chaparral-pro",georgia,serif; 
-    }
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
 
-    .chord path {
-        fill-opacity: .6;
-        stroke: none;
-        stroke-width: 0px;
-    }
-    text {
-        font: 10px sans-serif;
-        font-weight: bold;   
-    }
-    #graph1 {
-        margin: auto;
-        width: 1300px;
-        height: 800px;
-    }
-    #circos {
-        width: 700px;
-        height:700px;
-        display: inline-block;
-        margin: 0 auto;
-        margin-right: 50px;
-    }
-    #stateDesc {
-        position: absolute;
-        padding-top: 75px;
-        width: 500px;
-        height: 800px;
-        display: inline-block;
-        margin: 0 auto;
-        margin-left: 50px;      
-    }
-    h1 {
-        font-family: "chaparral-pro",georgia,serif;
-        font-size: 26px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 800;
-        line-height: 24.4px;
-    }
+    <head>
 
-    h3 {
-        font-family: "chaparral-pro",georgia,serif;
-        font-size: 15px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 500;
-        line-height: 17px;
-    }
-    h4 {
-        font-family: "chaparral-pro",georgia,serif;
-        font-size: 10px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 500;
-        line-height: 12px;
-    }
-    p {
-        font-family: "chaparral-pro",georgia,serif;
-        font-size: 15px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-        line-height: 17px;
-    }
-    #stateTitle {
-        font-weight: bolder;
-        font-size: 22px;
-        line-height: 20px;
-    }
-    
-    .axis text {
-      font: 10px sans-serif;
-      opacity:0.8;
-    }
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke-width: 2;
-      stroke: #000;
-      opacity:0.8;
-      shape-rendering: crispEdges;
-    }
-    #graph2 .lines {
-      stroke-width: 2;
-      stroke: black;
-      stroke-dasharray:15,10;
+        <style>
+            body {
+                /*font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;*/
+                font-family: "chaparral-pro",georgia,serif;
+            }
 
-    }
-    .minmax {
-      font-size:12px;
-    }
-    div.tooltip { 
-        position: absolute;     
-        text-align: left;     
-        width: 300px;          
-        height: 100px;         
-        padding: 2px;       
-        font: 12px sans-serif;    
-        background: lightgray; 
-        border: 0px;    
-        line-height: 2;
-        border-radius: 5px;     
-        pointer-events: none;     
-    }
-    #graph2 {
-        width: 75%;
-        margin: 0 auto;
-    }
-    #topBar {
-        background: #53a8c4;
-        height: 190px;
-        display:block;
-        margin: -20;
-    }
-    .wrap {
-        margin: 0 auto;
-        margin-left: 30px;
-        display:block;
-        color: white;
-        font-family: 'proxima-nova',helvetica,sans-serif;
-        font-size: 50px;
-        text-align: center;
-    }
-    #logo {
-        float: left;
-        position: relative;
-        top: 25px;
-        width: 615px;
-        height: 35px;
-    }
-    h6 {
-        margin-top: 14px;
-        font-family: 'proxima-nova',helvetica,sans-serif;
-        font-size: 20px;
-        text-align: center;
-    }
-    #body {
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    
-    .tick_label {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: block;
-		height: 25px;
-		white-space: nowrap;
-	}
-	#month_ticks li {
-		display: inline-block;
-		width: 85px;
-	}
-	#day_of_week_ticks li {
-		display: inline-block;
-		width: 160px;
-	}
-	.data_obj {
-		cursor: pointer;
-	}
-    #graph3 svg {
-		border: 5px solid black;
-	}
+            .chord path {
+                fill-opacity: .6;
+                stroke: none;
+                stroke-width: 0px;
+            }
+            text {
+                font: 10px sans-serif;
+                font-weight: bold;
+            }
+            #graph1 {
+                margin: auto;
+                width: 1300px;
+                height: 800px;
+            }
+            #circos {
+                width: 700px;
+                height:700px;
+                display: inline-block;
+                margin: 0 auto;
+                margin-right: 50px;
+            }
+            #stateDesc {
+                position: absolute;
+                padding-top: 75px;
+                width: 500px;
+                height: 800px;
+                display: inline-block;
+                margin: 0 auto;
+                margin-left: 50px;
+            }
+            h1 {
+                font-family: "chaparral-pro",georgia,serif;
+                font-size: 26px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 800;
+                line-height: 24.4px;
+            }
 
-</style>
+            h3 {
+                font-family: "chaparral-pro",georgia,serif;
+                font-size: 15px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 500;
+                line-height: 17px;
+            }
+            h4 {
+                font-family: "chaparral-pro",georgia,serif;
+                font-size: 10px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 500;
+                line-height: 12px;
+            }
+            p {
+                font-family: "chaparral-pro",georgia,serif;
+                font-size: 15px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                line-height: 17px;
+            }
+            #stateTitle {
+                font-weight: bolder;
+                font-size: 22px;
+                line-height: 20px;
+            }
 
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/queue.v1.min.js"></script>  
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+            .axis text {
+                font: 10px sans-serif;
+                opacity:0.8;
+            }
+            .axis path,
+            .axis line {
+                fill: none;
+                stroke-width: 2;
+                stroke: #000;
+                opacity:0.8;
+                shape-rendering: crispEdges;
+            }
+            #graph2 .lines {
+                stroke-width: 2;
+                stroke: black;
+                stroke-dasharray:15,10;
 
-</head>
-    
-<body>
+            }
+            .minmax {
+                font-size:12px;
+            }
+            div.tooltip {
+                position: absolute;
+                text-align: left;
+                width: 300px;
+                height: 100px;
+                padding: 2px;
+                font: 12px sans-serif;
+                background: lightgray;
+                border: 0px;
+                line-height: 2;
+                border-radius: 5px;
+                pointer-events: none;
+            }
+            #graph2 {
+                width: 75%;
+                margin: 0 auto;
+            }
+            #topBar {
+                background: #53a8c4;
+                height: 190px;
+                display:block;
+                margin: -20;
+            }
+            .wrap {
+                margin: 0 auto;
+                margin-left: 30px;
+                display:block;
+                color: white;
+                font-family: 'proxima-nova',helvetica,sans-serif;
+                font-size: 50px;
+                text-align: center;
+            }
+            #logo {
+                float: left;
+                position: relative;
+                top: 25px;
+                width: 615px;
+                height: 35px;
+            }
+            h6 {
+                margin-top: 14px;
+                font-family: 'proxima-nova',helvetica,sans-serif;
+                font-size: 20px;
+                text-align: center;
+            }
+            #body {
+                width: 80%;
+                margin: 0 auto;
+            }
 
-<div id="topBar">
-    <div class="wrap">
-        <div class="logo"><br>Trends in U.S. Domestic Flights<h6>How Domestic Flights Differ in Frequency, Price, and Delay</h6>
+
+            .tick_label {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: block;
+                height: 25px;
+                white-space: nowrap;
+            }
+            #month_ticks li {
+                display: inline-block;
+                width: 85px;
+            }
+            #day_of_week_ticks li {
+                display: inline-block;
+                width: 160px;
+            }
+            .data_obj {
+                cursor: pointer;
+            }
+            #graph3 svg {
+                border: 5px solid black;
+            }
+
+        </style>
+
+        <script src="//d3js.org/d3.v3.min.js"></script>
+        <script src="//d3js.org/queue.v1.min.js"></script>
+        <script src="d3.tip.v0.6.3.js"></script>
+        <script src="topojson.v1.min.js"></script>
+    </head>
+
+    <body>
+
+        <div id="topBar">
+            <div class="wrap">
+                <div class="logo"><br>Trends in U.S. Domestic Flights<h6>How Domestic Flights Differ in Frequency, Price, and Delay</h6>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-<div id="body">
-    <div class = "detail"><h1><br><br>U.S. Domestic Flights by State* in 2015</h1><h3>Focus on an individual state by clicking the state's arc.<br><br>This chord diagram shows the number of flights between two states in the United States. The width of a chord is proportional to the relative frequency of flights between the two states. The chords are directional: the color of the chord matches the color of the state that has more going out of than into that state. For example, there are more people flying from Arizona (AZ) to California (CA) than CA to AZ. Units of the axis is in ten millions. All 50 states and Puerto Rico are represented in this visualization, but some states are trivial because there are significantly less flights coming from or into these states.</h3><h4>*Includes Puerto Rico.<br>Data source: Bureau of Transportation Statistics and United States Census Bureau </h4><br><br><br></div>
-    <div id = "graph1">
-        <div id = "circos"></div>
-        <div id = "stateDesc">
-            <p id = "stateTitle">Select a State<br> for More Information</p>
-            <p id = "statePop"></p>
-            <p id = "stateAirportNum"></p>
-            <p id = "stateInflow"></p>
-            <p id = "stateOutflow"></p>
+        <div id="body">
+            <div class = "detail"><h1><br><br>U.S. Domestic Flights by State* in 2015</h1><h3>Focus on an individual state by clicking the state's arc.<br><br>This chord diagram shows the number of flights between two states in the United States. The width of a chord is proportional to the relative frequency of flights between the two states. The chords are directional: the color of the chord matches the color of the state that has more going out of than into that state. For example, there are more people flying from Arizona (AZ) to California (CA) than CA to AZ. Units of the axis is in ten millions. All 50 states and Puerto Rico are represented in this visualization, but some states are trivial because there are significantly less flights coming from or into these states.</h3><h4>*Includes Puerto Rico.<br>Data source: Bureau of Transportation Statistics and United States Census Bureau </h4><br><br><br></div>
+            <div id = "graph1">
+                <div id = "circos"></div>
+                <div id = "stateDesc">
+                    <p id = "stateTitle">Select a State<br> for More Information</p>
+                    <p id = "statePop"></p>
+                    <p id = "stateAirportNum"></p>
+                    <p id = "stateInflow"></p>
+                    <p id = "stateOutflow"></p>
+                </div>
+            </div>
+
+
+            <div class = 'detail'><h1>Flight Prices over Time (1993-2015)</h1><h3> Hover over each point on the colored lines to Learn more about the selected airport in that year.<br><br>This graph depicts flight prices (inflation adjusted) over time for the top 8 airports in the US.  The airports are Los Angeles, Chicago O'Hare, Denver Itn'l, Hartsfield Atlanta, Logan Boston International, Seattle Itn'l, and Dallas Itn'l. These airports were determined by outgoing passenger traffic in 2015.  Hovering over each dot uncovers a pop-up box with the following information 1) The Aiport Name and Year 2) The Average Price that year for outgoing domestic US flights 3) The state GDP growth to depict the health of the state that year 3) How many domestic US flights left that aiport in that year to depict demand in that airport.  Lastly, max and min lines appear with the max average flight price and min flight price of that airport from 1993-2015. This helps to see how the current dot relates to the min and max.<br><h4>Data source: Bureau of Transportation Statistics</h4><br><br><br></h3>
+
+
+            </div>
+            <div id = "graph2"></div>
+
+
+            <div class = 'detail'><h1>Flight Delays in 2015</h1><h3>In this graph the same 8 airports are plotted at their actual geographic coordinates. You can pan and zoom the map by dragging and using the scroll wheel. Click on an airport to see the outgoing routes. Click on that same airport again to hide the routes. The color and weight of the route indicates the average delay over the selected time period in 2015. To change the month you are viewing, drag the slider above the map. To switch from averaging over all flights in the same month to averaging over all flights on the same day of the week, tap on the radio buttons above the slider. You will find that generally in the colder winter months there is longer delay, most likely due to weather conditions; while in the summer and fall, the delays are relatively low. In addition, flights departing on Monday have slightly longer delays.<br><h4>Data source: Bureau of Transportation Statistics</h4><br><br></h3>
+            </div>
+
+            <div>
+                <h3><b>Period</b></h3>
+                <input type="radio" name="period" value="month" checked> Month<br>
+                <input type="radio" name="period" value="day_of_week"> Day of Week<br>
+
+                <label id="slider_label"><h3><b>Month</b></h3></label>
+                <div id="month_div">
+                    <ul id="month_ticks" class="tick_label">
+                        <li>Jan</li>
+                        <li>Feb</li>
+                        <li>Mar</li>
+                        <li>April</li>
+                        <li>May</li>
+                        <li>June</li>
+                        <li>July</li>
+                        <li>Aug</li>
+                        <li>Sept</li>
+                        <li>Oct</li>
+                        <li>Nov</li>
+                        <li>Dec</li>
+                    </ul>
+                    <input id="month_slider" type="range" style="width: 1000px;" min="1" max="12" value="1" step="1" list="ticks">
+                </div>
+
+                <div id="day_of_week_div">
+                    <ul id="day_of_week_ticks" class="tick_label">
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thur</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                        <li>Sun</li>
+                    </ul>
+                    <input id="day_of_week_slider" type="range" style="width: 1000px;" min="1" max="7" value="1" step="1" list="ticks">
+                </div>
+
+                <datalist id="ticks">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </datalist>
+
+                <br><br>
+                <div id = "graph3"></div>
+            </div>
+
         </div>
-    </div>
-
-
-    <div class = 'detail'><h1>Flight Prices over Time (1993-2015)</h1><h3> Hover over each point on the colored lines to Learn more about the selected airport in that year.<br><br>This graph depicts flight prices (inflation adjusted) over time for the top 8 airports in the US.  The airports are Los Angeles, Chicago O'Hare, Denver Itn'l, Hartsfield Atlanta, Logan Boston International, Seattle Itn'l, and Dallas Itn'l. These airports were determined by outgoing passenger traffic in 2015.  Hovering over each dot uncovers a pop-up box with the following information 1) The Aiport Name and Year 2) The Average Price that year for outgoing domestic US flights 3) The state GDP growth to depict the health of the state that year 3) How many domestic US flights left that aiport in that year to depict demand in that airport.  Lastly, max and min lines appear with the max average flight price and min flight price of that airport from 1993-2015. This helps to see how the current dot relates to the min and max.<br><h4>Data source: Bureau of Transportation Statistics</h4><br><br><br></h3>
-   
-    
-    </div>
-    <div id = "graph2"></div>
-
-    
-    <div class = 'detail'><h1>Flight Delays in 2015</h1><h3>In this graph the same 8 airports are plotted at their actual geographic coordinates. You can pan and zoom the map by dragging and using the scroll wheel. Click on an airport to see the outgoing routes. Click on that same airport again to hide the routes. The color and weight of the route indicates the average delay over the selected time period in 2015. To change the month you are viewing, drag the slider above the map. To switch from averaging over all flights in the same month to averaging over all flights on the same day of the week, tap on the radio buttons above the slider. You will find that generally in the colder winter months there is longer delay, most likely due to weather conditions; while in the summer and fall, the delays are relatively low. In addition, flights departing on Monday have slightly longer delays.<br><h4>Data source: Bureau of Transportation Statistics</h4><br><br></h3>
-    </div>
-    
-    <div>
-        <h3><b>Period</b></h3>
-        <input type="radio" name="period" value="month" checked> Month<br>
-        <input type="radio" name="period" value="day_of_week"> Day of Week<br>
-
-        <label id="slider_label"><h3><b>Month</b></h3></label>
-        <div id="month_div">
-            <ul id="month_ticks" class="tick_label">
-                <li>Jan</li>
-                <li>Feb</li>
-                <li>Mar</li>
-                <li>April</li>
-                <li>May</li>
-                <li>June</li>
-                <li>July</li>
-                <li>Aug</li>
-                <li>Sept</li>
-                <li>Oct</li>
-                <li>Nov</li>
-                <li>Dec</li>
-            </ul>
-            <input id="month_slider" type="range" style="width: 1000px;" min="1" max="12" value="1" step="1" list="ticks">
-        </div>
-
-        <div id="day_of_week_div">
-            <ul id="day_of_week_ticks" class="tick_label">
-                <li>Mon</li>
-                <li>Tue</li>
-                <li>Wed</li>
-                <li>Thur</li>
-                <li>Fri</li>
-                <li>Sat</li>
-                <li>Sun</li>
-            </ul>
-            <input id="day_of_week_slider" type="range" style="width: 1000px;" min="1" max="7" value="1" step="1" list="ticks">
-        </div>
-
-        <datalist id="ticks">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-        </datalist>
-
-        <br><br>
-        <div id = "graph3"></div>
-    </div>
-   
-</div>  
-    
-
-
-<script>  
-//Visualization #1 (Yezy Lim)
-var sign = "unclicked";
-    
-//Inspiration from https://bost.ocks.org/mike/uberdata/ and http://bl.ocks.org/mbostock/4062006
-    
-//list of colors from http://www.umsiko.co.za/links/RGB-ColourNamesHex.pdf 
-//csv to javascript array converter: http://creativyst.com/Prod/17/
-var size = 51;
-var colors = Array([size]);
-colors[0] = "#8B4513";
-colors[1] = "#00DED1";
-colors[2] = "#9400D3";
-colors[3] = "#FF1493";
-colors[4] = "#00BFFF";
-colors[5] = "#696969";
-colors[6] = "#FFEFD5";
-colors[7] = "#B22222";
-colors[8] = "#B0E0E6";
-colors[9] = "#228B22";
-colors[10] = "#FF00FF";
-colors[11] = "#DCDCDC";
-colors[12] = "#800080";
-colors[13] = "#FFD700";
-colors[14] = "#DAA520";
-colors[15] = "#808080";
-colors[16] = "#008000";
-colors[17] = "#E0FFFF";
-colors[18] = "#F0FFF0";
-colors[19] = "#FF69B4";
-colors[20] = "#CD5C5C";
-colors[21] = "#BC8F8F";
-colors[22] = "#9ACD32";
-colors[23] = "#F0E68C";
-colors[24] = "#E6E6FA";
-colors[25] = "#FFF0F5";
-colors[26] = "#4B0082";
-colors[27] = "#DB7093";
-colors[28] = "#ADD8E6";
-colors[29] = "#F08080";
-colors[30] = "#FAFAD2";
-colors[31] = "#2E8B57";
-colors[32] = "#90EE90";
-colors[33] = "#D3D3D3";
-colors[34] = "#FFB6C1";
-colors[35] = "#4682B4";
-colors[36] = "#D2B48C";
-colors[37] = "#D8BFD8";
-colors[38] = "#008080";
-colors[39] = "#FF6347";
-colors[40] = "#FFFAF0";
-colors[41] = "#EE82EE";
-colors[42] = "#F5DEB3";
-colors[43] = "#A0522D";
-colors[44] = "#C0C0C0";
-colors[45] = "#87CEEB";
-colors[46] = "#6A5ACD";
-colors[47] = "#4169E1";
-colors[48] = "#FFFACD";
-colors[49] = "#FA8072";
-colors[50] = "#40E0D0";
-
-//csv to javascript array converter: http://creativyst.com/Prod/17/
-//array of state names + PR abrev.
-var stateNum = 51;
-var states = Array([stateNum]);
-states[0] = "AL";
-states[1] = "AK";
-states[2] = "AZ";
-states[3] = "AR";
-states[4] = "CA";
-states[5] = "CO";
-states[6] = "CT";
-states[7] = "DE";
-states[8] = "FL";
-states[9] = "GA";
-states[10] = "HI";
-states[11] = "ID";
-states[12] = "IL";
-states[13] = "IN";
-states[14] = "IA";
-states[15] = "KS";
-states[16] = "KY";
-states[17] = "LA";
-states[18] = "ME";
-states[19] = "MD";
-states[20] = "MA";
-states[21] = "MI";
-states[22] = "MN";
-states[23] = "MS";
-states[24] = "MO";
-states[25] = "MT";
-states[26] = "NE";
-states[27] = "NV";
-states[28] = "NH";
-states[29] = "NJ";
-states[30] = "NM";
-states[31] = "NY";
-states[32] = "NC";
-states[33] = "ND";
-states[34] = "OH";
-states[35] = "OK";
-states[36] = "OR";
-states[37] = "PA";
-states[38] = "RI";
-states[39] = "SC";
-states[40] = "SD";
-states[41] = "TN";
-states[42] = "TX";
-states[43] = "UT";
-states[44] = "VT";
-states[45] = "VA";
-states[46] = "WA";
-states[47] = "WV";
-states[48] = "WI";
-states[49] = "WY";
-states[50] = "PR";
-
-    
-    
-    
-//2d array of 50 rows and 50 columns
-matrix = new Array(51);
-for (var i = 0; i < 51; i++) {
-    var row = [];
-    for (var j = 0; j < 51; j++) {
-        row.push(0);
-    }
-    matrix[i] = row;
-    row = [];
-}
-    
-queue()
-    .defer(d3.json, "data_ext.json")
-    .defer(d3.json, "popData.json")
-    .defer(d3.json, "2015data.json")
-    .await(ready);
-
-function ready(error, data, popData, miscData) {
-    if (error) throw error;
-    
-    //populate matrix... -1 if the flight does not exist
-    for (var k = 0; k < data.length ; k++) {
-        var rowNum = states.indexOf(data[k].orig);
-        var colNum = states.indexOf(data[k].dest);
-        matrix[rowNum][colNum] = data[k].numPeople*10;
-    }
-    //initial variables
-    var width = 700;
-    var height = 700;
-    var innerRadius = Math.min(width, height) * .4;
-    var outerRadius = innerRadius * 1.1;
-    
-    //assign colors to state
-    var fill = d3.scale.ordinal()
-    .domain(d3.range(51))
-    .range(colors);
-    
-    //create svg
-    var svg = d3.select("#circos").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-    
-    //svg svgArc
-    var svgArc = d3.svg.arc()
-    .innerRadius(innerRadius)
-    .outerRadius(outerRadius);
-    
-    //svg svgChord
-    var svgChord = d3.svg.chord()
-    .radius(innerRadius);
-    
-    //chord layout
-    var chordGroup = d3.layout.chord()
-    .padding(.05)
-    .sortSubgroups(d3.descending)
-    .matrix(matrix);
-    
-    //draw arcs
-    var arcs = svg.append("g").selectAll("path")
-    .data(chordGroup.groups)
-    .enter().append("path")
-    .style("fill", function(d) { return fill(d.index); })
-    .style("stroke", function(d) { return fill(d.index); })
-    .attr("id", function(d, i) { return "arc" + i; })
-    .attr("d", svgArc)
-    .on("click", function(d,i) {show(d,i);} )
-    ;
-    
-    //draw chords
-    svg.append("g")
-    .attr("class", "chord")
-    .selectAll("path")
-    .data(chordGroup.chords)
-    .enter().append("path")
-    .attr("d", svgChord)
-    .style("fill", function(d) { return fill(d.source.index);})
-    .style("opacity", 0.9);
-
-    //write states' labels
-    var labels = svg.selectAll(".label")
-    .data(chordGroup.groups)
-    .enter().append("g")
-    .attr("class", "label")
-    .append("text")
-    .attr("x", 3)
-    .attr("dy", 20)
-    .append("textPath")
-    .attr("xlink:href", function(d, i) { return "#arc" + i; })
-    .text(function(d, i) { return states[i]; });
-    
-    function print(d,i) {
-        console.log(i);
-    };
- 
-   
-  
-    // Remove the labels that are too long for the arc length
-    labels
-    .filter(function(d, i) { 
-        return (arcs[0][i].getTotalLength() / 2 - 40 < this.getComputedTextLength()); 
-    })
-    .remove();
-    /*
-    for (var n = 0 ; n < 51; n++) {
-        document.getElementById("#arc"+n).on("click", console.log("hi"));
-    }*/
-    
-    //draw ticks
-    var ticks = svg.append("g").selectAll("g")
-    .data(chordGroup.groups)
-    .enter().append("g").selectAll("g")
-    .data(groupTicks);
-    
-    ticks
-    .enter().append("g")
-    .attr("transform", function(d) {
-      return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
-          + "translate(" + outerRadius + ",0)";
-    });
-
-    ticks.append("line")
-    .attr("x1", 1)
-    .attr("y1", 0)
-    .attr("x2", 5)
-    .attr("y2", 0)
-    .style("stroke", "#000");
-
-    ticks.append("text")
-    .attr("x", 8)
-    .attr("dy", ".35em")
-    .attr("transform", function(d) { return d.angle > Math.PI ? "rotate(180),translate(-16)" : null; })
-    .style("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
-    .text(function(d) { return d.label; });
-    
-    // Returns an array of tick angles and labels (1 tick = 100,000)
-    function groupTicks(d) {
-        var k = (d.endAngle - d.startAngle) / d.value;
-        return d3.range(0, d.value, 1000000).map(function(v, i) {
-            return {angle: v * k + d.startAngle, label: i % 10 ? null : v / 10000000 + ""};
-        });
-    }
-    
-    //changes opacity and displays state's description
-    var stateIndex;
-    var prev;
-    function show(d,i) {
-        if (i == prev && stateIndex != -1) {
-            
-            console.log("prevclicked" + popData[stateIndex].state);
-            
-            svg.selectAll(".chord path")
-            .transition()
-            .style("opacity", 1);   
-            
-            stateIndex = -1;
-            prev = i;
-            
-            document.getElementById("stateTitle").innerHTML = "Select a State<br> for More Information";
-            document.getElementById("stateTitle").style.color = "black";
-            document.getElementById("statePop").innerHTML = "";
-            document.getElementById("stateAirportNum").innerHTML = "";
-            document.getElementById("stateInflow").innerHTML = "";
-            document.getElementById("stateOutflow").innerHTML = "";
-        }
-        else if ((i!= prev) || (i == prev && stateIndex == -1)) {
-            svg.selectAll(".chord path")
-            .transition()
-            .style("opacity", 1); 
-            
-            svg.selectAll(".chord path")
-            .filter(function(d) { 
-                state = d.source.index;
-                return d.source.index != i && d.target.index != i; })
-            .transition()
-            .style("opacity", .075);
-           
-            stateIndex = i;
-            console.log("clicked" + popData[stateIndex].state);
-            prev = i;
-            
-            
-            document.getElementById("stateTitle").innerHTML = miscData[stateIndex].State + ", 2015";
-            document.getElementById("stateTitle").style.color = colors[i];
-            document.getElementById("statePop").innerHTML = "<b>Population Size:</b> " + numberWithCommas(miscData[stateIndex].Population);
-            document.getElementById("stateAirportNum").innerHTML = "<b>Number of Airports: </b>" +numberWithCommas(miscData[stateIndex].AirportNum);
-            document.getElementById("stateInflow").innerHTML = "<b>Number of People Flying In:</b> " + numberWithCommas(popData[stateIndex].inflow*10);
-            document.getElementById("stateOutflow").innerHTML = "<b>Number of People Flying Out: </b>" + numberWithCommas(popData[stateIndex].outflow*10);
-            
-        }
-    }
-    //function found on http://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-    
-}
-
-    
-//Visualization 2 (Ankita Agrawal)
-    
-d3.json("pricesdata.json", function(data) {
-
-var margin = {top: 30, right: 10, bottom: 60, left: 60},
-    width = 900 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-var xScale = d3.scale.linear()
-    .domain([1993,2015])
-    .range([margin.left, width]); 
-
-
-
-
-var xAxis = d3.svg.axis()
-    .scale(xScale)
-    .tickFormat(d3.format("d"))
-    .orient("bottom");
-
-var yScale = d3.scale.linear()
-    .domain([700,300])
-    .range([10, height]);
-
-var yAxis = d3.svg.axis()
-    .scale(yScale)
-    .orient("left");
-
-var svg = d3.select("#graph2").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-svg.append("g")
-      .attr("class", "axis")
-      .attr('transform', 'translate(0,410)')
-      .call(xAxis);
-svg.append("g")
-      .attr("class", "axis")
-      .attr('transform', 'translate(60,0)')
-      .call(yAxis); 
-
-svg.append("text")
-          .attr("class", "y label")
-          .attr("transform", "rotate(-90)")
-          .attr("y", 10)
-          .attr("x",-200)
-          .style("font-weight","bold")
-          .style("font-size","12px")
-          .attr("text-anchor", "middle")    
-          .text("Average Outgoing Domestic US Flight Prices");
-
-svg.append("text")
-          .attr("class", "x label")
-          .attr("text-anchor", "end")
-          .attr("x", 450)
-          .attr("y", height+45)
-          .style("font-weight","bold")
-          .style("font-size","12px")
-          .text("Years");
-
-{
-//for popup
-var div = d3.select("#graph2").append("div") 
-    .attr("class", "tooltip")       
-    .style("opacity", 0);
-
-//1st Line - California 
-var lineGen = d3.svg.line()
-  .x(function(d) {
-        return xScale(d.Year);
-  })
-  .y(function(d) {
-    return yScale(d.CA)
-  });
-
-svg.append("path")
-  .attr('d', lineGen(data))
-  .data(data)
-  .attr('stroke', 'green')
-  .attr('stroke-width', 2)
-  .attr("id","lineA")
-  .attr('fill', 'none');
-
-//adding dots and data
-svg.selectAll("dot")  
-        .data(data)     
-        .enter().append("circle")               
-        .attr("r", 3)   
-        .attr("cx", function(d) { return xScale(d.Year); })   
-        .attr("cy", function(d) { return yScale(d.CA); })   
-        .on("mouseover", function(d) {    
-            div.transition()    
-                .duration(200)    
-                .style("opacity", .9);  
-              //HTML FORMATTING FOR POP UP BOX  
-            div .html("<b><center>Los Angeles Airport, </b>" + d.Year +  "</center><b>Price:</b> $" + d.CA + "<br><b> State GDP Growth: </b> " + d.CA_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.CA_flights) )
-                .style("left", (d3.event.pageX + 20)+ "px")   
-                .style("top", (d3.event.pageY - 20) + "px"); 
-
-   d3.select(this).attr("fill", "red").attr("r", 3);
-   d3.select("#lineA").attr("stroke-width",4);
-   svg.append("line")
-                          .attr("id","line1")
-                          .attr("class","lines")
-                          .attr("x1", 60)
-                          .attr("y1", yScale(d.CA_Max))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.CA_Max));
-  svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","max1")
-                          .attr("y", yScale(d.CA_Max))
-                          .attr("x",width+7)
-                          .text("MAX");
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","min1")
-                          .attr("y", yScale(d.CA_Min))
-                          .attr("x",width+7)
-                          .text("MIN");
-                          
-   svg.append("line")
-                          .attr("id","line2")
-                          .attr("class","lines")
-                          .attr("x1", 60)
-                          .attr("y1", yScale(d.CA_Min))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.CA_Min));
-                          
-   
-  })
-          
-        .on("mouseout", function(d) {   
-            div.transition()    
-                .duration(500)    
-                .style("opacity", 0); 
-            d3.select(this).attr("fill", "black").attr("r", 3);
-            d3.select("#lineA").attr("stroke-width",2);
-            d3.select("#line1").remove();
-            d3.select("#line2").remove();
-            d3.select("#max1").remove();
-            d3.select("#min1").remove();
-        });
-
-
-
- //2nd line - Illinois
- var lineGen2 = d3.svg.line()
-  .x(function(d) {
-        return xScale(d.Year);
-  })
-  .y(function(d) {
-    return yScale(d.IL)
-  });
-
-svg.append("path")
-  .attr('d', lineGen2(data))
-  .data(data)
-  .attr('stroke', 'red')
-  .attr('stroke-width', 2)
-  .attr("id","lineB")
-  .attr('fill', 'none');
-
-//adding dots and data
-svg.selectAll("dot")  
-        .data(data)     
-        .enter().append("circle")               
-        .attr("r", 3)   
-        .attr("cx", function(d) { return xScale(d.Year); })   
-        .attr("cy", function(d) { return yScale(d.IL); })   
-        .on("mouseover", function(d) {    
-            div.transition()    
-                .duration(200)    
-                .style("opacity", .9);  
-              //HTML FORMATTING FOR POP UP BOX  
-            div .html("<b><center> Chicago O'Hare Airport, </b>" + d.Year +  "</center><b>Price:</b> $" + d.IL + "<br><b> State GDP Growth: </b> " + d.IL_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.IL_flights) )
-                .style("left", (d3.event.pageX +20) + "px")   
-                .style("top", (d3.event.pageY - 28) + "px"); 
-
-   d3.select(this).attr("fill", "red").attr("r", 3);
-   d3.select("#lineB").attr("stroke-width",4);
-   svg.append("line")
-                          .attr("id","line1")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.IL_Max))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.IL_Max));
-                          
-   svg.append("line")
-                          .attr("id","line2")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.IL_Min))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.IL_Min));
-   svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","max1")
-                          .attr("y", yScale(d.IL_Max))
-                          .attr("x",width+7)
-                          .text("MAX");
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","min1")
-                          .attr("y", yScale(d.IL_Min))
-                          .attr("x",width+7)
-                          .text("MIN");
-                                                 
-                          
-   
-  })
-          
-        .on("mouseout", function(d) {   
-            div.transition()    
-                .duration(500)    
-                .style("opacity", 0); 
-            d3.select(this).attr("fill", "black").attr("r", 3);
-            d3.select("#lineB").attr("stroke-width",2);
-            d3.select("#line1").remove();
-            d3.select("#line2").remove();
-            d3.select("#max1").remove();
-            d3.select("#min1").remove();
-        });
-
-
-//3rd line - Denver CO
-var lineGen3 = d3.svg.line()
-  .x(function(d) {
-        return xScale(d.Year);
-  })
-  .y(function(d) {
-    return yScale(d.CO)
-  });
-
-svg.append("path")
-  .attr('d', lineGen3(data))
-  .data(data)
-  .attr('stroke', 'blue')
-  .attr('stroke-width', 2)
-  .attr("id","lineC")
-  .attr('fill', 'none');
-
-//adding dots and data
-svg.selectAll("dot")  
-        .data(data)     
-        .enter().append("circle")               
-        .attr("r", 3)   
-        .attr("cx", function(d) { return xScale(d.Year); })   
-        .attr("cy", function(d) { return yScale(d.CO); })   
-        .on("mouseover", function(d) {    
-            div.transition()    
-                .duration(200)    
-                .style("opacity", .9);  
-              //HTML FORMATTING FOR POP UP BOX  
-            div .html("<b><center> Denver International Airport, </b>" + d.Year +  "</center><b>Price:</b> $" + d.CO + "<br><b> State GDP Growth: </b> " + d.CO_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.CO_flights) )
-                .style("left", (d3.event.pageX+20) + "px")   
-                .style("top", (d3.event.pageY - 28) + "px"); 
-
-   d3.select(this).attr("fill", "red").attr("r", 3);
-   d3.select("#lineC").attr("stroke-width",4);
-   svg.append("line")
-                          .attr("id","line1")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.CO_Max))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.CO_Max));
-                          
-   svg.append("line")
-                          .attr("id","line2")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.CO_Min))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.CO_Min));
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","max1")
-                          .attr("y", yScale(d.CO_Max))
-                          .attr("x",width+7)
-                          .text("MAX");
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","min1")
-                          .attr("y", yScale(d.CO_Min))
-                          .attr("x",width+7)
-                          .text("MIN");
-                          
-                          
-   
-  })
-          
-        .on("mouseout", function(d) {   
-            div.transition()    
-                .duration(500)    
-                .style("opacity", 0); 
-            d3.select(this).attr("fill", "black").attr("r", 3);
-            d3.select("#lineC").attr("stroke-width",2);
-            d3.select("#line1").remove();
-            d3.select("#line2").remove();
-            d3.select("#max1").remove();
-            d3.select("#min1").remove();
-        });
-
- 
- //4th line - Hartfield Atlanta
- var lineGen4 = d3.svg.line()
-  .x(function(d) {
-        return xScale(d.Year);
-  })
-  .y(function(d) {
-    return yScale(d.GA)
-  });
-
-svg.append("path")
-  .attr('d', lineGen4(data))
-  .data(data)
-  .attr('stroke', 'purple')
-  .attr('stroke-width', 2)
-  .attr("id","lineD")
-  .attr('fill', 'none');
-
-//adding dots and data
-svg.selectAll("dot")  
-        .data(data)     
-        .enter().append("circle")               
-        .attr("r", 3)   
-        .attr("cx", function(d) { return xScale(d.Year); })   
-        .attr("cy", function(d) { return yScale(d.GA); })   
-        .on("mouseover", function(d) {    
-            div.transition()    
-                .duration(200)    
-                .style("opacity", .9);  
-              //HTML FORMATTING FOR POP UP BOX  
-            div .html("<b><center> Hartfield Atlanta Airport, </b>" + d.Year +  "</center><b>Price:</b> $" + d.GA + "<br><b> State GDP Growth: </b> " + d.GA_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.GA_flights) )
-                .style("left", (d3.event.pageX+20) + "px")   
-                .style("top", (d3.event.pageY - 28) + "px"); 
-
-   d3.select(this).attr("fill", "red").attr("r", 3);
-   d3.select("#lineD").attr("stroke-width",4);
-   svg.append("line")
-                          .attr("id","line1")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.GA_Max))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.GA_Max));
-                          
-   svg.append("line")
-                          .attr("id","line2")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.GA_Min))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.GA_Min));
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","max1")
-                          .attr("y", yScale(d.GA_Max))
-                          .attr("x",width+7)
-                          .text("MAX");
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","min1")
-                          .attr("y", yScale(d.GA_Min))
-                          .attr("x",width+7)
-                          .text("MIN");
-                          
-                          
-   
-  })
-          
-        .on("mouseout", function(d) {   
-            div.transition()    
-                .duration(500)    
-                .style("opacity", 0); 
-            d3.select(this).attr("fill", "black").attr("r", 3);
-            d3.select("#lineD").attr("stroke-width",2);
-            d3.select("#line1").remove();
-            d3.select("#line2").remove();
-            d3.select("#max1").remove();
-            d3.select("#min1").remove();
-        });
-
-//5th line - Logan Boston MA
-var lineGen5 = d3.svg.line()
-  .x(function(d) {
-        return xScale(d.Year);
-  })
-  .y(function(d) {
-    return yScale(d.MA)
-  });
-
-svg.append("path")
-  .attr('d', lineGen5(data))
-  .data(data)
-  .attr('stroke', 'orange')
-  .attr('stroke-width', 2)
-  .attr("id","lineE")
-  .attr('fill', 'none');
-
-//adding dots and data
-svg.selectAll("dot")  
-        .data(data)     
-        .enter().append("circle")               
-        .attr("r", 3)   
-        .attr("cx", function(d) { return xScale(d.Year); })   
-        .attr("cy", function(d) { return yScale(d.MA); })   
-        .on("mouseover", function(d) {    
-            div.transition()    
-                .duration(200)    
-                .style("opacity", .9);  
-              //HTML FORMATTING FOR POP UP BOX  
-            div .html("<b><center> Logan - Boston International Airport, </b>" + d.Year +  "</center><b>Price:</b> $" + d.MA + "<br><b> State GDP Growth: </b> " + d.MA_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.MA_flights) )
-                .style("left", (d3.event.pageX+20) + "px")   
-                .style("top", (d3.event.pageY - 28) + "px"); 
-
-   d3.select(this).attr("fill", "red").attr("r", 3);
-   d3.select("#lineE").attr("stroke-width",4);
-   svg.append("line")
-                          .attr("id","line1")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.MA_Max))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.MA_Max));
-                          
-   svg.append("line")
-                          .attr("id","line2")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.MA_Min))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.MA_Min));
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","max1")
-                          .attr("y", yScale(d.MA_Max))
-                          .attr("x",width+7)
-                          .text("MAX");
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","min1")
-                          .attr("y", yScale(d.MA_Min))
-                          .attr("x",width+7)
-                          .text("MIN");
-                          
-                          
-   
-  })
-          
-        .on("mouseout", function(d) {   
-            div.transition()    
-                .duration(500)    
-                .style("opacity", 0); 
-            d3.select(this).attr("fill", "black").attr("r", 3);
-            d3.select("#lineE").attr("stroke-width",2);
-            d3.select("#line1").remove();
-            d3.select("#line2").remove();
-            d3.select("#max1").remove();
-            d3.select("#min1").remove();
-        });
- 
-
- //6th line - Seattle International WA
-var lineGen6 = d3.svg.line()
-  .x(function(d) {
-        return xScale(d.Year);
-  })
-  .y(function(d) {
-    return yScale(d.WA)
-  });
-
-svg.append("path")
-  .attr('d', lineGen6(data))
-  .data(data)
-  .attr('stroke', 'pink')
-  .attr('stroke-width', 2)
-  .attr("id","lineF")
-  .attr('fill', 'none');
-
-//adding dots and data
-svg.selectAll("dot")  
-        .data(data)     
-        .enter().append("circle")               
-        .attr("r", 3)   
-        .attr("cx", function(d) { return xScale(d.Year); })   
-        .attr("cy", function(d) { return yScale(d.WA); })   
-        .on("mouseover", function(d) {    
-            div.transition()    
-                .duration(200)    
-                .style("opacity", .9);  
-              //HTML FORMATTING FOR POP UP BOX  
-            div .html("<b><center> Seattle Washington Airport, </b>" + d.Year +  "</center><b>Price:</b> $" + d.WA + "<br><b> State GDP Growth: </b> " + d.WA_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.WA_flights) )
-                .style("left", (d3.event.pageX+20) + "px")   
-                .style("top", (d3.event.pageY - 28) + "px"); 
-
-   d3.select(this).attr("fill", "red").attr("r", 3);
-   d3.select("#lineF").attr("stroke-width",4);
-   svg.append("line")
-                          .attr("id","line1")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.WA_Max))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.WA_Max));
-                          
-   svg.append("line")
-                          .attr("id","line2")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.WA_Min))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.WA_Min));
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","max1")
-                          .attr("y", yScale(d.WA_Max))
-                          .attr("x",width+7)
-                          .text("MAX");
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","min1")
-                          .attr("y", yScale(d.WA_Min))
-                          .attr("x",width+7)
-                          .text("MIN");
-                          
-                          
-   
-  })
-          
-        .on("mouseout", function(d) {   
-            div.transition()    
-                .duration(500)    
-                .style("opacity", 0); 
-            d3.select(this).attr("fill", "black").attr("r", 3);
-            d3.select("#lineF").attr("stroke-width",2);
-            d3.select("#line1").remove();
-            d3.select("#line2").remove();
-            d3.select("#max1").remove();
-            d3.select("#min1").remove();
-        });
- 
-//7th line - Dallas Airport
-var lineGen7 = d3.svg.line()
-  .x(function(d) {
-        return xScale(d.Year);
-  })
-  .y(function(d) {
-    return yScale(d.TX)
-  });
-
-svg.append("path")
-  .attr('d', lineGen7(data))
-  .data(data)
-  .attr('stroke', 'lightgreen')
-  .attr('stroke-width', 2)
-  .attr("id","lineG")
-  .attr('fill', 'none');
-
-//adding dots and data
-svg.selectAll("dot")  
-        .data(data)     
-        .enter().append("circle")               
-        .attr("r", 3)   
-        .attr("cx", function(d) { return xScale(d.Year); })   
-        .attr("cy", function(d) { return yScale(d.TX); })   
-        .on("mouseover", function(d) {    
-            div.transition()    
-                .duration(200)    
-                .style("opacity", .9);  
-              //HTML FORMATTING FOR POP UP BOX  
-            div .html("<b><center> Dallas International Airport, </b>" + d.Year +  "</center><b>Price:</b> $" + d.TX + "<br><b> State GDP Growth: </b> " + d.TX_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.TX_flights) )
-                .style("left", (d3.event.pageX+20) + "px")   
-                .style("top", (d3.event.pageY - 28) + "px"); 
-
-   d3.select(this).attr("fill", "red").attr("r", 3);
-   d3.select("#lineG").attr("stroke-width",4);
-   svg.append("line")
-                          .attr("id","line1")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.TX_Max))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.TX_Max));
-                          
-   svg.append("line")
-                          .attr("id","line2")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.TX_Min))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.TX_Min));
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","max1")
-                          .attr("y", yScale(d.TX_Max))
-                          .attr("x",width+7)
-                          .text("MAX");
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","min1")
-                          .attr("y", yScale(d.TX_Min))
-                          .attr("x",width+7)
-                          .text("MIN");
-                          
-                          
-   
-  })
-          
-        .on("mouseout", function(d) {   
-            div.transition()    
-                .duration(500)    
-                .style("opacity", 0); 
-            d3.select(this).attr("fill", "black").attr("r", 3);
-            d3.select("#lineG").attr("stroke-width",2);
-            d3.select("#line1").remove();
-            d3.select("#line2").remove();
-            d3.select("#max1").remove();
-            d3.select("#min1").remove();
-        });
-
-//8th line - LaGuardia NY
-var lineGen8 = d3.svg.line()
-  .x(function(d) {
-        return xScale(d.Year);
-  })
-  .y(function(d) {
-    return yScale(d.NY)
-  });
-
-svg.append("path")
-  .attr('d', lineGen8(data))
-  .data(data)
-  .attr('stroke', 'lightblue')
-  .attr('stroke-width', 2)
-  .attr("id","lineH")
-  .attr('fill', 'none');
-
-//adding dots and data
-svg.selectAll("dot")  
-        .data(data)     
-        .enter().append("circle")               
-        .attr("r", 3)   
-        .attr("cx", function(d) { return xScale(d.Year); })   
-        .attr("cy", function(d) { return yScale(d.NY); })   
-        .on("mouseover", function(d) {    
-            div.transition()    
-                .duration(200)    
-                .style("opacity", .9);  
-              //HTML FORMATTING FOR POP UP BOX  
-            div .html("<b><center> LaGuardia International Airport, </b>" + d.Year +  "</center><b>Price:</b> $" + d.CO + "<br><b> State GDP Growth: </b> " + d.NY_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.NY_flights) )
-                .style("left", (d3.event.pageX+20) + "px")   
-                .style("top", (d3.event.pageY - 28) + "px"); 
-
-   d3.select(this).attr("fill", "red").attr("r", 3);
-   d3.select("#lineH").attr("stroke-width",4);
-   svg.append("line")
-                          .attr("id","line1")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.NY_Max))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.NY_Max));
-                          
-   svg.append("line")
-                          .attr("id","line2")
-                          .attr("class","lines")
-                          .attr("x1", margin.left)
-                          .attr("y1", yScale(d.NY_Min))
-                          .attr("x2", width)
-                          .attr("y2", yScale(d.NY_Min));
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","max1")
-                          .attr("y", yScale(d.NY_Max))
-                          .attr("x",width+7)
-                          .text("MAX");
-    svg.append("text")
-                          .attr("class","minmax")
-                          .attr("id","min1")
-                          .attr("y", yScale(d.NY_Min))
-                          .attr("x",width+7)
-                          .text("MIN");                       
-   
-  })
-          
-        .on("mouseout", function(d) {   
-            div.transition()    
-                .duration(500)    
-                .style("opacity", 0); 
-            d3.select(this).attr("fill", "black").attr("r", 3);
-            d3.select("#lineH").attr("stroke-width",2);
-            d3.select("#line1").remove();
-            d3.select("#line2").remove();
-            d3.select("#max1").remove();
-            d3.select("#min1").remove();
-        });
-
-
- }
-
-});
-    
-
-var period_val = "month";
-var period_radios = document.getElementsByName('period');
-var type_val = "delay";
-var type_radios = document.getElementsByName('type');
-
-// init slider divs
-var month_div = document.getElementById("month_div");
-var day_of_week_div = document.getElementById("day_of_week_div");
-day_of_week_div.style.display = "none";
-
-// init data table
-var data_table = {};
-data_table["selected"] = {};
-data_table["selected"]["period"] = "month";
-data_table["selected"]["type"] = "delay";
-
-// callback for switching period modes
-function switch_periods(period) {
-	var sliderLabel = document.getElementById("slider_label");
-	var lookup = {};
-	lookup["month"] = "Month";
-	lookup["day_of_week"] = "Day of Week";
-	sliderLabel.innerHTML = "<h4>"+lookup[period]+"</h4>";
-	data_table["selected"]["period"] = period;
-
-	// hide/show slider divs
-	if(period == "month") {
-		day_of_week_div.style.display = "none";
-		month_div.style.display = "block";
-	} else if(period == "day_of_week") {
-		month_div.style.display = "none";
-		day_of_week_div.style.display = "block";
-
-	}
-
-	// record selected period in data table
-	var slider = document.getElementById(period+"_slider");
-	var sliderVal = document.getElementById("slider_val");
-	data_table["selected"][period] = slider.value;
-}
-
-// callback for switching type modes
-function switch_types(type) {
-	data_table["selected"]["type"] = type;
-}
-
-Array.prototype.max = function() {
-	return Math.max.apply(Math, this);
-}
-
-Array.prototype.min = function() {
-	return Math.min.apply(Math, this);
-}
-
-Array.prototype.min_max = function() {
-	return [this.min, this.max];
-}
-
-// code for following function taken from http://bl.ocks.org/eesur/4e0a69d57d3bfc8a82c2
-// used to move objects in graphs to front when needed
-d3.selection.prototype.moveToFront = function() {
-	return this.each(function() {
-		this.parentNode.appendChild(this);
-	});
-};
-
-// returns the true if the obj is included in the given array, false otherwise
-function include(arr,obj) {
-	return (arr.indexOf(obj) != -1);
-}
-
-// removes duplicate values from the array
-function remove_dups(duplicatesArray) {
-	var uniqueArray = duplicatesArray.filter(function(elem, pos) {
-		return duplicatesArray.indexOf(elem) == pos;
-	});
-	return uniqueArray;
-}
-
-// Download ariport code data, sourced from BTS
-function get_airport_names(data_table) {
-	d3.csv("AIRPORT_NAMES.csv", function (error, data) {
-		var airport_name_dict = {}
-		data.forEach(function(row) {
-			var code = row["Code"];
-			var name = row["Description"];
-			airport_name_dict[code] = name;
-		});
-
-		data_table["airport_names"] = airport_name_dict;
-
-		get_airport_locations(data_table);
-	});
-}
-
-// Download ariport location data
-// source: https://www.aggdata.com/airline_airport_locations/us_airport
-function get_airport_locations(data_table) {
-	var airport_loc_dict = {}
-	d3.csv("AIRPORT_COORD.csv", function (error, data) {
-		data.forEach(function(row) {
-			var code = row["Airport Code"];
-			var lat = row["Latitude"];
-			var long = row["Longitude"];
-			airport_loc_dict[code] = {"lat": lat, "long": long};
-		});
-
-		data_table["airport_locations"] = airport_loc_dict;
-
-		get_data1(data_table);
-	});
-}
-
-// Download airline delay/cancel by month data, sourced from BTS
-function get_data1(data_table) {
-	d3.csv("data1.csv", function (error, data) {
-		data_table["month"] = data;
-		get_data2(data_table);
-	});
-}
-
-// Download airline delay/cancel by month data, sourced from BTS
-function get_data2(data_table) {
-	d3.csv("data2.csv", function (error, data) {
-		data_table["day_of_week"] = data;
-		get_data3(data_table);
-	});
-}
-
-// Download airline delay/cancel by month data, sourced from BTS
-function get_data3(data_table) {
-	d3.csv("data3.csv", function (error, data) {
-		data_table["airline"] = data;
-		data_table = get_data_filtered(data_table, "month");
-		data_table = get_data_filtered(data_table, "day_of_week");
-		create_map(data_table);
-	});
-}
-
-function get_data_filtered(data_table, period) {
-	// var top_airports = ["ABE", "ATL", "AUS", "BNA", "BOS", "BWI", "CLE", "CLT", "DCA", "DEN", "DFW", "DTW", "EWR", "FLL", "HNL", "HOU", "IAD", "IAH", "JFK", "LAS", "LAX", "LGA", "MCI", "MCO", "MDW", "MIA", "MSP", "OAK", "ORD", "PDX", "PHL", "PHX", "RDU", "SAN", "SEA", "SFO", "SLC", "SMF", "SNA", "STL", "TPA"];
-	var top_airports = ["LAX", "ORD", "DEN", "ATL", "BOS", "SEA", "DFW", "LGA"];
-	data_table["top_airports"] = top_airports;
-
-	var filtered = [],
-		delays = [],
-		cancels = [];
-
-	// save all important values to variables for easy access
-	data_table[period].forEach(function(row) {
-		var AVG_ARR_DELAY = row["AVG(ARR_DELAY)"],
-		AVG_ARR_DELAY_NEW = row["AVG(ARR_DELAY_NEW)"],
-		AVG_DEP_DELAY = row["AVG(DEP_DELAY)"],
-		AVG_DEP_DELAY_NEW = row["AVG(DEP_DELAY_NEW)"],
-		DEST = row["DEST"],
-		DEST_STATE_ABR = row["DEST_STATE_ABR"],
-		MONTH = row["MONTH"],
-		DAY_OF_WEEK = row["DAY_OF_WEEK"],
-		ORIGIN = row["ORIGIN"],
-		ORIGIN_STATE_ABR = row["ORIGIN_STATE_ABR"],
-		SUM_CANCELLED = row["SUM(CANCELLED)"],
-		SUM_FLIGHTS = row["SUM(FLIGHTS)"];
-
-		// for each entry with only included airports with location data
-		// create a data obj that will be used to plot the lines
-		try {
-			if(include(top_airports, ORIGIN) && include(top_airports, DEST)) {
-				var loc = data_table["airport_locations"];
-
-				var long_lat1 = [loc[ORIGIN]["long"], loc[ORIGIN]["lat"]];
-				var long_lat2 = [loc[DEST]["long"], loc[DEST]["lat"]];
-				
-				if(isNaN(long_lat1[0]) || isNaN(long_lat1[1]) ||
-					isNaN(long_lat2[0]) || isNaN(long_lat2[1])) {
-				} else {
-					filtered.push({
-						"pt1": long_lat1,
-						"pt2": long_lat2,
-						"month" : MONTH,
-						"day_of_week" : DAY_OF_WEEK,
-						"ORIGIN" : ORIGIN,
-						"DEST" : DEST,
-						"delay" : AVG_DEP_DELAY_NEW,
-						"cancel" : SUM_CANCELLED,
-					})
-					delays.push(AVG_DEP_DELAY_NEW);
-					cancels.push(SUM_CANCELLED);
-				}
-			}
-		} catch(e) {
-			console.error(e)
-		}
-	});
-
-	// init weight and color scales
-	var delay_max = delays.max();
-	var cancel_max = cancels.max();
-
-	var cancelWeightScale = d3.scale.linear()
-		.domain([0, cancel_max])
-		.range([1, 10]);
-
-	var cancelColorScale = d3.scale.linear()
-		.domain([0, cancel_max/2, cancel_max])
-		.range(['green', 'yellow', 'red']);
-
-	data_table["cancel_max"] = cancel_max;
-
-	var delayWeightScale = d3.scale.linear()
-		.domain([0, delay_max])
-		.range([1, 10]);
-
-	var delayColorScale = d3.scale.linear()
-		.domain([0, delay_max/2, delay_max])
-		.range(['green', 'yellow', 'red']);
-
-	data_table["delay_max"] = delay_max;
-
-	// save the scaled values to each data obj
-	filtered.forEach(function(pt) {
-		pt["delay_weight"] = delayWeightScale(pt["delay"]);
-		pt["delay_color"] = delayColorScale(pt["delay"]);
-
-		pt["cancel_weight"] = cancelWeightScale(pt["cancel"]);
-		pt["cancel_color"] = cancelColorScale(pt["cancel"]);
-	});
-
-	data_table[period+"_filtered"] = filtered;
-
-	return data_table;
-}
-
-function create_map(data_table) {
-	var width = 1000,
-		height = 600,
-		init_rotate = [97, -34],	// [-97, 38] becomes initial center of projection
-		init_scale = 3.2,
-		maxlat = 83;	// clip northern and southern poles (infinite in mercator)
-		
-	var projection = d3.geo.mercator()
-		.rotate(init_rotate)
-		.scale(1)	// we'll scale up to match viewport shortly.
-		.translate([width/2, height/2]);
-
-	// find the top left and bottom right of current projection
-	function mercatorBounds(projection, maxlat) {
-		var yaw = projection.rotate()[0],
-			xymax = projection([-yaw+180-1e-6,-maxlat]),
-			xymin = projection([-yaw-180+1e-6, maxlat]);
-		
-		return [xymin,xymax];
-	}
-
-	// set up the scale extent and initial scale for the projection
-	var b = mercatorBounds(projection, maxlat),
-		s = width/(b[1][0]-b[0][0])*init_scale,
-		scaleExtent = [.5*s, 10*s];
-
-	projection
-		.scale(s);
-
-	// init period radio callbacks
-	for (var rc = 0 ; rc < period_radios.length; rc++) {
-		period_radios[rc].onclick = function() {
-			if(this.value != period_val) {
-				period_val = this.value;
-				switch_periods(this.value);
-				redraw(); // update map
-			}
-		}
-	}
-
-	// init type radio callbacks
-	for (var rc = 0 ; rc < type_radios.length; rc++) {
-		type_radios[rc].onclick = function() {
-			if(this.value != type_val) {
-				type_val = this.value;
-				switch_types(this.value);
-				redraw(); // update map
-			}
-		}
-	}
-		
-	var path = d3.geo.path()
-		.projection(projection);
-
-	var zoom = d3.behavior.zoom()
-		.scaleExtent(scaleExtent)
-		.scale(projection.scale())
-		.on("zoom", redraw);
-
-	var svg = d3.select('#graph3')
-		.append('svg')
-			.attr('width',width)
-			.attr('height',height)
-			.call(zoom);
-
-	// disable double click zoom
-	svg.on("dblclick.zoom", null);
-
-	var g = svg.append("g");
-	var usObjects;
-
-	// get the US path data and draw the paths
-	d3.json("us.json", function ready(error, us) {
-		svg.selectAll('path')
-			.data(topojson.feature(us, us.objects.states).features)
-		.enter().append('path')
-			.style("fill", "gray")
-			.style("stroke", "lightgray")
-		
-		redraw(); // update map
-	});
-
-	// track last translation and scale event we processed
-	var tlast = [0,0], 
-		slast = null;
-
-	// init selected data table
-	data_table["selected"]["month"] = 1;
-	data_table["selected"]["origins"] = [];
-	data_table["selected"]["origins_shown"] = [];
-	var month_slider = document.getElementById("month_slider"),
-	day_of_week_slider = document.getElementById("day_of_week_slider"),
-	sliderVal = document.getElementById("slider_val");
-
-	// add callbacks for slider changes
-	month_slider.addEventListener("input", function() {
-		data_table["selected"]["month"] = this.value;
-		redraw(); // update map
-	});
-
-	day_of_week_slider.addEventListener("input", function() {
-		data_table["selected"]["day_of_week"] = this.value;
-		redraw(); // update map
-	});
-
-	// add the color legend to the svg
-	function addColorLegend() {
-		d3.selectAll(".colorAxis").remove();
-		// color legend
-		var gradient = svg.append("defs")
-			.append("linearGradient")
-			.attr("id", "gradient")
-			.attr("x1", "0%")
-			.attr("y1", "0%")
-			.attr("x2", "100%")
-			.attr("y2", "0%")
-			.attr("spreadMethod", "pad");
-		gradient.append("stop")
-			.attr("offset", "0%")
-			.attr("stop-color", "green")
-			.attr("stop-opacity", 1);
-		gradient.append("stop")
-			.attr("offset", "50%")
-			.attr("stop-color", "yellow")
-			.attr("stop-opacity", 1);
-		gradient.append("stop")
-			.attr("offset", "100%")
-			.attr("stop-color", "red")
-			.attr("stop-opacity", 1);
-		var weight_max = data_table["delay_max"];
-		var colorAxisScale = d3.scale.linear()
-			.domain([0, weight_max])
-			.range([0, width / 2]);
-		var colorAxis = d3.svg.axis()
-			.scale(colorAxisScale)
-			.orient('bottom')
-			.ticks(5, ",.1s")
-			.tickSize(10, 1);
-		var colorLegend = svg.append('g')
-			.attr('class', 'colorAxis')
-			.attr("transform", "translate(" + width / 4 + "," + (height-80) + ")")
-			.call(colorAxis)
-		colorLegend.append("rect")
-			.attr("class", "legend")
-			.attr("width", width / 2)
-			.attr("height", height / 32)
-			.attr("transform", "translate(0,-40)")
-			.style("fill", "url(#gradient)");
-		colorLegend.append("text")
-			.attr("class", "label")
-			.attr("x", width/4)
-			.attr("y", 50)
-			.attr("font-size", 16)
-			.style("text-anchor", "middle")
-			.text("Average Delay (min)");
-	}
-
-	// redraw all svg elements on map translation/rotation/zoom
-	function redraw() {
-		if (d3.event) { 
-			var scale = d3.event.scale,
-				t = d3.event.translate;				
-			
-			// if scaling changes, ignore translation (otherwise touch zooms are weird)
-			if (scale != slast) {
-				projection.scale(scale);
-			} else {
-				var dx = (t[0]-tlast[0])/init_scale,
-					dy = t[1]-tlast[1],
-					yaw = projection.rotate(),
-					tp = projection.translate();
-			
-				// use x translation to rotate based on current scale
-				projection.rotate([yaw[0]+360.*dx/width*scaleExtent[0]/scale, yaw[1], 0]);
-				// use y translation to translate projection, clamped by min/max
-				var b = mercatorBounds(projection, maxlat);
-				if (b[0][1] + dy > 0) dy = -b[0][1];
-				else if (b[1][1] + dy < height) dy = height-b[1][1];
-				projection.translate([tp[0],tp[1]+dy]);
-			}
-			slast = scale;
-			tlast = t;
-		}
-		
-		svg.selectAll('path')	// re-project path data
-			.attr('d', path);
-
-		// add an airport node with given lon/lat and name
-		function addLocation(lon, lat, name) {
-			var coords = projection([lon, lat]);
-			data_obj = svg.append('g')
-				.attr("class", "data_obj");
-			data_obj.append('circle')
-				.attr("class", "data_point")
-				.attr("cx", coords[0])
-				.attr("cy", coords[1])
-				.attr("r", 3)
-				.attr("fill", "red");
-			data_obj.append("text")
-				.attr("class", "data_label")
-				.attr("x", coords[0])
-				.attr("y", coords[1]-5)
-				.attr("font-size", 14)
-				.attr("fill", "black")
-				.style("font-weight", "bold")
-				.style("text-anchor", "middle")
-				.text(name);
-
-			// add callback for clicking on an airport node
-			data_obj.on("click",function() {
-
-				var selected_origin = name;
-				var idx = data_table["selected"]["origins"].indexOf(selected_origin);
-				if (idx != -1) {
-					data_table["selected"]["origins"].splice(idx, 1);
-					data_table["selected"]["origins_shown"].splice(idx, 1);
-				} else {
-					data_table["selected"]["origins"].push(selected_origin);
-					data_table["selected"]["origins_shown"].push(false);
-				}
-				
-				redraw_routes();
-			});
-
-		}
-
-		// redraw all airports
-		d3.selectAll(".data_obj").remove();
-		var top_airports = data_table["top_airports"]
-		for(var i in top_airports) {
-			var airport = top_airports[i];
-			var code = airport;
-			try {
-				var lat = data_table["airport_locations"][airport]["lat"];
-				var long = data_table["airport_locations"][airport]["long"];
-				if(!isNaN(long) && !isNaN(lat)) {
-					addLocation(long, lat, code);
-				}
-			} catch(e) {
-				// console.error(e);	
-			}
-		}
-
-		// redraw all route paths between nodes
-		function redraw_routes() {
-
-			d3.selectAll(".lines").remove();
-
-			// draw a path from one coordinate to the second with given weight and color
-			function drawRoute(long_lat1, long_lat2, weight, color, transition) {
-				try {
-					var offsetx = 0;
-					var offsety = 0;
-
-					var coords1 = projection(long_lat1);
-					var coords2 = projection(long_lat2);
-
-					var mult = .2;
-					offsety = (coords1[0] - coords2[0])*mult;
-					offsetx = (coords2[1] - coords1[1])*mult;
-
-					var lineData = [
-						{"x":coords1[0],"y":coords1[1]},
-						{
-							"x":(coords1[0]+coords2[0])/2+offsetx,
-							"y":(coords1[1]+coords2[1])/2+offsety
-						},
-						{"x":coords2[0],"y":coords2[1]}
-					];
-
-					var lineFunction = d3.svg.line()
-						.x(function(d){return d.x;})
-						.y(function(d){return d.y;})
-						.interpolate("basis");
-
-					var lineGraph = svg.append("path")
-						.attr("d",lineFunction(lineData))
-						.attr("fill","none")
-						.attr("stroke", color)
-						.attr("stroke-width", weight)
-						.attr("class","lines");
-
-					// add transition only if this is the first time drawing these edges
-					if(transition) {
-						var totalLength = lineGraph.node().getTotalLength();
-						var durationLine = totalLength*1.5;
-						lineGraph
-							.attr("stroke-dasharray", totalLength + " " + totalLength)
-							.attr("stroke-dashoffset", totalLength)
-							.transition()
-							.duration(durationLine)
-							.ease("linear")
-							.attr("stroke-dashoffset", 0);
-					}
-				} catch(e) {
-					console.error(e);
-				}
-			}
-
-			// redraw all selected routes
-			var period = data_table["selected"]["period"];
-			var type = data_table["selected"]["type"];
-			var selected = data_table["selected"][period];
-			for (i in data_table["selected"]["origins"]) {
-				var origin = data_table["selected"]["origins"][i];
-				var shown = data_table["selected"]["origins_shown"][i];
-				data_table[period+"_filtered"].forEach(function(pt) {
-					if(pt["ORIGIN"] == origin && 
-						pt[period] == selected) {
-						if(type == "delay") {
-							drawRoute(pt["pt1"], pt["pt2"], pt["delay_weight"], pt["delay_color"], !shown);
-						}
-						else if(type == "cancel") {
-							drawRoute(pt["pt1"], pt["pt2"], pt["cancel_weight"], pt["cancel_color"], !shown);
-						}
-						data_table["selected"]["origins_shown"][i] = true;
-					}
-				});
-			}
-			d3.selectAll(".data_obj").moveToFront();
-		}
-
-		redraw_routes();
-
-		addColorLegend();
-	}
-}
-
-// get all the data
-function get_all_data(data_table) {
-	get_airport_names(data_table);
-}
-
-get_all_data(data_table);    
-    
-    
-    
-</script>
-</body>
+
+
+
+        <script>
+            //Visualization #1 (Yezy Lim)
+            var sign = "unclicked";
+
+            //Inspiration from https://bost.ocks.org/mike/uberdata/ and http://bl.ocks.org/mbostock/4062006
+
+            //list of colors from http://www.umsiko.co.za/links/RGB-ColourNamesHex.pdf
+            //csv to javascript array converter: http://creativyst.com/Prod/17/
+            var size = 51;
+            var colors = Array([size]);
+            colors[0] = "#8B4513";
+            colors[1] = "#00DED1";
+            colors[2] = "#9400D3";
+            colors[3] = "#FF1493";
+            colors[4] = "#00BFFF";
+            colors[5] = "#696969";
+            colors[6] = "#FFEFD5";
+            colors[7] = "#B22222";
+            colors[8] = "#B0E0E6";
+            colors[9] = "#228B22";
+            colors[10] = "#FF00FF";
+            colors[11] = "#DCDCDC";
+            colors[12] = "#800080";
+            colors[13] = "#FFD700";
+            colors[14] = "#DAA520";
+            colors[15] = "#808080";
+            colors[16] = "#008000";
+            colors[17] = "#E0FFFF";
+            colors[18] = "#F0FFF0";
+            colors[19] = "#FF69B4";
+            colors[20] = "#CD5C5C";
+            colors[21] = "#BC8F8F";
+            colors[22] = "#9ACD32";
+            colors[23] = "#F0E68C";
+            colors[24] = "#E6E6FA";
+            colors[25] = "#FFF0F5";
+            colors[26] = "#4B0082";
+            colors[27] = "#DB7093";
+            colors[28] = "#ADD8E6";
+            colors[29] = "#F08080";
+            colors[30] = "#FAFAD2";
+            colors[31] = "#2E8B57";
+            colors[32] = "#90EE90";
+            colors[33] = "#D3D3D3";
+            colors[34] = "#FFB6C1";
+            colors[35] = "#4682B4";
+            colors[36] = "#D2B48C";
+            colors[37] = "#D8BFD8";
+            colors[38] = "#008080";
+            colors[39] = "#FF6347";
+            colors[40] = "#FFFAF0";
+            colors[41] = "#EE82EE";
+            colors[42] = "#F5DEB3";
+            colors[43] = "#A0522D";
+            colors[44] = "#C0C0C0";
+            colors[45] = "#87CEEB";
+            colors[46] = "#6A5ACD";
+            colors[47] = "#4169E1";
+            colors[48] = "#FFFACD";
+            colors[49] = "#FA8072";
+            colors[50] = "#40E0D0";
+
+            //csv to javascript array converter: http://creativyst.com/Prod/17/
+            //array of state names + PR abrev.
+            var stateNum = 51;
+            var states = Array([stateNum]);
+            states[0] = "AL";
+            states[1] = "AK";
+            states[2] = "AZ";
+            states[3] = "AR";
+            states[4] = "CA";
+            states[5] = "CO";
+            states[6] = "CT";
+            states[7] = "DE";
+            states[8] = "FL";
+            states[9] = "GA";
+            states[10] = "HI";
+            states[11] = "ID";
+            states[12] = "IL";
+            states[13] = "IN";
+            states[14] = "IA";
+            states[15] = "KS";
+            states[16] = "KY";
+            states[17] = "LA";
+            states[18] = "ME";
+            states[19] = "MD";
+            states[20] = "MA";
+            states[21] = "MI";
+            states[22] = "MN";
+            states[23] = "MS";
+            states[24] = "MO";
+            states[25] = "MT";
+            states[26] = "NE";
+            states[27] = "NV";
+            states[28] = "NH";
+            states[29] = "NJ";
+            states[30] = "NM";
+            states[31] = "NY";
+            states[32] = "NC";
+            states[33] = "ND";
+            states[34] = "OH";
+            states[35] = "OK";
+            states[36] = "OR";
+            states[37] = "PA";
+            states[38] = "RI";
+            states[39] = "SC";
+            states[40] = "SD";
+            states[41] = "TN";
+            states[42] = "TX";
+            states[43] = "UT";
+            states[44] = "VT";
+            states[45] = "VA";
+            states[46] = "WA";
+            states[47] = "WV";
+            states[48] = "WI";
+            states[49] = "WY";
+            states[50] = "PR";
+
+
+
+
+            //2d array of 50 rows and 50 columns
+            matrix = new Array(51);
+            for (var i = 0; i < 51; i++) {
+                var row = [];
+                for (var j = 0; j < 51; j++) {
+                    row.push(0);
+                }
+                matrix[i] = row;
+                row = [];
+            }
+
+            queue()
+                    .defer(d3.json, "data_ext.json")
+                    .defer(d3.json, "popData.json")
+                    .defer(d3.json, "2015data.json")
+                    .await(ready);
+
+            function ready(error, data, popData, miscData) {
+                if (error)
+                    throw error;
+
+                //populate matrix... -1 if the flight does not exist
+                for (var k = 0; k < data.length; k++) {
+                    var rowNum = states.indexOf(data[k].orig);
+                    var colNum = states.indexOf(data[k].dest);
+                    matrix[rowNum][colNum] = data[k].numPeople * 10;
+                }
+                //initial variables
+                var width = 700;
+                var height = 700;
+                var innerRadius = Math.min(width, height) * .4;
+                var outerRadius = innerRadius * 1.1;
+
+                //assign colors to state
+                var fill = d3.scale.ordinal()
+                        .domain(d3.range(51))
+                        .range(colors);
+
+                //create svg
+                var svg = d3.select("#circos").append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append("g")
+                        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                //svg svgArc
+                var svgArc = d3.svg.arc()
+                        .innerRadius(innerRadius)
+                        .outerRadius(outerRadius);
+
+                //svg svgChord
+                var svgChord = d3.svg.chord()
+                        .radius(innerRadius);
+
+                //chord layout
+                var chordGroup = d3.layout.chord()
+                        .padding(.05)
+                        .sortSubgroups(d3.descending)
+                        .matrix(matrix);
+
+                //draw arcs
+                var arcs = svg.append("g").selectAll("path")
+                        .data(chordGroup.groups)
+                        .enter().append("path")
+                        .style("fill", function (d) {
+                            return fill(d.index);
+                        })
+                        .style("stroke", function (d) {
+                            return fill(d.index);
+                        })
+                        .attr("id", function (d, i) {
+                            return "arc" + i;
+                        })
+                        .attr("d", svgArc)
+                        .on("click", function (d, i) {
+                            show(d, i);
+                        })
+                        ;
+
+                //draw chords
+                svg.append("g")
+                        .attr("class", "chord")
+                        .selectAll("path")
+                        .data(chordGroup.chords)
+                        .enter().append("path")
+                        .attr("d", svgChord)
+                        .style("fill", function (d) {
+                            return fill(d.source.index);
+                        })
+                        .style("opacity", 0.9);
+
+                //write states' labels
+                var labels = svg.selectAll(".label")
+                        .data(chordGroup.groups)
+                        .enter().append("g")
+                        .attr("class", "label")
+                        .append("text")
+                        .attr("x", 3)
+                        .attr("dy", 20)
+                        .append("textPath")
+                        .attr("xlink:href", function (d, i) {
+                            return "#arc" + i;
+                        })
+                        .text(function (d, i) {
+                            return states[i];
+                        });
+
+                function print(d, i) {
+                    console.log(i);
+                }
+                ;
+
+
+
+                // Remove the labels that are too long for the arc length
+                labels
+                        .filter(function (d, i) {
+                            return (arcs[0][i].getTotalLength() / 2 - 40 < this.getComputedTextLength());
+                        })
+                        .remove();
+                /*
+                 for (var n = 0 ; n < 51; n++) {
+                 document.getElementById("#arc"+n).on("click", console.log("hi"));
+                 }*/
+
+                //draw ticks
+                var ticks = svg.append("g").selectAll("g")
+                        .data(chordGroup.groups)
+                        .enter().append("g").selectAll("g")
+                        .data(groupTicks);
+
+                ticks
+                        .enter().append("g")
+                        .attr("transform", function (d) {
+                            return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
+                                    + "translate(" + outerRadius + ",0)";
+                        });
+
+                ticks.append("line")
+                        .attr("x1", 1)
+                        .attr("y1", 0)
+                        .attr("x2", 5)
+                        .attr("y2", 0)
+                        .style("stroke", "#000");
+
+                ticks.append("text")
+                        .attr("x", 8)
+                        .attr("dy", ".35em")
+                        .attr("transform", function (d) {
+                            return d.angle > Math.PI ? "rotate(180),translate(-16)" : null;
+                        })
+                        .style("text-anchor", function (d) {
+                            return d.angle > Math.PI ? "end" : null;
+                        })
+                        .text(function (d) {
+                            return d.label;
+                        });
+
+                // Returns an array of tick angles and labels (1 tick = 100,000)
+                function groupTicks(d) {
+                    var k = (d.endAngle - d.startAngle) / d.value;
+                    return d3.range(0, d.value, 1000000).map(function (v, i) {
+                        return {angle: v * k + d.startAngle, label: i % 10 ? null : v / 10000000 + ""};
+                    });
+                }
+
+                //changes opacity and displays state's description
+                var stateIndex;
+                var prev;
+                function show(d, i) {
+                    if (i == prev && stateIndex != -1) {
+
+                        console.log("prevclicked" + popData[stateIndex].state);
+
+                        svg.selectAll(".chord path")
+                                .transition()
+                                .style("opacity", 1);
+
+                        stateIndex = -1;
+                        prev = i;
+
+                        document.getElementById("stateTitle").innerHTML = "Select a State<br> for More Information";
+                        document.getElementById("stateTitle").style.color = "black";
+                        document.getElementById("statePop").innerHTML = "";
+                        document.getElementById("stateAirportNum").innerHTML = "";
+                        document.getElementById("stateInflow").innerHTML = "";
+                        document.getElementById("stateOutflow").innerHTML = "";
+                    } else if ((i != prev) || (i == prev && stateIndex == -1)) {
+                        svg.selectAll(".chord path")
+                                .transition()
+                                .style("opacity", 1);
+
+                        svg.selectAll(".chord path")
+                                .filter(function (d) {
+                                    state = d.source.index;
+                                    return d.source.index != i && d.target.index != i;
+                                })
+                                .transition()
+                                .style("opacity", .075);
+
+                        stateIndex = i;
+                        console.log("clicked" + popData[stateIndex].state);
+                        prev = i;
+
+
+                        document.getElementById("stateTitle").innerHTML = miscData[stateIndex].State + ", 2015";
+                        document.getElementById("stateTitle").style.color = colors[i];
+                        document.getElementById("statePop").innerHTML = "<b>Population Size:</b> " + numberWithCommas(miscData[stateIndex].Population);
+                        document.getElementById("stateAirportNum").innerHTML = "<b>Number of Airports: </b>" + numberWithCommas(miscData[stateIndex].AirportNum);
+                        document.getElementById("stateInflow").innerHTML = "<b>Number of People Flying In:</b> " + numberWithCommas(popData[stateIndex].inflow * 10);
+                        document.getElementById("stateOutflow").innerHTML = "<b>Number of People Flying Out: </b>" + numberWithCommas(popData[stateIndex].outflow * 10);
+
+                    }
+                }
+                //function found on http://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+                function numberWithCommas(x) {
+                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+
+            }
+
+
+            //Visualization 2 (Ankita Agrawal)
+
+            d3.json("pricesdata.json", function (data) {
+
+                var margin = {top: 30, right: 10, bottom: 60, left: 60},
+                width = 900 - margin.left - margin.right,
+                        height = 500 - margin.top - margin.bottom;
+
+                var xScale = d3.scale.linear()
+                        .domain([1993, 2015])
+                        .range([margin.left, width]);
+
+
+
+
+                var xAxis = d3.svg.axis()
+                        .scale(xScale)
+                        .tickFormat(d3.format("d"))
+                        .orient("bottom");
+
+                var yScale = d3.scale.linear()
+                        .domain([700, 300])
+                        .range([10, height]);
+
+                var yAxis = d3.svg.axis()
+                        .scale(yScale)
+                        .orient("left");
+
+                var svg = d3.select("#graph2").append("svg")
+                        .attr("width", width + margin.left + margin.right)
+                        .attr("height", height + margin.top + margin.bottom)
+                        .append("g")
+                //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                svg.append("g")
+                        .attr("class", "axis")
+                        .attr('transform', 'translate(0,410)')
+                        .call(xAxis);
+                svg.append("g")
+                        .attr("class", "axis")
+                        .attr('transform', 'translate(60,0)')
+                        .call(yAxis);
+
+                svg.append("text")
+                        .attr("class", "y label")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 10)
+                        .attr("x", -200)
+                        .style("font-weight", "bold")
+                        .style("font-size", "12px")
+                        .attr("text-anchor", "middle")
+                        .text("Average Outgoing Domestic US Flight Prices");
+
+                svg.append("text")
+                        .attr("class", "x label")
+                        .attr("text-anchor", "end")
+                        .attr("x", 450)
+                        .attr("y", height + 45)
+                        .style("font-weight", "bold")
+                        .style("font-size", "12px")
+                        .text("Years");
+
+                {
+                    //for popup
+                    var div = d3.select("#graph2").append("div")
+                            .attr("class", "tooltip")
+                            .style("opacity", 0);
+
+                    //1st Line - California
+                    var lineGen = d3.svg.line()
+                            .x(function (d) {
+                                return xScale(d.Year);
+                            })
+                            .y(function (d) {
+                                return yScale(d.CA)
+                            });
+
+                    svg.append("path")
+                            .attr('d', lineGen(data))
+                            .data(data)
+                            .attr('stroke', 'green')
+                            .attr('stroke-width', 2)
+                            .attr("id", "lineA")
+                            .attr('fill', 'none');
+
+                    //adding dots and data
+                    svg.selectAll("dot")
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("r", 3)
+                            .attr("cx", function (d) {
+                                return xScale(d.Year);
+                            })
+                            .attr("cy", function (d) {
+                                return yScale(d.CA);
+                            })
+                            .on("mouseover", function (d) {
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", .9);
+                                //HTML FORMATTING FOR POP UP BOX
+                                div.html("<b><center>Los Angeles Airport, </b>" + d.Year + "</center><b>Price:</b> $" + d.CA + "<br><b> State GDP Growth: </b> " + d.CA_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.CA_flights))
+                                        .style("left", (d3.event.pageX + 20) + "px")
+                                        .style("top", (d3.event.pageY - 20) + "px");
+
+                                d3.select(this).attr("fill", "red").attr("r", 3);
+                                d3.select("#lineA").attr("stroke-width", 4);
+                                svg.append("line")
+                                        .attr("id", "line1")
+                                        .attr("class", "lines")
+                                        .attr("x1", 60)
+                                        .attr("y1", yScale(d.CA_Max))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.CA_Max));
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "max1")
+                                        .attr("y", yScale(d.CA_Max))
+                                        .attr("x", width + 7)
+                                        .text("MAX");
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "min1")
+                                        .attr("y", yScale(d.CA_Min))
+                                        .attr("x", width + 7)
+                                        .text("MIN");
+
+                                svg.append("line")
+                                        .attr("id", "line2")
+                                        .attr("class", "lines")
+                                        .attr("x1", 60)
+                                        .attr("y1", yScale(d.CA_Min))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.CA_Min));
+
+
+                            })
+
+                            .on("mouseout", function (d) {
+                                div.transition()
+                                        .duration(500)
+                                        .style("opacity", 0);
+                                d3.select(this).attr("fill", "black").attr("r", 3);
+                                d3.select("#lineA").attr("stroke-width", 2);
+                                d3.select("#line1").remove();
+                                d3.select("#line2").remove();
+                                d3.select("#max1").remove();
+                                d3.select("#min1").remove();
+                            });
+
+
+
+                    //2nd line - Illinois
+                    var lineGen2 = d3.svg.line()
+                            .x(function (d) {
+                                return xScale(d.Year);
+                            })
+                            .y(function (d) {
+                                return yScale(d.IL)
+                            });
+
+                    svg.append("path")
+                            .attr('d', lineGen2(data))
+                            .data(data)
+                            .attr('stroke', 'red')
+                            .attr('stroke-width', 2)
+                            .attr("id", "lineB")
+                            .attr('fill', 'none');
+
+                    //adding dots and data
+                    svg.selectAll("dot")
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("r", 3)
+                            .attr("cx", function (d) {
+                                return xScale(d.Year);
+                            })
+                            .attr("cy", function (d) {
+                                return yScale(d.IL);
+                            })
+                            .on("mouseover", function (d) {
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", .9);
+                                //HTML FORMATTING FOR POP UP BOX
+                                div.html("<b><center> Chicago O'Hare Airport, </b>" + d.Year + "</center><b>Price:</b> $" + d.IL + "<br><b> State GDP Growth: </b> " + d.IL_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.IL_flights))
+                                        .style("left", (d3.event.pageX + 20) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+
+                                d3.select(this).attr("fill", "red").attr("r", 3);
+                                d3.select("#lineB").attr("stroke-width", 4);
+                                svg.append("line")
+                                        .attr("id", "line1")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.IL_Max))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.IL_Max));
+
+                                svg.append("line")
+                                        .attr("id", "line2")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.IL_Min))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.IL_Min));
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "max1")
+                                        .attr("y", yScale(d.IL_Max))
+                                        .attr("x", width + 7)
+                                        .text("MAX");
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "min1")
+                                        .attr("y", yScale(d.IL_Min))
+                                        .attr("x", width + 7)
+                                        .text("MIN");
+
+
+
+                            })
+
+                            .on("mouseout", function (d) {
+                                div.transition()
+                                        .duration(500)
+                                        .style("opacity", 0);
+                                d3.select(this).attr("fill", "black").attr("r", 3);
+                                d3.select("#lineB").attr("stroke-width", 2);
+                                d3.select("#line1").remove();
+                                d3.select("#line2").remove();
+                                d3.select("#max1").remove();
+                                d3.select("#min1").remove();
+                            });
+
+
+                    //3rd line - Denver CO
+                    var lineGen3 = d3.svg.line()
+                            .x(function (d) {
+                                return xScale(d.Year);
+                            })
+                            .y(function (d) {
+                                return yScale(d.CO)
+                            });
+
+                    svg.append("path")
+                            .attr('d', lineGen3(data))
+                            .data(data)
+                            .attr('stroke', 'blue')
+                            .attr('stroke-width', 2)
+                            .attr("id", "lineC")
+                            .attr('fill', 'none');
+
+                    //adding dots and data
+                    svg.selectAll("dot")
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("r", 3)
+                            .attr("cx", function (d) {
+                                return xScale(d.Year);
+                            })
+                            .attr("cy", function (d) {
+                                return yScale(d.CO);
+                            })
+                            .on("mouseover", function (d) {
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", .9);
+                                //HTML FORMATTING FOR POP UP BOX
+                                div.html("<b><center> Denver International Airport, </b>" + d.Year + "</center><b>Price:</b> $" + d.CO + "<br><b> State GDP Growth: </b> " + d.CO_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.CO_flights))
+                                        .style("left", (d3.event.pageX + 20) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+
+                                d3.select(this).attr("fill", "red").attr("r", 3);
+                                d3.select("#lineC").attr("stroke-width", 4);
+                                svg.append("line")
+                                        .attr("id", "line1")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.CO_Max))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.CO_Max));
+
+                                svg.append("line")
+                                        .attr("id", "line2")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.CO_Min))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.CO_Min));
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "max1")
+                                        .attr("y", yScale(d.CO_Max))
+                                        .attr("x", width + 7)
+                                        .text("MAX");
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "min1")
+                                        .attr("y", yScale(d.CO_Min))
+                                        .attr("x", width + 7)
+                                        .text("MIN");
+
+
+
+                            })
+
+                            .on("mouseout", function (d) {
+                                div.transition()
+                                        .duration(500)
+                                        .style("opacity", 0);
+                                d3.select(this).attr("fill", "black").attr("r", 3);
+                                d3.select("#lineC").attr("stroke-width", 2);
+                                d3.select("#line1").remove();
+                                d3.select("#line2").remove();
+                                d3.select("#max1").remove();
+                                d3.select("#min1").remove();
+                            });
+
+
+                    //4th line - Hartfield Atlanta
+                    var lineGen4 = d3.svg.line()
+                            .x(function (d) {
+                                return xScale(d.Year);
+                            })
+                            .y(function (d) {
+                                return yScale(d.GA)
+                            });
+
+                    svg.append("path")
+                            .attr('d', lineGen4(data))
+                            .data(data)
+                            .attr('stroke', 'purple')
+                            .attr('stroke-width', 2)
+                            .attr("id", "lineD")
+                            .attr('fill', 'none');
+
+                    //adding dots and data
+                    svg.selectAll("dot")
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("r", 3)
+                            .attr("cx", function (d) {
+                                return xScale(d.Year);
+                            })
+                            .attr("cy", function (d) {
+                                return yScale(d.GA);
+                            })
+                            .on("mouseover", function (d) {
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", .9);
+                                //HTML FORMATTING FOR POP UP BOX
+                                div.html("<b><center> Hartfield Atlanta Airport, </b>" + d.Year + "</center><b>Price:</b> $" + d.GA + "<br><b> State GDP Growth: </b> " + d.GA_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.GA_flights))
+                                        .style("left", (d3.event.pageX + 20) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+
+                                d3.select(this).attr("fill", "red").attr("r", 3);
+                                d3.select("#lineD").attr("stroke-width", 4);
+                                svg.append("line")
+                                        .attr("id", "line1")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.GA_Max))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.GA_Max));
+
+                                svg.append("line")
+                                        .attr("id", "line2")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.GA_Min))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.GA_Min));
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "max1")
+                                        .attr("y", yScale(d.GA_Max))
+                                        .attr("x", width + 7)
+                                        .text("MAX");
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "min1")
+                                        .attr("y", yScale(d.GA_Min))
+                                        .attr("x", width + 7)
+                                        .text("MIN");
+
+
+
+                            })
+
+                            .on("mouseout", function (d) {
+                                div.transition()
+                                        .duration(500)
+                                        .style("opacity", 0);
+                                d3.select(this).attr("fill", "black").attr("r", 3);
+                                d3.select("#lineD").attr("stroke-width", 2);
+                                d3.select("#line1").remove();
+                                d3.select("#line2").remove();
+                                d3.select("#max1").remove();
+                                d3.select("#min1").remove();
+                            });
+
+                    //5th line - Logan Boston MA
+                    var lineGen5 = d3.svg.line()
+                            .x(function (d) {
+                                return xScale(d.Year);
+                            })
+                            .y(function (d) {
+                                return yScale(d.MA)
+                            });
+
+                    svg.append("path")
+                            .attr('d', lineGen5(data))
+                            .data(data)
+                            .attr('stroke', 'orange')
+                            .attr('stroke-width', 2)
+                            .attr("id", "lineE")
+                            .attr('fill', 'none');
+
+                    //adding dots and data
+                    svg.selectAll("dot")
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("r", 3)
+                            .attr("cx", function (d) {
+                                return xScale(d.Year);
+                            })
+                            .attr("cy", function (d) {
+                                return yScale(d.MA);
+                            })
+                            .on("mouseover", function (d) {
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", .9);
+                                //HTML FORMATTING FOR POP UP BOX
+                                div.html("<b><center> Logan - Boston International Airport, </b>" + d.Year + "</center><b>Price:</b> $" + d.MA + "<br><b> State GDP Growth: </b> " + d.MA_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.MA_flights))
+                                        .style("left", (d3.event.pageX + 20) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+
+                                d3.select(this).attr("fill", "red").attr("r", 3);
+                                d3.select("#lineE").attr("stroke-width", 4);
+                                svg.append("line")
+                                        .attr("id", "line1")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.MA_Max))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.MA_Max));
+
+                                svg.append("line")
+                                        .attr("id", "line2")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.MA_Min))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.MA_Min));
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "max1")
+                                        .attr("y", yScale(d.MA_Max))
+                                        .attr("x", width + 7)
+                                        .text("MAX");
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "min1")
+                                        .attr("y", yScale(d.MA_Min))
+                                        .attr("x", width + 7)
+                                        .text("MIN");
+
+
+
+                            })
+
+                            .on("mouseout", function (d) {
+                                div.transition()
+                                        .duration(500)
+                                        .style("opacity", 0);
+                                d3.select(this).attr("fill", "black").attr("r", 3);
+                                d3.select("#lineE").attr("stroke-width", 2);
+                                d3.select("#line1").remove();
+                                d3.select("#line2").remove();
+                                d3.select("#max1").remove();
+                                d3.select("#min1").remove();
+                            });
+
+
+                    //6th line - Seattle International WA
+                    var lineGen6 = d3.svg.line()
+                            .x(function (d) {
+                                return xScale(d.Year);
+                            })
+                            .y(function (d) {
+                                return yScale(d.WA)
+                            });
+
+                    svg.append("path")
+                            .attr('d', lineGen6(data))
+                            .data(data)
+                            .attr('stroke', 'pink')
+                            .attr('stroke-width', 2)
+                            .attr("id", "lineF")
+                            .attr('fill', 'none');
+
+                    //adding dots and data
+                    svg.selectAll("dot")
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("r", 3)
+                            .attr("cx", function (d) {
+                                return xScale(d.Year);
+                            })
+                            .attr("cy", function (d) {
+                                return yScale(d.WA);
+                            })
+                            .on("mouseover", function (d) {
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", .9);
+                                //HTML FORMATTING FOR POP UP BOX
+                                div.html("<b><center> Seattle Washington Airport, </b>" + d.Year + "</center><b>Price:</b> $" + d.WA + "<br><b> State GDP Growth: </b> " + d.WA_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.WA_flights))
+                                        .style("left", (d3.event.pageX + 20) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+
+                                d3.select(this).attr("fill", "red").attr("r", 3);
+                                d3.select("#lineF").attr("stroke-width", 4);
+                                svg.append("line")
+                                        .attr("id", "line1")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.WA_Max))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.WA_Max));
+
+                                svg.append("line")
+                                        .attr("id", "line2")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.WA_Min))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.WA_Min));
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "max1")
+                                        .attr("y", yScale(d.WA_Max))
+                                        .attr("x", width + 7)
+                                        .text("MAX");
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "min1")
+                                        .attr("y", yScale(d.WA_Min))
+                                        .attr("x", width + 7)
+                                        .text("MIN");
+
+
+
+                            })
+
+                            .on("mouseout", function (d) {
+                                div.transition()
+                                        .duration(500)
+                                        .style("opacity", 0);
+                                d3.select(this).attr("fill", "black").attr("r", 3);
+                                d3.select("#lineF").attr("stroke-width", 2);
+                                d3.select("#line1").remove();
+                                d3.select("#line2").remove();
+                                d3.select("#max1").remove();
+                                d3.select("#min1").remove();
+                            });
+
+                    //7th line - Dallas Airport
+                    var lineGen7 = d3.svg.line()
+                            .x(function (d) {
+                                return xScale(d.Year);
+                            })
+                            .y(function (d) {
+                                return yScale(d.TX)
+                            });
+
+                    svg.append("path")
+                            .attr('d', lineGen7(data))
+                            .data(data)
+                            .attr('stroke', 'lightgreen')
+                            .attr('stroke-width', 2)
+                            .attr("id", "lineG")
+                            .attr('fill', 'none');
+
+                    //adding dots and data
+                    svg.selectAll("dot")
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("r", 3)
+                            .attr("cx", function (d) {
+                                return xScale(d.Year);
+                            })
+                            .attr("cy", function (d) {
+                                return yScale(d.TX);
+                            })
+                            .on("mouseover", function (d) {
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", .9);
+                                //HTML FORMATTING FOR POP UP BOX
+                                div.html("<b><center> Dallas International Airport, </b>" + d.Year + "</center><b>Price:</b> $" + d.TX + "<br><b> State GDP Growth: </b> " + d.TX_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.TX_flights))
+                                        .style("left", (d3.event.pageX + 20) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+
+                                d3.select(this).attr("fill", "red").attr("r", 3);
+                                d3.select("#lineG").attr("stroke-width", 4);
+                                svg.append("line")
+                                        .attr("id", "line1")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.TX_Max))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.TX_Max));
+
+                                svg.append("line")
+                                        .attr("id", "line2")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.TX_Min))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.TX_Min));
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "max1")
+                                        .attr("y", yScale(d.TX_Max))
+                                        .attr("x", width + 7)
+                                        .text("MAX");
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "min1")
+                                        .attr("y", yScale(d.TX_Min))
+                                        .attr("x", width + 7)
+                                        .text("MIN");
+
+
+
+                            })
+
+                            .on("mouseout", function (d) {
+                                div.transition()
+                                        .duration(500)
+                                        .style("opacity", 0);
+                                d3.select(this).attr("fill", "black").attr("r", 3);
+                                d3.select("#lineG").attr("stroke-width", 2);
+                                d3.select("#line1").remove();
+                                d3.select("#line2").remove();
+                                d3.select("#max1").remove();
+                                d3.select("#min1").remove();
+                            });
+
+                    //8th line - LaGuardia NY
+                    var lineGen8 = d3.svg.line()
+                            .x(function (d) {
+                                return xScale(d.Year);
+                            })
+                            .y(function (d) {
+                                return yScale(d.NY)
+                            });
+
+                    svg.append("path")
+                            .attr('d', lineGen8(data))
+                            .data(data)
+                            .attr('stroke', 'lightblue')
+                            .attr('stroke-width', 2)
+                            .attr("id", "lineH")
+                            .attr('fill', 'none');
+
+                    //adding dots and data
+                    svg.selectAll("dot")
+                            .data(data)
+                            .enter().append("circle")
+                            .attr("r", 3)
+                            .attr("cx", function (d) {
+                                return xScale(d.Year);
+                            })
+                            .attr("cy", function (d) {
+                                return yScale(d.NY);
+                            })
+                            .on("mouseover", function (d) {
+                                div.transition()
+                                        .duration(200)
+                                        .style("opacity", .9);
+                                //HTML FORMATTING FOR POP UP BOX
+                                div.html("<b><center> LaGuardia International Airport, </b>" + d.Year + "</center><b>Price:</b> $" + d.CO + "<br><b> State GDP Growth: </b> " + d.NY_GDP + "<br><b>Number of Flights Departing Airport: </b>" + (d.NY_flights))
+                                        .style("left", (d3.event.pageX + 20) + "px")
+                                        .style("top", (d3.event.pageY - 28) + "px");
+
+                                d3.select(this).attr("fill", "red").attr("r", 3);
+                                d3.select("#lineH").attr("stroke-width", 4);
+                                svg.append("line")
+                                        .attr("id", "line1")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.NY_Max))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.NY_Max));
+
+                                svg.append("line")
+                                        .attr("id", "line2")
+                                        .attr("class", "lines")
+                                        .attr("x1", margin.left)
+                                        .attr("y1", yScale(d.NY_Min))
+                                        .attr("x2", width)
+                                        .attr("y2", yScale(d.NY_Min));
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "max1")
+                                        .attr("y", yScale(d.NY_Max))
+                                        .attr("x", width + 7)
+                                        .text("MAX");
+                                svg.append("text")
+                                        .attr("class", "minmax")
+                                        .attr("id", "min1")
+                                        .attr("y", yScale(d.NY_Min))
+                                        .attr("x", width + 7)
+                                        .text("MIN");
+
+                            })
+
+                            .on("mouseout", function (d) {
+                                div.transition()
+                                        .duration(500)
+                                        .style("opacity", 0);
+                                d3.select(this).attr("fill", "black").attr("r", 3);
+                                d3.select("#lineH").attr("stroke-width", 2);
+                                d3.select("#line1").remove();
+                                d3.select("#line2").remove();
+                                d3.select("#max1").remove();
+                                d3.select("#min1").remove();
+                            });
+
+
+                }
+
+            });
+
+
+            var period_val = "month";
+            var period_radios = document.getElementsByName('period');
+            var type_val = "delay";
+            var type_radios = document.getElementsByName('type');
+
+            // init slider divs
+            var month_div = document.getElementById("month_div");
+            var day_of_week_div = document.getElementById("day_of_week_div");
+            day_of_week_div.style.display = "none";
+
+            // init data table
+            var data_table = {};
+            data_table["selected"] = {};
+            data_table["selected"]["period"] = "month";
+            data_table["selected"]["type"] = "delay";
+
+            // callback for switching period modes
+            function switch_periods(period) {
+                var sliderLabel = document.getElementById("slider_label");
+                var lookup = {};
+                lookup["month"] = "Month";
+                lookup["day_of_week"] = "Day of Week";
+                sliderLabel.innerHTML = "<h4>" + lookup[period] + "</h4>";
+                data_table["selected"]["period"] = period;
+
+                // hide/show slider divs
+                if (period == "month") {
+                    day_of_week_div.style.display = "none";
+                    month_div.style.display = "block";
+                } else if (period == "day_of_week") {
+                    month_div.style.display = "none";
+                    day_of_week_div.style.display = "block";
+
+                }
+
+                // record selected period in data table
+                var slider = document.getElementById(period + "_slider");
+                var sliderVal = document.getElementById("slider_val");
+                data_table["selected"][period] = slider.value;
+            }
+
+            // callback for switching type modes
+            function switch_types(type) {
+                data_table["selected"]["type"] = type;
+            }
+
+            Array.prototype.max = function () {
+                return Math.max.apply(Math, this);
+            }
+
+            Array.prototype.min = function () {
+                return Math.min.apply(Math, this);
+            }
+
+            Array.prototype.min_max = function () {
+                return [this.min, this.max];
+            }
+
+            // code for following function taken from http://bl.ocks.org/eesur/4e0a69d57d3bfc8a82c2
+            // used to move objects in graphs to front when needed
+            d3.selection.prototype.moveToFront = function () {
+                return this.each(function () {
+                    this.parentNode.appendChild(this);
+                });
+            };
+
+            // returns the true if the obj is included in the given array, false otherwise
+            function include(arr, obj) {
+                return (arr.indexOf(obj) != -1);
+            }
+
+            // removes duplicate values from the array
+            function remove_dups(duplicatesArray) {
+                var uniqueArray = duplicatesArray.filter(function (elem, pos) {
+                    return duplicatesArray.indexOf(elem) == pos;
+                });
+                return uniqueArray;
+            }
+
+            // Download ariport code data, sourced from BTS
+            function get_airport_names(data_table) {
+                d3.csv("AIRPORT_NAMES.csv", function (error, data) {
+                    var airport_name_dict = {}
+                    data.forEach(function (row) {
+                        var code = row["Code"];
+                        var name = row["Description"];
+                        airport_name_dict[code] = name;
+                    });
+
+                    data_table["airport_names"] = airport_name_dict;
+
+                    get_airport_locations(data_table);
+                });
+            }
+
+            // Download ariport location data
+            // source: https://www.aggdata.com/airline_airport_locations/us_airport
+            function get_airport_locations(data_table) {
+                var airport_loc_dict = {}
+                d3.csv("AIRPORT_COORD.csv", function (error, data) {
+                    data.forEach(function (row) {
+                        var code = row["Airport Code"];
+                        var lat = row["Latitude"];
+                        var long = row["Longitude"];
+                        airport_loc_dict[code] = {"lat": lat, "long": long};
+                    });
+
+                    data_table["airport_locations"] = airport_loc_dict;
+
+                    get_data1(data_table);
+                });
+            }
+
+            // Download airline delay/cancel by month data, sourced from BTS
+            function get_data1(data_table) {
+                d3.csv("data1.csv", function (error, data) {
+                    data_table["month"] = data;
+                    get_data2(data_table);
+                });
+            }
+
+            // Download airline delay/cancel by month data, sourced from BTS
+            function get_data2(data_table) {
+                d3.csv("data2.csv", function (error, data) {
+                    data_table["day_of_week"] = data;
+                    get_data3(data_table);
+                });
+            }
+
+            // Download airline delay/cancel by month data, sourced from BTS
+            function get_data3(data_table) {
+                d3.csv("data3.csv", function (error, data) {
+                    data_table["airline"] = data;
+                    data_table = get_data_filtered(data_table, "month");
+                    data_table = get_data_filtered(data_table, "day_of_week");
+                    create_map(data_table);
+                });
+            }
+
+            function get_data_filtered(data_table, period) {
+                // var top_airports = ["ABE", "ATL", "AUS", "BNA", "BOS", "BWI", "CLE", "CLT", "DCA", "DEN", "DFW", "DTW", "EWR", "FLL", "HNL", "HOU", "IAD", "IAH", "JFK", "LAS", "LAX", "LGA", "MCI", "MCO", "MDW", "MIA", "MSP", "OAK", "ORD", "PDX", "PHL", "PHX", "RDU", "SAN", "SEA", "SFO", "SLC", "SMF", "SNA", "STL", "TPA"];
+                var top_airports = ["LAX", "ORD", "DEN", "ATL", "BOS", "SEA", "DFW", "LGA"];
+                data_table["top_airports"] = top_airports;
+
+                var filtered = [],
+                        delays = [],
+                        cancels = [];
+
+                // save all important values to variables for easy access
+                data_table[period].forEach(function (row) {
+                    var AVG_ARR_DELAY = row["AVG(ARR_DELAY)"],
+                            AVG_ARR_DELAY_NEW = row["AVG(ARR_DELAY_NEW)"],
+                            AVG_DEP_DELAY = row["AVG(DEP_DELAY)"],
+                            AVG_DEP_DELAY_NEW = row["AVG(DEP_DELAY_NEW)"],
+                            DEST = row["DEST"],
+                            DEST_STATE_ABR = row["DEST_STATE_ABR"],
+                            MONTH = row["MONTH"],
+                            DAY_OF_WEEK = row["DAY_OF_WEEK"],
+                            ORIGIN = row["ORIGIN"],
+                            ORIGIN_STATE_ABR = row["ORIGIN_STATE_ABR"],
+                            SUM_CANCELLED = row["SUM(CANCELLED)"],
+                            SUM_FLIGHTS = row["SUM(FLIGHTS)"];
+
+                    // for each entry with only included airports with location data
+                    // create a data obj that will be used to plot the lines
+                    try {
+                        if (include(top_airports, ORIGIN) && include(top_airports, DEST)) {
+                            var loc = data_table["airport_locations"];
+
+                            var long_lat1 = [loc[ORIGIN]["long"], loc[ORIGIN]["lat"]];
+                            var long_lat2 = [loc[DEST]["long"], loc[DEST]["lat"]];
+
+                            if (isNaN(long_lat1[0]) || isNaN(long_lat1[1]) ||
+                                    isNaN(long_lat2[0]) || isNaN(long_lat2[1])) {
+                            } else {
+                                filtered.push({
+                                    "pt1": long_lat1,
+                                    "pt2": long_lat2,
+                                    "month": MONTH,
+                                    "day_of_week": DAY_OF_WEEK,
+                                    "ORIGIN": ORIGIN,
+                                    "DEST": DEST,
+                                    "delay": AVG_DEP_DELAY_NEW,
+                                    "cancel": SUM_CANCELLED,
+                                })
+                                delays.push(AVG_DEP_DELAY_NEW);
+                                cancels.push(SUM_CANCELLED);
+                            }
+                        }
+                    } catch (e) {
+                        console.error(e)
+                    }
+                });
+
+                // init weight and color scales
+                var delay_max = delays.max();
+                var cancel_max = cancels.max();
+
+                var cancelWeightScale = d3.scale.linear()
+                        .domain([0, cancel_max])
+                        .range([1, 10]);
+
+                var cancelColorScale = d3.scale.linear()
+                        .domain([0, cancel_max / 2, cancel_max])
+                        .range(['green', 'yellow', 'red']);
+
+                data_table["cancel_max"] = cancel_max;
+
+                var delayWeightScale = d3.scale.linear()
+                        .domain([0, delay_max])
+                        .range([1, 10]);
+
+                var delayColorScale = d3.scale.linear()
+                        .domain([0, delay_max / 2, delay_max])
+                        .range(['green', 'yellow', 'red']);
+
+                data_table["delay_max"] = delay_max;
+
+                // save the scaled values to each data obj
+                filtered.forEach(function (pt) {
+                    pt["delay_weight"] = delayWeightScale(pt["delay"]);
+                    pt["delay_color"] = delayColorScale(pt["delay"]);
+
+                    pt["cancel_weight"] = cancelWeightScale(pt["cancel"]);
+                    pt["cancel_color"] = cancelColorScale(pt["cancel"]);
+                });
+
+                data_table[period + "_filtered"] = filtered;
+
+                return data_table;
+            }
+
+            function create_map(data_table) {
+                var width = 1000,
+                        height = 600,
+                        init_rotate = [97, -34], // [-97, 38] becomes initial center of projection
+                        init_scale = 3.2,
+                        maxlat = 83;	// clip northern and southern poles (infinite in mercator)
+
+                var projection = d3.geo.mercator()
+                        .rotate(init_rotate)
+                        .scale(1)	// we'll scale up to match viewport shortly.
+                        .translate([width / 2, height / 2]);
+
+                // find the top left and bottom right of current projection
+                function mercatorBounds(projection, maxlat) {
+                    var yaw = projection.rotate()[0],
+                            xymax = projection([-yaw + 180 - 1e-6, -maxlat]),
+                            xymin = projection([-yaw - 180 + 1e-6, maxlat]);
+
+                    return [xymin, xymax];
+                }
+
+                // set up the scale extent and initial scale for the projection
+                var b = mercatorBounds(projection, maxlat),
+                        s = width / (b[1][0] - b[0][0]) * init_scale,
+                        scaleExtent = [.5 * s, 10 * s];
+
+                projection
+                        .scale(s);
+
+                // init period radio callbacks
+                for (var rc = 0; rc < period_radios.length; rc++) {
+                    period_radios[rc].onclick = function () {
+                        if (this.value != period_val) {
+                            period_val = this.value;
+                            switch_periods(this.value);
+                            redraw(); // update map
+                        }
+                    }
+                }
+
+                // init type radio callbacks
+                for (var rc = 0; rc < type_radios.length; rc++) {
+                    type_radios[rc].onclick = function () {
+                        if (this.value != type_val) {
+                            type_val = this.value;
+                            switch_types(this.value);
+                            redraw(); // update map
+                        }
+                    }
+                }
+
+                var path = d3.geo.path()
+                        .projection(projection);
+
+                var zoom = d3.behavior.zoom()
+                        .scaleExtent(scaleExtent)
+                        .scale(projection.scale())
+                        .on("zoom", redraw);
+
+                var svg = d3.select('#graph3')
+                        .append('svg')
+                        .attr('width', width)
+                        .attr('height', height)
+                        .call(zoom);
+
+                // disable double click zoom
+                svg.on("dblclick.zoom", null);
+
+                var g = svg.append("g");
+                var usObjects;
+
+                // get the US path data and draw the paths
+                d3.json("us.json", function ready(error, us) {
+                    svg.selectAll('path')
+                            .data(topojson.feature(us, us.objects.states).features)
+                            .enter().append('path')
+                            .style("fill", "gray")
+                            .style("stroke", "lightgray")
+
+                    redraw(); // update map
+                });
+
+                // track last translation and scale event we processed
+                var tlast = [0, 0],
+                        slast = null;
+
+                // init selected data table
+                data_table["selected"]["month"] = 1;
+                data_table["selected"]["origins"] = [];
+                data_table["selected"]["origins_shown"] = [];
+                var month_slider = document.getElementById("month_slider"),
+                        day_of_week_slider = document.getElementById("day_of_week_slider"),
+                        sliderVal = document.getElementById("slider_val");
+
+                // add callbacks for slider changes
+                month_slider.addEventListener("input", function () {
+                    data_table["selected"]["month"] = this.value;
+                    redraw(); // update map
+                });
+
+                day_of_week_slider.addEventListener("input", function () {
+                    data_table["selected"]["day_of_week"] = this.value;
+                    redraw(); // update map
+                });
+
+                // add the color legend to the svg
+                function addColorLegend() {
+                    d3.selectAll(".colorAxis").remove();
+                    // color legend
+                    var gradient = svg.append("defs")
+                            .append("linearGradient")
+                            .attr("id", "gradient")
+                            .attr("x1", "0%")
+                            .attr("y1", "0%")
+                            .attr("x2", "100%")
+                            .attr("y2", "0%")
+                            .attr("spreadMethod", "pad");
+                    gradient.append("stop")
+                            .attr("offset", "0%")
+                            .attr("stop-color", "green")
+                            .attr("stop-opacity", 1);
+                    gradient.append("stop")
+                            .attr("offset", "50%")
+                            .attr("stop-color", "yellow")
+                            .attr("stop-opacity", 1);
+                    gradient.append("stop")
+                            .attr("offset", "100%")
+                            .attr("stop-color", "red")
+                            .attr("stop-opacity", 1);
+                    var weight_max = data_table["delay_max"];
+                    var colorAxisScale = d3.scale.linear()
+                            .domain([0, weight_max])
+                            .range([0, width / 2]);
+                    var colorAxis = d3.svg.axis()
+                            .scale(colorAxisScale)
+                            .orient('bottom')
+                            .ticks(5, ",.1s")
+                            .tickSize(10, 1);
+                    var colorLegend = svg.append('g')
+                            .attr('class', 'colorAxis')
+                            .attr("transform", "translate(" + width / 4 + "," + (height - 80) + ")")
+                            .call(colorAxis)
+                    colorLegend.append("rect")
+                            .attr("class", "legend")
+                            .attr("width", width / 2)
+                            .attr("height", height / 32)
+                            .attr("transform", "translate(0,-40)")
+                            .style("fill", "url(#gradient)");
+                    colorLegend.append("text")
+                            .attr("class", "label")
+                            .attr("x", width / 4)
+                            .attr("y", 50)
+                            .attr("font-size", 16)
+                            .style("text-anchor", "middle")
+                            .text("Average Delay (min)");
+                }
+
+                // redraw all svg elements on map translation/rotation/zoom
+                function redraw() {
+                    if (d3.event) {
+                        var scale = d3.event.scale,
+                                t = d3.event.translate;
+
+                        // if scaling changes, ignore translation (otherwise touch zooms are weird)
+                        if (scale != slast) {
+                            projection.scale(scale);
+                        } else {
+                            var dx = (t[0] - tlast[0]) / init_scale,
+                                    dy = t[1] - tlast[1],
+                                    yaw = projection.rotate(),
+                                    tp = projection.translate();
+
+                            // use x translation to rotate based on current scale
+                            projection.rotate([yaw[0] + 360. * dx / width * scaleExtent[0] / scale, yaw[1], 0]);
+                            // use y translation to translate projection, clamped by min/max
+                            var b = mercatorBounds(projection, maxlat);
+                            if (b[0][1] + dy > 0)
+                                dy = -b[0][1];
+                            else if (b[1][1] + dy < height)
+                                dy = height - b[1][1];
+                            projection.translate([tp[0], tp[1] + dy]);
+                        }
+                        slast = scale;
+                        tlast = t;
+                    }
+
+                    svg.selectAll('path')	// re-project path data
+                            .attr('d', path);
+
+                    // add an airport node with given lon/lat and name
+                    function addLocation(lon, lat, name) {
+                        var coords = projection([lon, lat]);
+                        data_obj = svg.append('g')
+                                .attr("class", "data_obj");
+                        data_obj.append('circle')
+                                .attr("class", "data_point")
+                                .attr("cx", coords[0])
+                                .attr("cy", coords[1])
+                                .attr("r", 3)
+                                .attr("fill", "red");
+                        data_obj.append("text")
+                                .attr("class", "data_label")
+                                .attr("x", coords[0])
+                                .attr("y", coords[1] - 5)
+                                .attr("font-size", 14)
+                                .attr("fill", "black")
+                                .style("font-weight", "bold")
+                                .style("text-anchor", "middle")
+                                .text(name);
+
+                        // add callback for clicking on an airport node
+                        data_obj.on("click", function () {
+
+                            var selected_origin = name;
+                            var idx = data_table["selected"]["origins"].indexOf(selected_origin);
+                            if (idx != -1) {
+                                data_table["selected"]["origins"].splice(idx, 1);
+                                data_table["selected"]["origins_shown"].splice(idx, 1);
+                            } else {
+                                data_table["selected"]["origins"].push(selected_origin);
+                                data_table["selected"]["origins_shown"].push(false);
+                            }
+
+                            redraw_routes();
+                        });
+
+                    }
+
+                    // redraw all airports
+                    d3.selectAll(".data_obj").remove();
+                    var top_airports = data_table["top_airports"]
+                    for (var i in top_airports) {
+                        var airport = top_airports[i];
+                        var code = airport;
+                        try {
+                            var lat = data_table["airport_locations"][airport]["lat"];
+                            var long = data_table["airport_locations"][airport]["long"];
+                            if (!isNaN(long) && !isNaN(lat)) {
+                                addLocation(long, lat, code);
+                            }
+                        } catch (e) {
+                            // console.error(e);
+                        }
+                    }
+
+                    // redraw all route paths between nodes
+                    function redraw_routes() {
+
+                        d3.selectAll(".lines").remove();
+
+                        // draw a path from one coordinate to the second with given weight and color
+                        function drawRoute(long_lat1, long_lat2, weight, color, transition) {
+                            try {
+                                var offsetx = 0;
+                                var offsety = 0;
+
+                                var coords1 = projection(long_lat1);
+                                var coords2 = projection(long_lat2);
+
+                                var mult = .2;
+                                offsety = (coords1[0] - coords2[0]) * mult;
+                                offsetx = (coords2[1] - coords1[1]) * mult;
+
+                                var lineData = [
+                                    {"x": coords1[0], "y": coords1[1]},
+                                    {
+                                        "x": (coords1[0] + coords2[0]) / 2 + offsetx,
+                                        "y": (coords1[1] + coords2[1]) / 2 + offsety
+                                    },
+                                    {"x": coords2[0], "y": coords2[1]}
+                                ];
+
+                                var lineFunction = d3.svg.line()
+                                        .x(function (d) {
+                                            return d.x;
+                                        })
+                                        .y(function (d) {
+                                            return d.y;
+                                        })
+                                        .interpolate("basis");
+
+                                var lineGraph = svg.append("path")
+                                        .attr("d", lineFunction(lineData))
+                                        .attr("fill", "none")
+                                        .attr("stroke", color)
+                                        .attr("stroke-width", weight)
+                                        .attr("class", "lines");
+
+                                // add transition only if this is the first time drawing these edges
+                                if (transition) {
+                                    var totalLength = lineGraph.node().getTotalLength();
+                                    var durationLine = totalLength * 1.5;
+                                    lineGraph
+                                            .attr("stroke-dasharray", totalLength + " " + totalLength)
+                                            .attr("stroke-dashoffset", totalLength)
+                                            .transition()
+                                            .duration(durationLine)
+                                            .ease("linear")
+                                            .attr("stroke-dashoffset", 0);
+                                }
+                            } catch (e) {
+                                console.error(e);
+                            }
+                        }
+
+                        // redraw all selected routes
+                        var period = data_table["selected"]["period"];
+                        var type = data_table["selected"]["type"];
+                        var selected = data_table["selected"][period];
+                        for (i in data_table["selected"]["origins"]) {
+                            var origin = data_table["selected"]["origins"][i];
+                            var shown = data_table["selected"]["origins_shown"][i];
+                            data_table[period + "_filtered"].forEach(function (pt) {
+                                if (pt["ORIGIN"] == origin &&
+                                        pt[period] == selected) {
+                                    if (type == "delay") {
+                                        drawRoute(pt["pt1"], pt["pt2"], pt["delay_weight"], pt["delay_color"], !shown);
+                                    } else if (type == "cancel") {
+                                        drawRoute(pt["pt1"], pt["pt2"], pt["cancel_weight"], pt["cancel_color"], !shown);
+                                    }
+                                    data_table["selected"]["origins_shown"][i] = true;
+                                }
+                            });
+                        }
+                        d3.selectAll(".data_obj").moveToFront();
+                    }
+
+                    redraw_routes();
+
+                    addColorLegend();
+                }
+            }
+
+            // get all the data
+            function get_all_data(data_table) {
+                get_airport_names(data_table);
+            }
+
+            get_all_data(data_table);
+
+
+
+        </script>
+    </body>
 </html>
 
