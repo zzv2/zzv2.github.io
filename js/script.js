@@ -74,14 +74,14 @@ $(document).ready(function () {
                     $(this).attr('src', static_src);
                 }
             },
-            function () {
-//                                var src = $(this).attr('src');
-//                                var new_src = src.replace(".gif", "-static.png");
-//                                if (src != new_src) {
-//                                    $(this).attr('src', new_src);
-//                                }
-            }
+            function () {}
     );
+
+    $(".toggle, #courses h2").hover(function () {
+        $(this).css("opacity", .5);
+    }, function () {
+        $(this).css("opacity", 1);
+    });
 
     var $w = $(window).scroll(function () {
         $(".gif").each(function () {

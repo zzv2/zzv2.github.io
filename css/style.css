@@ -146,10 +146,6 @@ a:hover {
     cursor: pointer;
 }
 
-.toggle, #courses h2:hover {
-    opacity: .5;
-}
-
 h2.toggle {
     background-color: gray;
     padding: 1%;
